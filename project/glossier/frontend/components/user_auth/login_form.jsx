@@ -12,10 +12,6 @@ export default class SignupForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
   }
-
-  componentDidMount() {
-    
-  }
   
   validateEmail() {
     const properEmail = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
@@ -37,12 +33,21 @@ export default class SignupForm extends Component {
   handleInput(key) {
     return e => {
       // handle checking for valid email
+      const valid = this.validateEmail();
       if (key === 'email') {
-        let valid = this.validateEmail(),
-            $input = $('#email');
+        const $input = $('#email');
         !valid ? $input.addClass('invalid') : $input.removeClass('invalid');
       }
 
+      // check if button can be enabled
+      const $btn = document.getElementById("submit_btn");
+      if (valid && this.state.password.length > 5) { 
+        $btn.disabled = false; 
+      } else {
+        $btn.disabled = true; 
+      };
+
+      // update state
       this.setState({ [key]: e.currentTarget.value
       })};
   }
@@ -88,7 +93,7 @@ export default class SignupForm extends Component {
             </p>
           </div>
           
-          <button type="submit" onClick={this.handleSubmit}>
+          <button id='submit_btn' type="submit" onClick={this.handleSubmit} disabled >
             <div>SIGN IN</div>
           </button>
 
