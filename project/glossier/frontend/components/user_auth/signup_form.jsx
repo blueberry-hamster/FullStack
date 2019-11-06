@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import RequiredFieldWarning from './_required_field_warning';
 import { Link } from 'react-router-dom';
 
 export default class SignupForm extends Component {
@@ -11,11 +12,19 @@ export default class SignupForm extends Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.addWarningIfEmpty = this.addWarningIfEmpty.bind(this);
   }
 
+  componentDidMount() {
+    // remove invalid tags if they try to sign up again with invalid inputs
+    let fields = ['email', 'password'];
+    fields.forEach(field => $(`#${field}`).removeClass('invalid'));
+  }
+
+  // add errors if user submitted invalid inputs
   addWarningIfEmpty(field, $element) {
-    if (field.length < 1) {
-      $element.toggleClass('invalid')
+    if (this.state[field].length < 1) {
+      $element.addClass('invalid')
     }
   }
 
@@ -23,8 +32,9 @@ export default class SignupForm extends Component {
     e.preventDefault();
     this.props.createNewUser(this.state)
       .then(() => this.props.history.push('/'))
-      .fail(err => {
-
+      .fail(() => {
+        let fields = ['email', 'password'];
+        fields.forEach(field => this.addWarningIfEmpty(field, $(`#${field}`)))
       })
   }
 
@@ -76,7 +86,8 @@ export default class SignupForm extends Component {
             />
             <label className='text_field_label'>
               <span>Email</span>
-            </label>  
+            </label>
+            <RequiredFieldWarning field='email' />  
           </div>
           
           <div className='form_input_container'>
@@ -90,7 +101,8 @@ export default class SignupForm extends Component {
             />
             <label className='text_field_label'>
               <span>Create a Password</span>
-            </label>  
+            </label>
+            <RequiredFieldWarning field='password' />
           </div>
           
           <button type="submit" onClick={this.handleSubmit}>

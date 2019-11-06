@@ -6,36 +6,43 @@ export default class SignupForm extends Component {
     super(props);
     this.state = {
       email: '',
-      password: '',
-      valid_email: '',
-      session_errors: ''
+      password: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
   }
 
+  componentDidMount() {
+    
+  }
+  
   validateEmail() {
-    const emailTest = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+    const properEmail = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
-    this.setState({ valid_email: emailTest.test(this.state.email) ? 'valid' : 'invalid'})
+    return properEmail.test(this.state.email) ? true : false;
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let { email, password } = this.state;
-    let stateSlice = { email, password};
-    this.props.loginUser(stateSlice)
+    this.props.loginUser(this.state)
       .then(() => this.props.history.push('/'))
       .fail(err => {
+        let $p = $('.form_input_container p');
+        $p.addClass('show');
         this.setState({ session_errors: this.props.errors[0] });
-        this.setState({ valid_email: ''});
       });
   }
 
   handleInput(key) {
     return e => {
-      this.validateEmail();
+      // handle checking for valid email
+      if (key === 'email') {
+        let valid = this.validateEmail(),
+            $input = $('#email');
+        !valid ? $input.addClass('invalid') : $input.removeClass('invalid');
+      }
+
       this.setState({ [key]: e.currentTarget.value
       })};
   }
@@ -52,7 +59,7 @@ export default class SignupForm extends Component {
               onChange={this.handleInput('email')}
               maxLength='100'
               minLength='0'
-              className={`${this.state.email.length > 0 ? 'has_input' : ''} ${this.state.valid_email}`}
+              className={this.state.email.length > 0 ? 'has_input' : ''}
             />
             <label className='text_field_label'>
               <span>Email</span>
