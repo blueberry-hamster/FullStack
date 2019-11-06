@@ -3,9 +3,9 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      render "/"
+      redirect_to '/'
     else
-      render @user.errors.full_messages, status 422
+      render @user.errors.full_messages, status: 422
     end
   end
 
@@ -14,7 +14,7 @@ class Api::UsersController < ApplicationController
     if @user 
       render "/api/users/#{@user.id}"
     else
-      render @user.errors.full_messages, status 422
+      render @user.errors.full_messages, status: 422
     end
   end
 end

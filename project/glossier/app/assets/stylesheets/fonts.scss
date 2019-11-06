@@ -1,0 +1,38 @@
+// @import './colors.scss';
+
+$serif: "Freight Display", Athelas, Constantias, Georgia, Times, "Times New Roman", serif;
+$sans-serif: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+body {
+  font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100%;
+  background-color: $white;
+  color: $black;
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  font-weight: bold;
+  color: $black;
+  font-size: 2em;
+}
+
+h2 {
+  font-weight: bold;
+  color: $black;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  color: $navy;
+  cursor: pointer;
+  text-decoration: none;
+}
