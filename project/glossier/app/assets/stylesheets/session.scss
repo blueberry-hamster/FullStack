@@ -10,113 +10,148 @@
   align-items: center;
   justify-content: center;
 
-    h1 {
-      font-size: 22px;
-      line-height: 32px;
-      text-align: center;
-      margin: 2rem;
-    }
+  h1 {
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    margin: 2rem;
+  }
 
-    form {
-      color: $medium-grey;
-      font-size: 1em;
-      line-height: 1em;
-      
-      margin-top: 1.5rem;
-      width: 100%;
-      height: 100%;
-      
-      box-sizing: border-box;
+  form {
+    color: $medium-grey;
+    font-size: 1em;
+    line-height: 1em;
+    
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 100%;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .form_input_container {
+      position: relative;
       display: flex;
       flex-direction: column;
-
-      .form_input_container {
-        position: relative;
-      }
-      
-      .form_input_container, button {
-        
-        input {
-          text-align: left;
-          line-height: 1rem;
-          border: 1px solid $light-grey;
-          border-radius: 3px;
-          
-          margin-top: 1rem;
-          padding: 20px 16px 8px 16px;
-          width: 100%;
-          
-          // make the border blue on focus
-          &:focus {
-            border-color: $navy;
-          }
-          
-          // when you are clicked into the input
-          &:focus + label {
-            color: $navy;
-            font-size: 0.5em;
-            transform: translateY(-8px);
-            transition: transform 0.2s ease 0s, translate 0.2s ease 0s;
-          }
-
-          // when you are not clicked into the input, but have text in the input
-          &.has_input:not(:focus) + label {
-            color: $medium-grey;
-            font-size: 0.5em;
-            transform: translateY(-8px);
-          }
-          
-        }  
-        
-        label {
-          display: flex;
-          position: absolute;
-          top: 16px;
-          left: 17px;
-          white-space: nowrap;
-        } 
-      }
-      
-      button {
-        width: 100%;
-        margin-top: 2em;
-        padding: 14px 16px;
-        text-align: center;
-        text-transform: uppercase;
-        color: $medium-light-grey;
-        background-color: $lightest-grey;
-      }
-
-      button {
-        color: $white;
-        background-color: $black;
-        border: none;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
+      justify-content: space-between;
     }
-
-    .switch_session_page {
-      margin-top: 2em;
-      display: flex;
-      flex-direction: row;
-
-      color: $black;
-      font-size: 0.8em;
-      font-weight: lighter;
-
-      a {
-        color: $black;
-        text-decoration: underline;
-        margin-left: 5px;
-
-        &:hover {
+    
+    .form_input_container, button {
+      text-align: left;
+      line-height: 1em;
+      margin-top: 1em; 
+      
+      input {
+        width: 92.5%;
+        height: 100%;
+        border-radius: 3px;
+        border: 1px solid $light-grey;
+        padding: 20px 16px 8px 16px;
+        
+        // make the border blue on focus
+        &:focus {
+          border-color: $navy;
+        }
+        
+        // when you are clicked into the input
+        &:focus + label {
           color: $navy;
-          text-decoration: none;
+          font-size: 0.5em;
+          transform: translateY(-8px);
+          transition: transform 0.2s ease 0s, translate 0.2s ease 0s;
         }
+
+        // when you are not clicked into the input, but have text in the input
+        &.has_input:not(:focus) + label {
+          color: $medium-grey;
+          font-size: 0.5em;
+          transform: translateY(-8px);
+        }
+
+        // change elements to red when handling invalid input
+        // keep the placeholder red when unfocused
+        &.invalid:not(:focus) + label {
+          color: $red;
+        }
+        
+        &.invalid {
+          border: 1px solid $red;
+
+          & + label {
+            color: $red;
+          }
+
+          & ~ p.session_errors {
+            display: block;
+          }
+        }
+      }  
+
+      .session_errors {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: $red;
+        margin-top: 1em;
+      }
+
+      .password_warning {
+        display: none;
+      }
+      
+      label {
+        display: flex;
+        position: absolute;
+        top: 16px;
+        left: 17px;
+        white-space: nowrap;
+        transition: transform 0.2s ease 0s, translate 0.2s ease 0s;
+      } 
+    }
+    
+    button {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+      border: 1px solid $light-grey;
+      margin-top: 3em;
+      padding: 14px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $medium-light-grey;
+      background-color: $lightest-grey;
+    }
+
+    button {
+      color: $white;
+      background-color: $black;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
       }
     }
+
+  }
+
+  .switch_session_page {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+
+    color: $black;
+    font-size: 0.8em;
+    font-weight: lighter;
+
+    a {
+      color: $black;
+      text-decoration: underline;
+      margin-left: 5px;
+
+      &:hover {
+        color: $navy;
+        text-decoration: none;
+      }
+    }
+  }
 }

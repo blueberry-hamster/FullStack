@@ -5,9 +5,9 @@ class Api::SessionsController < ApplicationController
     @user = User.find_by_credentials(email, password)
     if @user
       login!(@user)
-      render plain: "success"
+      render json: "success"
     else
-      render plain: 'invalid email or password' 
+      render json: ['invalid email or password'], status: 422
     end
   end
 

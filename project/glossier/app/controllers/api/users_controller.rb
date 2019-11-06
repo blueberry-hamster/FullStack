@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
       login!(@user)
       redirect_to '/'
     else
-      render @user.errors.full_messages, status: 422
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
@@ -14,7 +14,7 @@ class Api::UsersController < ApplicationController
     if @user 
       render "/api/users/#{@user.id}"
     else
-      render @user.errors.full_messages, status: 422
+      render json: @user.errors.full_messages, status: 422
     end
   end
 end

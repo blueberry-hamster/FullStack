@@ -13,10 +13,19 @@ export default class SignupForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  addWarningIfEmpty(field, $element) {
+    if (field.length < 1) {
+      $element.toggleClass('invalid')
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state);
-    this.props.history.push('/');
+    this.props.createNewUser(this.state)
+      .then(() => this.props.history.push('/'))
+      .fail(err => {
+
+      })
   }
 
   handleInput(key) {
@@ -26,7 +35,7 @@ export default class SignupForm extends Component {
   render() {
     return (
       <div className='signup session'>
-        <h1>Create an Account</h1>
+        <h1>Create an account</h1>
         <form>
           <div className='form_input_container'>
             <input 
@@ -93,7 +102,7 @@ export default class SignupForm extends Component {
           <p>
             Already have an account?
           </p>
-        <Link to='/login'>Sign in!</Link>
+        <Link to='/signin'>Sign in!</Link>
         </div> 
       </div>
     )

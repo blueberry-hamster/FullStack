@@ -6,25 +6,44 @@ export default class SignupForm extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      valid_email: '',
+      session_errors: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.validateEmail = this.validateEmail.bind(this);
+  }
+
+  validateEmail() {
+    const emailTest = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+
+    this.setState({ valid_email: emailTest.test(this.state.email) ? 'valid' : 'invalid'})
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.loginUser(this.state);
-    this.props.history.push('/');
+    let { email, password } = this.state;
+    let stateSlice = { email, password};
+    this.props.loginUser(stateSlice)
+      .then(() => this.props.history.push('/'))
+      .fail(err => {
+        this.setState({ session_errors: this.props.errors[0] });
+        this.setState({ valid_email: ''});
+      });
   }
 
   handleInput(key) {
-    return e => this.setState({ [key]: e.currentTarget.value });
+    return e => {
+      this.validateEmail();
+      this.setState({ [key]: e.currentTarget.value
+      })};
   }
 
   render() {
     return (
       <div className='signup session'>
-        <h1>Sign In</h1>
+        <h1>Sign in</h1>
         <form>
           <div className='form_input_container'>
             <input
@@ -33,11 +52,14 @@ export default class SignupForm extends Component {
               onChange={this.handleInput('email')}
               maxLength='100'
               minLength='0'
-              className={this.state.email.length > 0 ? 'has_input' : ''}
+              className={`${this.state.email.length > 0 ? 'has_input' : ''} ${this.state.valid_email}`}
             />
             <label className='text_field_label'>
               <span>Email</span>
             </label>
+            <p className='password_warning session_errors'>
+              Please enter a correctly formatted email address.
+            </p>
           </div>
 
           <div className='form_input_container'>
@@ -52,6 +74,11 @@ export default class SignupForm extends Component {
             <label className='text_field_label'>
               <span>Create a Password</span>
             </label>
+            <p className='session_errors'>
+              {
+                this.state.session_errors
+              }
+            </p>
           </div>
           
           <button type="submit" onClick={this.handleSubmit}>
