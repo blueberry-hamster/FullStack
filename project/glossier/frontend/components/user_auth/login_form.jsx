@@ -23,42 +23,48 @@ export default class SignupForm extends Component {
 
   render() {
     return (
-      <div className='signup'>
+      <div className='signup session'>
         <h1>Sign In</h1>
         <form>
-          <input
-            type="text"
-            id='email'
-            placeholder="Email Address"
-            onChange={this.handleInput('email')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='email' class='text_field_label'>
-            <span>Email</span>
-          </label> */}
+          <div className='form_input_container'>
+            <input
+              type="text"
+              id='email'
+              onChange={this.handleInput('email')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.email.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>Email</span>
+            </label>
+          </div>
 
-          <input
-            type="password"
-            id='password'
-            placeholder="Create a Password"
-            onChange={this.handleInput('password')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='password' class='text_field_label'>
-            <span>Create a Password</span>
-          </label> */}
-
+          <div className='form_input_container'>
+            <input
+              type="password"
+              id='password'
+              onChange={this.handleInput('password')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.password.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>Create a Password</span>
+            </label>
+          </div>
+          
           <button type="submit" onClick={this.handleSubmit}>
-            Sign In
+            <div>SIGN IN</div>
           </button>
 
         </form>
-        <p>
-          Don't have an account yet?
-        </p>
-        <Link to='/signup'>Create one!</Link>
+        <div className='switch_session_page'>
+          <p>
+            Don't have an account yet?
+          </p>
+          <Link to='/signup'>Create one!</Link>
+        </div>
       </div>
     )
   }

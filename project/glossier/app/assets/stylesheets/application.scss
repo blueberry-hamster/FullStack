@@ -15,6 +15,7 @@
 
 // CSS Reset
 @import "reset.scss";
+@import "form_reset.scss";
 
 // Core
 @import "colors.scss";
@@ -25,7 +26,8 @@
 @import "grid.scss";
 
 // Components
-@import "header_main.scss";
+@import "header.scss";
+@import "session.scss";
 
 body {
   box-sizing: border-box;

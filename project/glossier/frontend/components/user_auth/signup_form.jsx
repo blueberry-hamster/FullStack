@@ -25,67 +25,76 @@ export default class SignupForm extends Component {
   
   render() {
     return (
-      <div className='signup'>
+      <div className='signup session'>
         <h1>Create an Account</h1>
         <form>
-          <input 
-            type="text" 
-            id='first_name'
-            placeholder="First Name" 
-            onChange={this.handleInput('first_name')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='first_name' class='text_field_label'>
-            <span>First Name</span>
-          </label> */}
-
-          <input 
-            type="text" 
-            id='last_name'
-            placeholder="Last Name" 
-            onChange={this.handleInput('last_name')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='last_name' class='text_field_label'>
-            <span>First Name</span>
-          </label> */}
-
+          <div className='form_input_container'>
+            <input 
+              type="text" 
+              id='first_name'
+              onChange={this.handleInput('first_name')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.first_name.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>First Name</span>
+            </label>
+          </div>
           
-          <input 
-            type="text" 
-            id='email'
-            placeholder="Email Address" 
-            onChange={this.handleInput('email')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='email' class='text_field_label'>
-            <span>Email</span>
-          </label> */}
+          <div className='form_input_container'>
+            <input 
+              type="text" 
+              id='last_name'
+              onChange={this.handleInput('last_name')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.last_name.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>First Name</span>
+            </label>
+          </div>
 
-          <input 
-            type="password" 
-            id='password'
-            placeholder="Create a Password" 
-            onChange={this.handleInput('password')}
-            maxLength='100'
-            minLength='0'
-          />
-          {/* <label for='password' class='text_field_label'>
-            <span>Create a Password</span>
-          </label> */}
-
+          <div className='form_input_container'>
+            <input 
+              type="text" 
+              id='email'
+              onChange={this.handleInput('email')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.email.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>Email</span>
+            </label>  
+          </div>
+          
+          <div className='form_input_container'>
+            <input 
+              type="password" 
+              id='password'
+              onChange={this.handleInput('password')}
+              maxLength='100'
+              minLength='0'
+              className={this.state.password.length > 0 ? 'has_input' : ''}
+            />
+            <label className='text_field_label'>
+              <span>Create a Password</span>
+            </label>  
+          </div>
+          
           <button type="submit" onClick={this.handleSubmit}>
-            Sign Up
+            SIGN UP
           </button>
 
         </form>
-        <p>
-          Already have an account?
-        </p>
+        <div className='switch_session_page'>
+          <p>
+            Already have an account?
+          </p>
         <Link to='/login'>Sign in!</Link>
+        </div> 
       </div>
     )
   }

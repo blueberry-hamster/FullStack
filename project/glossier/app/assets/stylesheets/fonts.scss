@@ -1,12 +1,11 @@
-// @import './colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:400,400i,600,700&display=swap');
 
-$serif: "Freight Display", Athelas, Constantias, Georgia, Times, "Times New Roman", serif;
-$sans-serif: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", Arial, sans-serif;
+$serif: 'Lora', Georgia, Times, "Times New Roman", serif;
+$sans-serif: 'Open Sans', Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 body {
   font-family: $sans-serif;
   font-style: normal;
-  font-weight: 300;
   font-size: 100%;
   background-color: $white;
   color: $black;
@@ -16,7 +15,7 @@ body {
 }
 
 h1 {
-  font-weight: bold;
+  font-weight: 700;
   color: $black;
   font-size: 2em;
 }
