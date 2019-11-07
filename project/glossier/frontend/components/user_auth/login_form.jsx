@@ -10,6 +10,7 @@ export default class SignupForm extends Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
   }
   
@@ -26,7 +27,6 @@ export default class SignupForm extends Component {
       .fail(err => {
         let $p = $('.form_input_container p');
         $p.addClass('show');
-        this.setState({ session_errors: this.props.errors[0] });
       });
   }
 
@@ -52,11 +52,21 @@ export default class SignupForm extends Component {
       })};
   }
 
+  handleDemo() {
+    const demoUser = {
+      email: 'tomato@gmail.com',
+      password: 'password'
+    }
+    this.props.loginUser(demoUser)
+      .then(() => this.props.history.push('/'));
+  }
+
   render() {
     return (
       <div className='signup session'>
         <h1>Sign in</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
+          
           <div className='form_input_container'>
             <input
               type="text"
@@ -84,17 +94,26 @@ export default class SignupForm extends Component {
               className={this.state.password.length > 0 ? 'has_input' : ''}
             />
             <label className='text_field_label'>
-              <span>Create a Password</span>
+              <span>Password</span>
             </label>
             <p className='session_errors'>
               {
-                this.state.session_errors
+                this.props.errors[0]
               }
             </p>
           </div>
           
-          <button id='submit_btn' type="submit" onClick={this.handleSubmit} disabled >
+          <button 
+            id='submit_btn' 
+            type="submit" 
+            // onClick={this.handleDemo} 
+            disabled
+          >
             <div>SIGN IN</div>
+          </button>
+
+          <button id='demo_login_btn' onClick={this.handleDemo}>
+            DEMO LOGIN
           </button>
 
         </form>
