@@ -32,6 +32,10 @@
     #submit_btn {
       margin-top: 3em;
     }
+    
+    label {
+      pointer-events: none;
+    }
 
     .form_input_container {
       position: relative;
@@ -89,7 +93,7 @@
             display: block;
           }
         }
-      }  
+      }
 
       .session_errors {
         display: none;

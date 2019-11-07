@@ -24,9 +24,9 @@ export default class SignupForm extends Component {
     e.preventDefault();
     this.props.loginUser(this.state)
       .then(() => this.props.history.push('/'))
-      .fail(err => {
-        let $p = $('.form_input_container p');
-        $p.addClass('show');
+      .fail(() => {
+        const $input = $('#password');
+        $input.addClass('invalid');
       });
   }
 

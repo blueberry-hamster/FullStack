@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: sizes
+#
+#  id         :bigint           not null, primary key
+#  imperial   :string           not null
+#  metric     :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imperial: MyString
+  metric: MyString
+
+two:
+  imperial: MyString
+  metric: MyString

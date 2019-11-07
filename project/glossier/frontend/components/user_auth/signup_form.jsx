@@ -105,7 +105,7 @@ export default class SignupForm extends Component {
             <RequiredFieldWarning field='password' />
           </div>
           
-          <button type="submit" onClick={this.handleSubmit}>
+          <button id='submit_btn' type="submit" onClick={this.handleSubmit}>
             SIGN UP
           </button>
 

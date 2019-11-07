@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: variations
+#
+#  id             :bigint           not null, primary key
+#  product_id     :string           not null
+#  variation_type :string           not null
+#  name           :string           not null
+#  primary        :boolean          default(TRUE), not null
+#  stock          :integer          default(100), not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: MyString
+  variation_type: MyString
+  name: MyString
+  primary: false
+  stock: 1
+
+two:
+  product_id: MyString
+  variation_type: MyString
+  name: MyString
+  primary: false
+  stock: 1
