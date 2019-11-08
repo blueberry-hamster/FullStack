@@ -17,7 +17,7 @@ class Variation < ApplicationRecord
   # VALIDATIONS
   validates :name, :product_id, :variation_type, :primary, :stock, presence: true
   validates :product_id, uniqueness: true
-  validates :stock :numericality => { greater_than_or_equal_to: 0}
+  # validates :stock numericality => { greater_than_or_equal_to: 0}
   #---------------------------------------------------------
 
   #---------------------------------------------------------
