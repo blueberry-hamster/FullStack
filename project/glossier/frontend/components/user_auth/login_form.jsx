@@ -52,13 +52,32 @@ export default class SignupForm extends Component {
       })};
   }
 
-  handleDemo() {
-    const demoUser = {
-      email: 'tomato@gmail.com',
-      password: 'password'
+  handleDemoLogin(email, password) {
+    if (email.length > 0) {
+      this.setState({
+        email: this.state.email += email.shift()
+      }, 
+      () => setTimeout(() => {
+        this.handleDemoLogin(email, password);
+      }, 50))
+    } else if (password.length > 0) {
+      this.setState({
+        password: this.state.password += password.shift()
+      }, 
+      () => setTimeout(() => {
+        this.handleDemoLogin(email, password);
+      }, 50))
+    } else {
+      this.props.loginUser(this.state)
+        .then(() => this.props.history.push('/'));
+
     }
-    this.props.loginUser(demoUser)
-      .then(() => this.props.history.push('/'));
+  }
+
+  handleDemo() {
+    const email ='tomato@gmail.com'.split('');
+    const password ='password'.split('');
+    this.handleDemoLogin(email, password);
   }
 
   render() {
@@ -71,6 +90,7 @@ export default class SignupForm extends Component {
             <input
               type="text"
               id='email'
+              value={this.state.email}
               onChange={this.handleInput('email')}
               maxLength='100'
               minLength='0'
@@ -88,6 +108,7 @@ export default class SignupForm extends Component {
             <input
               type="password"
               id='password'
+              value={this.state.password}
               onChange={this.handleInput('password')}
               maxLength='100'
               minLength='0'
@@ -106,7 +127,6 @@ export default class SignupForm extends Component {
           <button 
             id='submit_btn' 
             type="submit" 
-            // onClick={this.handleDemo} 
             disabled
           >
             <div>SIGN IN</div>

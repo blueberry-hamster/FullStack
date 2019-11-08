@@ -15,9 +15,19 @@
 class User < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
+  EMAIL_FORMAT = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+  PASSWORD_FORMAT = /\A
+    (?=.{6,15})        # Must contain 6-15 characters
+    (?=.*\d)           # Must contain a digit
+    (?=.*[a-z])        # Must contain a lower case character
+    (?=.*[A-Z])        # Must contain an upper case character
+    (?=.*[[:^alnum:]]) # Must contain a symbol
+  /x
   validates :email, :password_digest, presence: true
+  validates :email, format: { with: EMAIL_FORMAT } 
   validates :email, uniqueness: true
-  validates :password, length: { minimum: 6 }, allow_nil: true
+  validates :password, format: { with: PASSWORD_FORMAT }
   #---------------------------------------------------------
   
   #---------------------------------------------------------

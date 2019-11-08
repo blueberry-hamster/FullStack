@@ -12,6 +12,7 @@ export default class SignupForm extends Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.validateEmail = this.validateEmail.bind(this);
     this.addWarningIfEmpty = this.addWarningIfEmpty.bind(this);
   }
 
@@ -25,7 +26,17 @@ export default class SignupForm extends Component {
   addWarningIfEmpty(field, $element) {
     if (this.state[field].length < 1) {
       $element.addClass('invalid')
+
+      // make sure session errors do not show
+      const $input = $('#error_helper');
+      $input.removeClass('invalid');
     }
+  }
+
+  validateEmail() {
+    const properEmail = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+    return properEmail.test(this.state.email) ? true : false;
   }
 
   handleSubmit(e) {
@@ -33,13 +44,20 @@ export default class SignupForm extends Component {
     this.props.createNewUser(this.state)
       .then(() => this.props.history.push('/'))
       .fail(() => {
+        // empty fields error
         let fields = ['email', 'password'];
-        fields.forEach(field => this.addWarningIfEmpty(field, $(`#${field}`)))
+        fields.forEach(field => this.addWarningIfEmpty(field, $(`#${field}`)));
+        // incorrect input error
+        const $input = $('#error_helper');
+        $input.addClass('invalid');
       })
   }
 
   handleInput(key) {
-    return e => this.setState({ [key]: e.currentTarget.value });
+    return e => { 
+      // update state
+      this.setState({ [key]: e.currentTarget.value }) 
+    };
   }
   
   render() {
@@ -51,6 +69,7 @@ export default class SignupForm extends Component {
             <input 
               type="text" 
               id='first_name'
+              value={this.state.first_name}
               onChange={this.handleInput('first_name')}
               maxLength='100'
               minLength='0'
@@ -65,6 +84,7 @@ export default class SignupForm extends Component {
             <input 
               type="text" 
               id='last_name'
+              value={this.state.last_name}
               onChange={this.handleInput('last_name')}
               maxLength='100'
               minLength='0'
@@ -79,6 +99,7 @@ export default class SignupForm extends Component {
             <input 
               type="text" 
               id='email'
+              value={this.state.email}
               onChange={this.handleInput('email')}
               maxLength='100'
               minLength='0'
@@ -94,6 +115,7 @@ export default class SignupForm extends Component {
             <input 
               type="password" 
               id='password'
+              value={this.state.password}
               onChange={this.handleInput('password')}
               maxLength='100'
               minLength='0'
@@ -103,9 +125,19 @@ export default class SignupForm extends Component {
               <span>Create a Password</span>
             </label>
             <RequiredFieldWarning field='password' />
+            <input id='error_helper'></input>
+            <p className='session_errors'>
+              {
+                this.props.errors[0]
+              }
+            </p>
           </div>
           
-          <button id='submit_btn' type="submit" onClick={this.handleSubmit}>
+          <button 
+            id='submit_btn' 
+            type="submit" 
+            onClick={this.handleSubmit}
+          >
             SIGN UP
           </button>
 

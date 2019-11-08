@@ -24,5 +24,4 @@ class Category < ApplicationRecord
   # METHODS
   #---------------------------------------------------------
   
-  
 end

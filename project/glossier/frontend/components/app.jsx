@@ -5,7 +5,9 @@ import { AuthRoute } from '../util/route_util'
 import Header from './header/header_container'
 import LoginFormContainer from './user_auth/login_form_container';
 import SignupFormContainer from './user_auth/signup_form_container';
+
 import SplashContainer from './splash/splash_container';
+import ProductIndexContainer from './product/product_index_container';
 
 const App = () => (
   <div>
@@ -13,6 +15,7 @@ const App = () => (
 
     <AuthRoute path='/signin' component={LoginFormContainer} />
     <AuthRoute path='/signup' component={SignupFormContainer} />
+    <Route path='/products' component={ProductIndexContainer} />
     {/* <Route exact path='/' component={SplashContainer} /> */}
   </div>
 );
