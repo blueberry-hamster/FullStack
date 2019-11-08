@@ -50,6 +50,9 @@ export default class SignupForm extends Component {
         // incorrect input error
         const $input = $('#error_helper');
         $input.addClass('invalid');
+        // update error message
+        const $message = $('.session_errors:last-of-type');
+        $message.val(this.props.errors[0]);
       })
   }
 
