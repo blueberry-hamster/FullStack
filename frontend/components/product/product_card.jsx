@@ -5,7 +5,7 @@ const ProductCard = props => {
   const product = props.product;
   const productUrlName = product.name.split(' ').join('-');
   return (
-    <li>
+    <li className='product_card'>
       <div>
         {/* UNFINISHED quickview function */}
       </div>

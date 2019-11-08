@@ -1,0 +1,95 @@
+#product_index_container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 8px;
+  
+  min-width: 600px;
+  max-width: 70%;
+  background-color: rgb(240, 240, 240);
+  
+  #product_title_bar {
+    margin: 0px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #title_bar_left {
+      width: 350px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: 0.8em;
+      }
+
+      #product_list_dropdown_container {
+        position: relative;
+        height: fit-content;
+        margin: 8px auto 0px;
+
+        select {
+          box-sizing: border-box;
+          width: 232px;
+          height: 48px;
+          line-height: 16px;
+          padding: 20px 16px 8px 16px;
+          border: 1px solid $medium-light-grey;
+          border-radius: 3px;
+
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+
+            &::-ms-expand {
+              display: none;
+            }
+
+            &:focus {
+              outline: 0px;
+              border-color: $navy;
+
+              
+            }
+
+          option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0px 2px 1px;
+          }
+        }
+        
+        label {
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          white-space: nowrap;
+          color: $black;
+          pointer-events: none;
+          font-size: 0.5em;
+          padding: 10px 0px 0px 16px;
+          transition: transform 0.2s ease 0s, translate 0.2s ease 0s;
+
+          i {
+            font-size: 2em;
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+}

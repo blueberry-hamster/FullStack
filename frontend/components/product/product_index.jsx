@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductTitleBar from './product_title_bar';
-import ProductCard from './product_card';
+import ProductCategoryCards from './product_category_cards';
 
 export default class ProductIndex extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class ProductIndex extends Component {
   
   render() {
     return (
-      <div>
+      <div id='product_index_container'>
         <ProductTitleBar 
           category={this.props.category}
           count={this.props.products.length}
@@ -30,12 +30,15 @@ export default class ProductIndex extends Component {
         />
         <ul>
           {
-            this.props.products.map(product => (
-              <ProductCard 
-                key={product.id}
-                product={product}
-              />
-            ))
+            this.props.categories.map(category => {
+              let products = 'SORTED PRODUCTS';
+              return (
+                <ProductCategoryCards 
+                  category={category}
+                  products={products}
+                />
+              )
+            })
           }
         </ul>
       </div>

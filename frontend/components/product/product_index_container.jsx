@@ -5,6 +5,7 @@ import { getProducts } from '../../actions/product_actions';
 const mapStateToProps = state => {
   return {
   category: 'All',
+  categories: Object.values(state.entities.categories),
   products: Object.values(state.entities.products)
   }
 };

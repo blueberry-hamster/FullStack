@@ -67,3 +67,9 @@
 2. The product index component is showing on the page. Yay!
 3. Decided to flesh out `categories` in order to make `navbar`.
 4. 
+
+** Jbuilder.key_format camelize: :lower
+** fix casing. 
+    - HTML classnames -> kabob
+    - backend routes -> snake
+    - frontend routes -> camel

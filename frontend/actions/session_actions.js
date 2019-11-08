@@ -6,7 +6,7 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser: currentUser
+  currentUser
 });
 
 const logoutCurrentUser = () => ({
@@ -24,9 +24,7 @@ export const createNewUser = user => dispatch => signup(user)
 
 export const loginUser = user => dispatch => login(user)
   .then(user => dispatch(receiveCurrentUser(user)))
-  .fail(err => { 
-    dispatch(receiveSessionErrors(err)) 
-  });
+  .fail(err => dispatch(receiveSessionErrors(err)));
 
 export const logoutUser = () => dispatch => logout()
   .then(() => dispatch(logoutCurrentUser()))
