@@ -1,6 +1,6 @@
 # Diary
-## Phase 1: Design
 
+## Phase 1: Design
 ### 11/02/19
 1. Will start keeping a diary to keep track of thought process.
 2. Decided to split up product model into more tables to maintain a more modular, and flatter state shape.
@@ -27,3 +27,33 @@
 
 ### 11/04/19
 1. I will start on the user and user auth portion today
+
+## Phase 2: User Auth
+### 11/05/20
+1. Realized that every small detail is quite a lot of work.
+2. Discovered I can take the svg data off websites, and change their properties with the combination of CSS and React.
+3. It seems that linking CSS and React just involves many classes.
+4. Will try to git commit more.
+5. It seems that my focus on organization is paying off. It makes complex actions easier to wrap my head around.
+
+### 11/06/19
+1. Seems I am getting more into the flow of things. 
+2. Really happy that I am learning so much as I do this project.
+3. Refactoring some of the code in the form container took a lot of time.
+4. I can use regex in the future for validity testing. :)
+5. Why didn't I realize I can use JQuery eariler?
+6. Finished polishing my user auth. Happy with the results.
+7. Learned what .jbuilder files are actually for. Very happy about it.
+
+## Phase 3: Products
+### 11/06/19
+1. The schemas, sample state, and routes needs refactoring. Will start.
+2. Finally get the frontend/backend routes. Wrote out what I need for the next part.
+3. Discovered many errors in my schema. Can't believe I forgot that products have prices. That's the commerce in e-commerce.
+4. Found out how to do arrays in the db. Look at all these db data types.
+
+### 11/07/19
+1. Realized that I need some dependend-destroy relationships. Going to write associations.
+2. Must write so many validations.
+3. Added dividers to the models to keep visual organization
+4. 

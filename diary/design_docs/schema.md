@@ -13,20 +13,6 @@
 * index on `email, unique: true`
 * index on `session_token, unique: true`
 
-## `addresses`
-| column name       | data type | details                   |
-|-------------------|-----------|---------------------------|
-| `id`              | integer   | not null, primary key     |
-| `user_id`         | string    | not null, indexed, unique, foreign_key|
-| `address_1`       | string    | not null                  |
-| `address_2`       | string    |                           |
-| `city`            | string    | not null                  |
-| `state`           | string    | not null                  |
-| `zip_code`        | string    | not null                  |
-| `created_at`      | datetime  | not null                  |
-| `updated_at`      | datetime  | not null                  |
-* index on `email, unique: true`
-* index on `session_token, unique: true`
 ___
 
 
@@ -36,29 +22,27 @@ ___
 | `id`           | integer   | not null, primary key     |
 | `name`         | string    | not null, indexed, unique |
 | `tagline`      | string    | not null                  |
-| `description`  | blob      | not null                  |
-| `directions`   | blob      | not null                  |
+| `price`        | integer   | not null                  |
 | `created_at`   | datetime  | not null                  |
 | `updated_at`   | datetime  | not null                  |
 * index on `name, unique: true`
 * index on `category, unique: true`
 
-##  `product-variations`
+##  `variations`
 | column name    | data type | details                   |
 |----------------|-----------|---------------------------|
 | `id`           | integer   | not null, primary key     |
 |`product_id`    | string    | not null, indexed, unique, foreign_key|
-|`variation-type`| string    | not null                  |
+|`variation_type`| string    | not null                  |
 | `name`         | string    | not null                  |
 | `primary`      | boolean   | not null                  |
 | `stock`        | integer   | not null                  |
 | `created_at`   | datetime  | not null                  |
 | `updated_at`   | datetime  | not null                  |
 * index on `product_id, unique: true`
-* index on `category, unique: true`
 * `product_id` references `products`
 
-##  `product-description`
+##  `description`
 | column name    | data type | details                   |
 |----------------|-----------|---------------------------|
 | `id`           | integer   | not null, primary key     |
@@ -71,7 +55,7 @@ ___
 * index on `product_id, unique: true`
 * `product_id` references `products`
 
-##  `product-instructions`
+##  `instructions`
 | column name    | data type | details                   |
 |----------------|-----------|---------------------------|
 | `id`           | integer   | not null, primary key     |
@@ -122,82 +106,60 @@ ___
 | `updated_at`      | datetime  | not null                  |
 * index on `name, unique: true`
 
-## `promotions`
-| column name       | data type | details                   |
-|-------------------|-----------|---------------------------|
-| `id`              | integer   | not null, primary key     |
-| `name`            | string    | not null, indexed, unique |
-| `created_at`      | datetime  | not null                  |
-| `updated_at`      | datetime  | not null                  |
-* index on `name, unique: true`
-
 ___
 
 
-## `product-sizes-join`
+## `product-sizes`
 | column name        | data type | details                                |
 |--------------------|-----------|----------------------------------------|
 | `id`               | integer   | not null, primary key                  |
 | `product_id`       | string    | not null, indexed, unique, foreign_key |
-| `product_sizes_id` | string    | not null, indexed, foreign_key         |
+| `size_id`         | string    | not null, indexed, foreign_key         |
 | `created_at`       | datetime  | not null                               |
 | `updated_at`       | datetime  | not null                               |
 * index on `product_id`
-* index on `product_sizes_id`
+* index on `size_id`
 * `product_id` references `products, unique: true`
-* `product_sizes_id` references `product_sizes`
+* `size_id` references `sizes`
 
-## `product-categories-join`
+## `product-categories`
 | column name        | data type | details                                |
 |--------------------|-----------|----------------------------------------|
 | `id`               | integer   | not null, primary key                  |
 | `product_id`       | string    | not null, indexed, unique, foreign_key |
-| `product_categories_id` | string    | not null, indexed, foreign_key         |
+| `category_id`      | string    | not null, indexed, foreign_key         |
 | `created_at`       | datetime  | not null                               |
 | `updated_at`       | datetime  | not null                               |
 * index on `product_id`
-* index on `product_categories_id`
+* index on `category_id`
 * `product_id` references `products, unique: true`
-* `product_categories_id` references `product_categories`
+* `category_id` references `categories`
 
-## `product-ingredients-join`
+## `product-ingredients`
 | column name        | data type | details                                |
 |--------------------|-----------|----------------------------------------|
 | `id`               | integer   | not null, primary key                  |
 | `product_id`       | string    | not null, indexed, unique, foreign_key |
-| `product_ingredients_id` | string    | not null, indexed, foreign_key         |
+| `ingredient_id`    | string    | not null, indexed, foreign_key         |
 | `created_at`       | datetime  | not null                               |
 | `updated_at`       | datetime  | not null                               |
 * index on `product_id`
-* index on `product_ingredients_id`
+* index on `ingredient_id`
 * `product_id` references `products, unique: true`
-* `product_ingredients_id` references `product_ingredients`
+* `ingredient_id` references `ingredients`
 
-## `product-tags-join`
+## `product-tags`
 | column name        | data type | details                                |
 |--------------------|-----------|----------------------------------------|
 | `id`               | integer   | not null, primary key                  |
 | `product_id`       | string    | not null, indexed, unique, foreign_key |
-| `product_tags_id`  | string    | not null, indexed, foreign_key         |
+| `tag_id`           | string    | not null, indexed, foreign_key         |
 | `created_at`       | datetime  | not null                               |
 | `updated_at`       | datetime  | not null                               |
 * index on `product_id`
-* index on `product_tags_id`
+* index on `tag_id`
 * `product_id` references `products, unique: true`
-* `product_tags_id` references `product_tags`
-
-## `product-promotions-join`
-| column name        | data type | details                                |
-|--------------------|-----------|----------------------------------------|
-| `id`               | integer   | not null, primary key                  |
-| `product_id`       | string    | not null, indexed, unique, foreign_key |
-| `product_promotions_id` | string    | not null, indexed, foreign_key         |
-| `created_at`       | datetime  | not null                               |
-| `updated_at`       | datetime  | not null                               |
-* index on `product_id`
-* index on `product_promotions_id`
-* `product_id` references `products, unique: true`
-* `product_promotions_id` references `product_promotions`
+* `tag_id` references `tags`
 
 ___
 
@@ -212,7 +174,7 @@ ___
 * index on `user_id, unique: true`
 * `author_id` references `users`
 
-## `carts-products-join`
+## `carts-products`
 | column name       | data type | details                   |
 |-------------------|-----------|---------------------------|
 | `id`              | integer   | not null, primary key     |
@@ -249,7 +211,7 @@ ___
 * `address_id` references `address`
 * `payment_id` references `payment`
 
-## `order-product-join`
+## `order-product`
 | column name        | data type | details                                |
 |--------------------|-----------|----------------------------------------|
 | `id`               | integer   | not null, primary key                  |
