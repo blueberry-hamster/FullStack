@@ -56,4 +56,14 @@
 1. Realized that I need some dependend-destroy relationships. Going to write associations.
 2. Must write so many validations.
 3. Added dividers to the models to keep visual organization
+4. Made controllers, backend routes, frontend routes, api utils, actions, and reducers for products.
+5. Made seed files. Ran into a bug, unsure of how to debug it. Cannot seed.
+6. Making diagrams for the product show and navbar. These diagrams are going to be very helpful for later.
+7. Starting to make components for products. 
+8. Decided order will be product `index` -> `navbar` -> `show`
+
+###11/08/19
+1. Debugged my issue. 1-letter typos are the worst,
+2. The product index component is showing on the page. Yay!
+3. Decided to flesh out `categories` in order to make `navbar`.
 4. 

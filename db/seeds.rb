@@ -84,7 +84,19 @@ Product.create(
 
 # #---------------------------------------------------------
 # # CATEGORIES
-# Category.destroy_all
+Category.destroy_all
+Category.create(
+  name: 'Skincare'
+)
+Category.create(
+  name: 'Makeup'
+)
+Category.create(
+  name: 'Body'
+)
+Category.create(
+  name: 'Fragrance'
+)
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
@@ -104,7 +116,35 @@ Product.create(
 
 # #---------------------------------------------------------
 # # PRODUCT CATEGORIES
-# ProductCategory.destroy_all
+ProductCategory.destroy_all
+ProductCategory.create(
+  product_id: '1',
+  category_id: '1'
+)
+ProductCategory.create(
+  product_id: '2',
+  category_id: '1'
+)
+ProductCategory.create(
+  product_id: '3',
+  category_id: '1'
+)
+ProductCategory.create(
+  product_id: '4',
+  category_id: '2'
+)
+ProductCategory.create(
+  product_id: '5',
+  category_id: '2'
+)
+ProductCategory.create(
+  product_id: '6',
+  category_id: '2'
+)
+# ProductCategory.create(
+#   product_id: '7',
+#   category_id: '1'
+# )
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------

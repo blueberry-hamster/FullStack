@@ -6,7 +6,8 @@ export default class SignupForm extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      errors: this.props.errors
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,11 +23,15 @@ export default class SignupForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.loginUser(this.state)
+    let { email, password } = this.state;
+    const stateSlice = { email, password }
+    this.props.loginUser(stateSlice)
       .then(() => this.props.history.push('/'))
       .fail(() => {
         const $input = $('#password');
         $input.addClass('invalid');
+
+        this.setState({ errors: this.props.errors });
       });
   }
 
@@ -53,6 +58,7 @@ export default class SignupForm extends Component {
   }
 
   handleDemoLogin(email, password) {
+
     if (email.length > 0) {
       this.setState({
         email: this.state.email += email.shift()
@@ -75,6 +81,7 @@ export default class SignupForm extends Component {
   }
 
   handleDemo() {
+    this.setState({ email: '', password: '' });
     const email ='tomato@gmail.com'.split('');
     const password ='password'.split('');
     this.handleDemoLogin(email, password);
@@ -119,7 +126,7 @@ export default class SignupForm extends Component {
             </label>
             <p className='session_errors'>
               {
-                this.props.errors[0]
+                this.state.errors[this.state.errors.length - 1]
               }
             </p>
           </div>

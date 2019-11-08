@@ -21,7 +21,7 @@ class Product < ApplicationRecord
   # ASSOCIATIONS
   has_many :variations, dependent: :destroy
   has_one :description, dependent: :destroy
-  has_one :intruction, dependent: :destroy
+  has_one :instruction, dependent: :destroy
   
   has_one :product_size
   has_one :size, through: :product_size

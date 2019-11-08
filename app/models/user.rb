@@ -19,11 +19,11 @@ class User < ApplicationRecord
 
   PASSWORD_FORMAT = /\A
     (?=.{6,15})        # Must contain 6-15 characters
-    (?=.*\d)           # Must contain a digit
-    (?=.*[a-z])        # Must contain a lower case character
-    (?=.*[A-Z])        # Must contain an upper case character
-    (?=.*[[:^alnum:]]) # Must contain a symbol
+    (?=.*\d)           # Must contain a digit  
   /x
+    # (?=.*[a-z])        # Must contain a lower case character
+    # (?=.*[A-Z])        # Must contain an upper case character
+    # (?=.*[[:^alnum:]]) # Must contain a symbol
   validates :email, :password_digest, presence: true
   validates :email, format: { with: EMAIL_FORMAT } 
   validates :email, uniqueness: true

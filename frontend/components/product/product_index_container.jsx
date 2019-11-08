@@ -1,13 +1,16 @@
 import { connect } from 'react-redux';
 import ProductIndex from './product_index';
-// import { createNewUser } from '../../actions/session_actions';
+import { getProducts } from '../../actions/product_actions';
 
-const mapStateToProps = state => ({
-
-});
+const mapStateToProps = state => {
+  return {
+  category: 'All',
+  products: Object.values(state.entities.products)
+  }
+};
 
 const mapDispatchToProps = dispatch => ({
-  // createNewUser: user => dispatch(createNewUser(user)),
+  getProducts: () => dispatch(getProducts()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductIndex);
