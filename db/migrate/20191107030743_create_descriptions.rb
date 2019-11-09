@@ -1,7 +1,7 @@
 class CreateDescriptions < ActiveRecord::Migration[5.2]
   def change
     create_table :descriptions do |t|
-      t.string :product_id, null: false
+      t.integer :product_id, null: false
       t.string :title, null: false
       t.text :body, null: false
       t.text :notes, null: false

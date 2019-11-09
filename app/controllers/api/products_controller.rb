@@ -1,6 +1,7 @@
 class Api::ProductsController < ApplicationController
   def index
     @products = Product.all
+    @product_categories = ProductCategory.all
     render '/api/products/index'
   end
 

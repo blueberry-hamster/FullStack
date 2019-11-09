@@ -1,8 +1,8 @@
 class CreateProductIngredients < ActiveRecord::Migration[5.2]
   def change
     create_table :product_ingredients do |t|
-      t.string :product_id, null: false
-      t.string :ingredient_id, null: false
+      t.integer :product_id, null: false
+      t.integer :ingredient_id, null: false
 
       t.timestamps
     end

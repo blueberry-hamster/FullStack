@@ -1,8 +1,8 @@
 class CreateProductCategories < ActiveRecord::Migration[5.2]
   def change
     create_table :product_categories do |t|
-      t.string :product_id, null: false
-      t.string :category_id, null: false
+      t.integer :product_id, null: false
+      t.integer :category_id, null: false
 
       t.timestamps
     end

@@ -19199,3 +19199,1003 @@ Completed 200 OK in 122ms (Views: 120.4ms | ActiveRecord: 1.5ms)
 Completed 200 OK in 127ms (Views: 125.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for ::1 at 2019-11-08 16:53:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 77ms (Views: 71.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:53:24 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.9ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (10.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:54:25 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (8.9ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:54:26 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/index.json.jbuilder (7.6ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:54:27 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (7.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:54:28 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/index.json.jbuilder (7.3ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:57:58 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (27.8ms)
+Completed 200 OK in 55ms (Views: 22.8ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-08 16:57:59 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (10.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5049.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "glossier_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (161.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "glossier_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (143.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "glossier_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (351.2ms)[0m  [1m[35mCREATE DATABASE "glossier_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (264.5ms)[0m  [1m[35mCREATE DATABASE "glossier_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_categories_on_name" ON "categories"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "descriptions" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "descriptions" ("id" bigserial primary key, "product_id" character varying NOT NULL, "title" character varying NOT NULL, "body" text NOT NULL, "notes" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_descriptions_on_product_id" ON "descriptions"  ("product_id")[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_ingredients_on_name" ON "ingredients"  ("name")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructions" CASCADE[0m
+  ↳ db/schema.rb:43
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "instructions" ("id" bigserial primary key, "product_id" character varying NOT NULL, "steps" text[] NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:43
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_instructions_on_product_id" ON "instructions"  ("product_id")[0m
+  ↳ db/schema.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_categories" CASCADE[0m
+  ↳ db/schema.rb:51
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "product_categories" ("id" bigserial primary key, "product_id" character varying NOT NULL, "category_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_category_id" ON "product_categories"  ("category_id")[0m
+  ↳ db/schema.rb:51
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_product_id" ON "product_categories"  ("product_id")[0m
+  ↳ db/schema.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_ingredients" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "product_ingredients" ("id" bigserial primary key, "product_id" character varying NOT NULL, "ingredient_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_ingredient_id" ON "product_ingredients"  ("ingredient_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_product_id" ON "product_ingredients"  ("product_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_sizes" CASCADE[0m
+  ↳ db/schema.rb:69
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "product_sizes" ("id" bigserial primary key, "product_id" character varying NOT NULL, "size_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:69
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_product_id" ON "product_sizes"  ("product_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_size_id" ON "product_sizes"  ("size_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_tags" CASCADE[0m
+  ↳ db/schema.rb:78
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "product_tags" ("id" bigserial primary key, "product_id" character varying NOT NULL, "tag_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:78
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_product_id" ON "product_tags"  ("product_id")[0m
+  ↳ db/schema.rb:78
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_tag_id" ON "product_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:78
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:87
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying NOT NULL, "tagline" character varying NOT NULL, "price" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:87
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_products_on_name" ON "products"  ("name")[0m
+  ↳ db/schema.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sizes" CASCADE[0m
+  ↳ db/schema.rb:96
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "sizes" ("id" bigserial primary key, "imperial" character varying NOT NULL, "metric" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:96
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_imperial" ON "sizes"  ("imperial")[0m
+  ↳ db/schema.rb:96
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_metric" ON "sizes"  ("metric")[0m
+  ↳ db/schema.rb:96
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  ↳ db/schema.rb:105
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:105
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+  ↳ db/schema.rb:105
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:112
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "session_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:112
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "variations" CASCADE[0m
+  ↳ db/schema.rb:124
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "variations" ("id" bigserial primary key, "product_id" character varying NOT NULL, "variation_type" character varying NOT NULL, "name" character varying NOT NULL, "primary" boolean DEFAULT TRUE NOT NULL, "stock" integer DEFAULT 100 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:124
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_variations_on_product_id" ON "variations"  ("product_id")[0m
+  ↳ db/schema.rb:124
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191107034653)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191107034633),
+(20191107030555),
+(20191107034515),
+(20191107030912),
+(20191107030646),
+(20191104201925),
+(20191107030845),
+(20191107030743),
+(20191107030811),
+(20191107030937),
+(20191107034541),
+(20191107030950);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-09 01:05:32.149993"], ["updated_at", "2019-11-09 01:05:32.149993"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_categories_on_name" ON "categories"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "descriptions" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "descriptions" ("id" bigserial primary key, "product_id" character varying NOT NULL, "title" character varying NOT NULL, "body" text NOT NULL, "notes" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_descriptions_on_product_id" ON "descriptions"  ("product_id")[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_ingredients_on_name" ON "ingredients"  ("name")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructions" CASCADE[0m
+  ↳ db/schema.rb:43
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "instructions" ("id" bigserial primary key, "product_id" character varying NOT NULL, "steps" text[] NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:43
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_instructions_on_product_id" ON "instructions"  ("product_id")[0m
+  ↳ db/schema.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_categories" CASCADE[0m
+  ↳ db/schema.rb:51
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "product_categories" ("id" bigserial primary key, "product_id" character varying NOT NULL, "category_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_category_id" ON "product_categories"  ("category_id")[0m
+  ↳ db/schema.rb:51
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_product_id" ON "product_categories"  ("product_id")[0m
+  ↳ db/schema.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_ingredients" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "product_ingredients" ("id" bigserial primary key, "product_id" character varying NOT NULL, "ingredient_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_ingredient_id" ON "product_ingredients"  ("ingredient_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_product_id" ON "product_ingredients"  ("product_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_sizes" CASCADE[0m
+  ↳ db/schema.rb:69
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "product_sizes" ("id" bigserial primary key, "product_id" character varying NOT NULL, "size_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:69
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_product_id" ON "product_sizes"  ("product_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_size_id" ON "product_sizes"  ("size_id")[0m
+  ↳ db/schema.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_tags" CASCADE[0m
+  ↳ db/schema.rb:78
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "product_tags" ("id" bigserial primary key, "product_id" character varying NOT NULL, "tag_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:78
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_product_id" ON "product_tags"  ("product_id")[0m
+  ↳ db/schema.rb:78
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_tag_id" ON "product_tags"  ("tag_id")[0m
+  ↳ db/schema.rb:78
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:87
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying NOT NULL, "tagline" character varying NOT NULL, "price" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:87
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_products_on_name" ON "products"  ("name")[0m
+  ↳ db/schema.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sizes" CASCADE[0m
+  ↳ db/schema.rb:96
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "sizes" ("id" bigserial primary key, "imperial" character varying NOT NULL, "metric" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:96
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_imperial" ON "sizes"  ("imperial")[0m
+  ↳ db/schema.rb:96
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_metric" ON "sizes"  ("metric")[0m
+  ↳ db/schema.rb:96
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  ↳ db/schema.rb:105
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:105
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+  ↳ db/schema.rb:105
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:112
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "session_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:112
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:112
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "variations" CASCADE[0m
+  ↳ db/schema.rb:124
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "variations" ("id" bigserial primary key, "product_id" character varying NOT NULL, "variation_type" character varying NOT NULL, "name" character varying NOT NULL, "primary" boolean DEFAULT TRUE NOT NULL, "stock" integer DEFAULT 100 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:124
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_variations_on_product_id" ON "variations"  ("product_id")[0m
+  ↳ db/schema.rb:124
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191107034653)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191107034633),
+(20191107030555),
+(20191107034515),
+(20191107030912),
+(20191107030646),
+(20191104201925),
+(20191107030845),
+(20191107030743),
+(20191107030811),
+(20191107030937),
+(20191107034541),
+(20191107030950);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-09 01:05:32.430195"], ["updated_at", "2019-11-09 01:05:32.430195"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-11-09 01:05:32.434725"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tomato@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Tomato"], ["last_name", "Potato"], ["email", "tomato@gmail.com"], ["password_digest", "$2a$12$baIMJCkJ40ogexFAG6RxIu7cnYtVDVP..MY8eP9pghXLw4yXta.96"], ["session_token", "TtzVL5hfpe3B4gLx8pSrug"], ["created_at", "2019-11-09 01:05:32.731131"], ["updated_at", "2019-11-09 01:05:32.731131"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Milky Jelly Cleanser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Milky Jelly Cleanser"], ["tagline", "conditioning face wash"], ["price", 18], ["created_at", "2019-11-09 01:05:32.763186"], ["updated_at", "2019-11-09 01:05:32.763186"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Balm Dotcom"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Balm Dotcom"], ["tagline", "universal skin salve"], ["price", 12], ["created_at", "2019-11-09 01:05:32.766602"], ["updated_at", "2019-11-09 01:05:32.766602"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Solution"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Solution"], ["tagline", "exfoliating skin perfector"], ["price", 24], ["created_at", "2019-11-09 01:05:32.769424"], ["updated_at", "2019-11-09 01:05:32.769424"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Generation G"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Generation G"], ["tagline", "sheer matte lipstick"], ["price", 18], ["created_at", "2019-11-09 01:05:32.772203"], ["updated_at", "2019-11-09 01:05:32.772203"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Cloud Paint"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cloud Paint"], ["tagline", "seamless cheek color"], ["price", 18], ["created_at", "2019-11-09 01:05:32.774993"], ["updated_at", "2019-11-09 01:05:32.774993"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Boy Brow"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Boy Brow"], ["tagline", "grooming pomade"], ["price", 16], ["created_at", "2019-11-09 01:05:32.777661"], ["updated_at", "2019-11-09 01:05:32.777661"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Skincare"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:88
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skincare"], ["created_at", "2019-11-09 01:05:32.792414"], ["updated_at", "2019-11-09 01:05:32.792414"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Makeup"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Makeup"], ["created_at", "2019-11-09 01:05:32.795763"], ["updated_at", "2019-11-09 01:05:32.795763"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Body"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Body"], ["created_at", "2019-11-09 01:05:32.798625"], ["updated_at", "2019-11-09 01:05:32.798625"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Fragrance"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fragrance"], ["created_at", "2019-11-09 01:05:32.801596"], ["updated_at", "2019-11-09 01:05:32.801596"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", "1"], ["category_id", "1"], ["created_at", "2019-11-09 01:05:32.847614"], ["updated_at", "2019-11-09 01:05:32.847614"]]
+  ↳ db/seeds.rb:120
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:120
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "3"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "4"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", "4"], ["category_id", "2"], ["created_at", "2019-11-09 01:05:32.872205"], ["updated_at", "2019-11-09 01:05:32.872205"]]
+  ↳ db/seeds.rb:132
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:132
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:136
+  [1m[36mProductCategory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "5"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:136
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:140
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "6"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", "2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:140
+Started GET "/api/products" for ::1 at 2019-11-08 17:05:55 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jianifan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (47.7ms)
+Completed 200 OK in 92ms (Views: 34.2ms | ActiveRecord: 27.1ms)
+
+
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", "1"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (136.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "glossier_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (138.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "glossier_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (339.5ms)[0m  [1m[35mCREATE DATABASE "glossier_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (262.2ms)[0m  [1m[35mCREATE DATABASE "glossier_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5296980413388565440)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191104201925)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "session_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191104201925_create_users.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20191104201925_create_users.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20191104201925_create_users.rb:13
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191104201925"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20191107030555)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying NOT NULL, "tagline" character varying NOT NULL, "price" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030555_create_products.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_products_on_name" ON "products"  ("name")[0m
+  ↳ db/migrate/20191107030555_create_products.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030555"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateVariations (20191107030646)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "variations" ("id" bigserial primary key, "product_id" integer NOT NULL, "variation_type" character varying NOT NULL, "name" character varying NOT NULL, "primary" boolean DEFAULT TRUE NOT NULL, "stock" integer DEFAULT 100 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030646_create_variations.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_variations_on_product_id" ON "variations"  ("product_id")[0m
+  ↳ db/migrate/20191107030646_create_variations.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030646"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDescriptions (20191107030743)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "descriptions" ("id" bigserial primary key, "product_id" integer NOT NULL, "title" character varying NOT NULL, "body" text NOT NULL, "notes" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030743_create_descriptions.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_descriptions_on_product_id" ON "descriptions"  ("product_id")[0m
+  ↳ db/migrate/20191107030743_create_descriptions.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030743"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateInstructions (20191107030811)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "instructions" ("id" bigserial primary key, "product_id" integer NOT NULL, "steps" text[] NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030811_create_instructions.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_instructions_on_product_id" ON "instructions"  ("product_id")[0m
+  ↳ db/migrate/20191107030811_create_instructions.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030811"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSizes (20191107030845)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "sizes" ("id" bigserial primary key, "imperial" character varying NOT NULL, "metric" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030845_create_sizes.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_imperial" ON "sizes"  ("imperial")[0m
+  ↳ db/migrate/20191107030845_create_sizes.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_sizes_on_metric" ON "sizes"  ("metric")[0m
+  ↳ db/migrate/20191107030845_create_sizes.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030845"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCategories (20191107030912)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030912_create_categories.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_categories_on_name" ON "categories"  ("name")[0m
+  ↳ db/migrate/20191107030912_create_categories.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030912"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20191107030937)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying NOT NULL, "body" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030937_create_ingredients.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_ingredients_on_name" ON "ingredients"  ("name")[0m
+  ↳ db/migrate/20191107030937_create_ingredients.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030937"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTags (20191107030950)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107030950_create_tags.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+  ↳ db/migrate/20191107030950_create_tags.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107030950"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProductSizes (20191107034515)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "product_sizes" ("id" bigserial primary key, "product_id" integer NOT NULL, "size_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107034515_create_product_sizes.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_product_id" ON "product_sizes"  ("product_id")[0m
+  ↳ db/migrate/20191107034515_create_product_sizes.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_sizes_on_size_id" ON "product_sizes"  ("size_id")[0m
+  ↳ db/migrate/20191107034515_create_product_sizes.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107034515"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProductCategories (20191107034541)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "product_categories" ("id" bigserial primary key, "product_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107034541_create_product_categories.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_product_id" ON "product_categories"  ("product_id")[0m
+  ↳ db/migrate/20191107034541_create_product_categories.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_product_categories_on_category_id" ON "product_categories"  ("category_id")[0m
+  ↳ db/migrate/20191107034541_create_product_categories.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107034541"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProductIngredients (20191107034633)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "product_ingredients" ("id" bigserial primary key, "product_id" integer NOT NULL, "ingredient_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107034633_create_product_ingredients.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_product_id" ON "product_ingredients"  ("product_id")[0m
+  ↳ db/migrate/20191107034633_create_product_ingredients.rb:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_product_ingredients_on_ingredient_id" ON "product_ingredients"  ("ingredient_id")[0m
+  ↳ db/migrate/20191107034633_create_product_ingredients.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107034633"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProductTags (20191107034653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "product_tags" ("id" bigserial primary key, "product_id" integer NOT NULL, "tag_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191107034653_create_product_tags.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_product_id" ON "product_tags"  ("product_id")[0m
+  ↳ db/migrate/20191107034653_create_product_tags.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_product_tags_on_tag_id" ON "product_tags"  ("tag_id")[0m
+  ↳ db/migrate/20191107034653_create_product_tags.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191107034653"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-09 01:08:23.728670"], ["updated_at", "2019-11-09 01:08:23.728670"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5296980413388565440)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tomato@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Tomato"], ["last_name", "Potato"], ["email", "tomato@gmail.com"], ["password_digest", "$2a$12$mzqsmgp2piLJinorlGrWgONdWjx3dRKoi7vMBGQ8.JccF4ZlG048y"], ["session_token", "GijTMr_Z2Bd7D6UJMx4RQw"], ["created_at", "2019-11-09 01:08:32.726675"], ["updated_at", "2019-11-09 01:08:32.726675"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Milky Jelly Cleanser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Milky Jelly Cleanser"], ["tagline", "conditioning face wash"], ["price", 18], ["created_at", "2019-11-09 01:08:32.751709"], ["updated_at", "2019-11-09 01:08:32.751709"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Balm Dotcom"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Balm Dotcom"], ["tagline", "universal skin salve"], ["price", 12], ["created_at", "2019-11-09 01:08:32.755071"], ["updated_at", "2019-11-09 01:08:32.755071"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Solution"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Solution"], ["tagline", "exfoliating skin perfector"], ["price", 24], ["created_at", "2019-11-09 01:08:32.757717"], ["updated_at", "2019-11-09 01:08:32.757717"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Generation G"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Generation G"], ["tagline", "sheer matte lipstick"], ["price", 18], ["created_at", "2019-11-09 01:08:32.760363"], ["updated_at", "2019-11-09 01:08:32.760363"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Cloud Paint"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cloud Paint"], ["tagline", "seamless cheek color"], ["price", 18], ["created_at", "2019-11-09 01:08:32.763436"], ["updated_at", "2019-11-09 01:08:32.763436"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Boy Brow"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Boy Brow"], ["tagline", "grooming pomade"], ["price", 16], ["created_at", "2019-11-09 01:08:32.766247"], ["updated_at", "2019-11-09 01:08:32.766247"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Skincare"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:88
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skincare"], ["created_at", "2019-11-09 01:08:32.782015"], ["updated_at", "2019-11-09 01:08:32.782015"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Makeup"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:91
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Makeup"], ["created_at", "2019-11-09 01:08:32.785618"], ["updated_at", "2019-11-09 01:08:32.785618"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Body"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Body"], ["created_at", "2019-11-09 01:08:32.788739"], ["updated_at", "2019-11-09 01:08:32.788739"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Fragrance"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fragrance"], ["created_at", "2019-11-09 01:08:32.791591"], ["updated_at", "2019-11-09 01:08:32.791591"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:120
+  [1m[36mProductCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 1], ["category_id", 1], ["created_at", "2019-11-09 01:08:32.837097"], ["updated_at", "2019-11-09 01:08:32.837097"]]
+  ↳ db/seeds.rb:120
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:120
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:132
+  [1m[36mProductCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 4], ["category_id", 2], ["created_at", "2019-11-09 01:08:32.863919"], ["updated_at", "2019-11-09 01:08:32.863919"]]
+  ↳ db/seeds.rb:132
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:132
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:136
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:136
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:140
+  [1m[36mProductCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."product_id" = $1 LIMIT $2[0m  [["product_id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mProductCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "product_categories" WHERE "product_categories"."category_id" = $1 LIMIT $2[0m  [["category_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:140
+Started GET "/api/products" for ::1 at 2019-11-08 17:08:46 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jianifan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (55.0ms)
+Completed 200 OK in 90ms (Views: 36.5ms | ActiveRecord: 31.0ms)
+
+

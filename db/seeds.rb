@@ -25,32 +25,32 @@ User.create(
 #---------------------------------------------------------
 # PRODUCTS
 Product.destroy_all
-Product.create(
+milky_jelly_cleanser = Product.create(
   name: 'Milky Jelly Cleanser',
   tagline: 'conditioning face wash',
   price: 18
 )
-Product.create(
+balm_dotcom = Product.create(
   name: 'Balm Dotcom',
   tagline: 'universal skin salve',
   price: 12
 )
-Product.create(
+solution = Product.create(
   name: 'Solution',
   tagline: 'exfoliating skin perfector',
   price: 24
 )
-Product.create(
+generation_g = Product.create(
   name: 'Generation G',
   tagline: 'sheer matte lipstick',
   price: 18
 )
-Product.create(
+cloud_paint = Product.create(
   name: 'Cloud Paint',
   tagline: 'seamless cheek color',
   price: 18
 )
-Product.create(
+boy_brow = Product.create(
   name: 'Boy Brow',
   tagline: 'grooming pomade',
   price: 16
@@ -85,16 +85,16 @@ Product.create(
 # #---------------------------------------------------------
 # # CATEGORIES
 Category.destroy_all
-Category.create(
+skincare = Category.create(
   name: 'Skincare'
 )
-Category.create(
+makeup = Category.create(
   name: 'Makeup'
 )
-Category.create(
+body = Category.create(
   name: 'Body'
 )
-Category.create(
+fragrance = Category.create(
   name: 'Fragrance'
 )
 # #---------------------------------------------------------
@@ -118,32 +118,32 @@ Category.create(
 # # PRODUCT CATEGORIES
 ProductCategory.destroy_all
 ProductCategory.create(
-  product_id: '1',
-  category_id: '1'
+  product_id: milky_jelly_cleanser.id,
+  category_id: skincare.id
 )
 ProductCategory.create(
-  product_id: '2',
-  category_id: '1'
+  product_id: balm_dotcom.id,
+  category_id: skincare.id
 )
 ProductCategory.create(
-  product_id: '3',
-  category_id: '1'
+  product_id: solution.id,
+  category_id: skincare.id
 )
 ProductCategory.create(
-  product_id: '4',
-  category_id: '2'
+  product_id: generation_g.id,
+  category_id: makeup.id
 )
 ProductCategory.create(
-  product_id: '5',
-  category_id: '2'
+  product_id: cloud_paint.id,
+  category_id: makeup.id
 )
 ProductCategory.create(
-  product_id: '6',
-  category_id: '2'
+  product_id: boy_brow.id,
+  category_id: makeup.id
 )
 # ProductCategory.create(
 #   product_id: '7',
-#   category_id: '1'
+#   category_id: skincare.id
 # )
 # #---------------------------------------------------------
 

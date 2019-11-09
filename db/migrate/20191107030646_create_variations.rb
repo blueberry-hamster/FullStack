@@ -1,7 +1,7 @@
 class CreateVariations < ActiveRecord::Migration[5.2]
   def change
     create_table :variations do |t|
-      t.string :product_id, null: false
+      t.integer :product_id, null: false
       t.string :variation_type, null: false
       t.string :name, null: false
       t.boolean :primary, default: true, null: false
