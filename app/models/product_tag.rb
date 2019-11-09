@@ -12,7 +12,7 @@
 class ProductTag < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :tag_id, presence: true, uniqueness: true
+  validates :product_id, :tag_id, presence: true
   #---------------------------------------------------------
 
   #---------------------------------------------------------

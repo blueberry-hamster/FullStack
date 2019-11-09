@@ -16,6 +16,12 @@ export default class ProductIndex extends Component {
     this.props.getCategories();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.category !== this.props.match.params.category) {
+      console.log('new category', this.props.match.params.category);
+    } 
+  }
+
   updateSortParam(param) {
     this.setState({ sortParam: param})
   }
@@ -23,6 +29,8 @@ export default class ProductIndex extends Component {
   render() {
     return (
       <div id='product_index_container'>
+        <button onClick={() => this.props.history.push('/products/skincare')}>Skincare</button>
+        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup</button>
         <ProductTitleBar 
           category={this.props.category}
           count={this.props.products.length}

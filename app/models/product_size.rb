@@ -12,7 +12,7 @@
 class ProductSize < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :size_id, presence: true, uniqueness: true
+  validates :product_id, :size_id, presence: true
   #---------------------------------------------------------
 
   #---------------------------------------------------------

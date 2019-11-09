@@ -12,7 +12,7 @@
 class ProductIngredient < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :ingredient_id, presence: true, uniqueness: true
+  validates :product_id, :ingredient_id, presence: true
   #---------------------------------------------------------
 
   #---------------------------------------------------------

@@ -12,7 +12,7 @@
 class ProductCategory < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :category_id, presence: true, uniqueness: true
+  validates :product_id, :category_id, presence: true
   #---------------------------------------------------------
 
   #---------------------------------------------------------
