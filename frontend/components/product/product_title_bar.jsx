@@ -11,7 +11,7 @@ const ProductTitleBar = props => {
           <select 
             name="productListDropdown" 
             id="productListSort"
-            onChange={props.updateSortParam(e.target.value)}
+            onChange={() => props.updateSortParam(event.target.value)}
           >
             <option value="Product Type">Product Type</option>
             <option value="Lowest Price">Lowest Price</option>
