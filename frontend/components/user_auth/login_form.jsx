@@ -76,10 +76,11 @@ export default class SignupForm extends Component {
   }
 
   handleDemo() {
-    this.setState({ email: '', password: '' });
-    const email ='tomato@gmail.com'.split('');
-    const password ='password'.split('');
-    this.handleDemoLogin(email, password);
+    this.setState({ email: '', password: '' }, () => {
+      const email ='tomato@gmail.com'.split('');
+      const password ='password'.split('');
+      this.handleDemoLogin(email, password);
+    });
   }
 
   render() {

@@ -8,7 +8,11 @@ const ProductTitleBar = props => {
       <div id='title_bar_left'>
         <p>{ `${props.count} Items` }</p>
         <div id='product_list_dropdown_container'>
-          <select name="productListDropdown" id="productListSort">
+          <select 
+            name="productListDropdown" 
+            id="productListSort"
+            onChange={props.updateSortParam(e.target.value)}
+          >
             <option value="Product Type">Product Type</option>
             <option value="Lowest Price">Lowest Price</option>
             <option value="Highest Price">Highest Price</option>

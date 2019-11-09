@@ -17,7 +17,6 @@ export default class ProductIndex extends Component {
 
   updateSortParam(param) {
     this.setState({ sortParam: param})
-    // UNFINISHED need to add categories
   }
   
   render() {
