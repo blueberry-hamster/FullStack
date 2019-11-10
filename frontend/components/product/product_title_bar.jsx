@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProductTitleBar = props => {
-  const title = props.category === 'All' ? 'Shop All Products' : `Shop All ${props.category}`;
+  const title = props.category === undefined ? 'Shop All Products' : `Shop All ${props.category}`;
   return (
     <div id='product_title_bar'>
       <h2>{ title }</h2>

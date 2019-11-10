@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { selectProducts } from '../../reducers/selectors/product_selector';
 import ProductTitleBar from './product_title_bar';
 import ProductCategoryCards from './product_category_cards';
 
@@ -6,7 +7,7 @@ export default class ProductIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortParam: null
+      sortParam: null,
     }
     this.updateSortParam = this.updateSortParam.bind(this);
   }
@@ -14,6 +15,7 @@ export default class ProductIndex extends Component {
   componentDidMount() {
     this.props.getProducts();
     this.props.getCategories();
+    console.log(this.props.products);
   }
 
   componentDidUpdate(prevProps) {
@@ -27,10 +29,12 @@ export default class ProductIndex extends Component {
   }
   
   render() {
+    console.log();
     return (
       <div id='product_index_container'>
-        <button onClick={() => this.props.history.push('/products/skincare')}>Skincare</button>
-        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup</button>
+        <button onClick={() => this.props.history.push('/products/')}>All Products </button>
+        <button onClick={() => this.props.history.push('/products/skincare')}>Skincare </button>
+        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup </button>
         <ProductTitleBar 
           category={this.props.category}
           count={this.props.products.length}
@@ -43,8 +47,8 @@ export default class ProductIndex extends Component {
               let products = this.props.products;
               return (
                 <ProductCategoryCards 
-                  key={category.name}
-                  category={category.name}
+                  key={category}
+                  category={category}
                   products={products}
                 />
               )
