@@ -152,11 +152,11 @@ ProductCategory.create!(
   category_id: makeup.id
 )
 ProductCategory.create!(
-  product_id: priming_mosturizer_rich,
+  product_id: priming_mosturizer_rich.id,
   category_id: skincare.id
 )
 ProductCategory.create!(
-  product_id: lip_gloss,
+  product_id: lip_gloss.id,
   category_id: makeup.id
 )
 # ProductCategory.create!(

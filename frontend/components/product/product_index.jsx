@@ -15,7 +15,6 @@ export default class ProductIndex extends Component {
   componentDidMount() {
     this.props.getProducts();
     this.props.getCategories();
-    console.log(this.props.products);
   }
 
   componentDidUpdate(prevProps) {
@@ -29,6 +28,9 @@ export default class ProductIndex extends Component {
   }
   
   render() {
+    let productCount = 0;
+    Object.values(this.props.products).forEach(arr => productCount += arr.length);
+    
     return (
       <div id='product_index_container'>
         <button onClick={() => this.props.history.push('/products/')}>All Products </button>
@@ -36,7 +38,7 @@ export default class ProductIndex extends Component {
         <button onClick={() => this.props.history.push('/products/makeup')}>Makeup </button>
         <ProductTitleBar 
           category={this.props.category}
-          count={this.props.products.length}
+          count={productCount}
           updateSortParam={this.updateSortParam}
         />
         <div>

@@ -1,33 +1,29 @@
 import React, { Component } from 'react';
-import FlyoutProductCards from './flyout_product_cards';
+import NavbarCategoryButton from './navbar_category_button';
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeCategory: null
+      activeCategory: 'Shop All'
     }
   }
 
   componentDidMount() {
-    if(activeCategory) {
-
-    }
+    this.props.getProducts();
+    this.props.getCategories();
   }
   
   render() {
-    const navbarCategories = ['Shop All'].concat(this.props.categories);
+    const navbarCategories = ['Shop All'].concat(Object.keys(this.props.categories));
     
     return (
       <ul>
         {
-          navbarCategories.map(category => (
-            <FlyoutProductCards
-              category={this.state.activeCategory}
-              // FIXME filter out products later
-              products={this.props.products}
-            />
-          ))
+          navbarCategories.map(category => <NavbarCategoryButton 
+                                            category={category} 
+                                            products={this.props.products[category]}
+                                          /> )
         }
       </ul>
     )

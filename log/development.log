@@ -24968,3 +24968,2054 @@ Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.7ms)
 Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 2.6ms)
 
 
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Destroy (4.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tomato@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (14.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Tomato"], ["last_name", "Potato"], ["email", "tomato@gmail.com"], ["password_digest", "$2a$12$msHiID2F64dcI1ObKJCZvOMQYzRQgiq6sOpyKJlVbb2wyiUyC0ySC"], ["session_token", "QT3SrgE0OEaLPoKs9uoWlQ"], ["created_at", "2019-11-11 18:07:48.800232"], ["updated_at", "2019-11-11 18:07:48.800232"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (2.9ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (1.5ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (1.3ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (2.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.4ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 14]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.4ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.6ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.5ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 15]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.4ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.5ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.4ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.5ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.4ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 17]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.4ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.4ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 18]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.3ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Milky Jelly Cleanser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Milky Jelly Cleanser"], ["tagline", "conditioning face wash"], ["price", 18], ["created_at", "2019-11-11 18:07:49.020587"], ["updated_at", "2019-11-11 18:07:49.020587"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Balm Dotcom"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Balm Dotcom"], ["tagline", "universal skin salve"], ["price", 12], ["created_at", "2019-11-11 18:07:49.026815"], ["updated_at", "2019-11-11 18:07:49.026815"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Solution"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Solution"], ["tagline", "exfoliating skin perfector"], ["price", 24], ["created_at", "2019-11-11 18:07:49.032896"], ["updated_at", "2019-11-11 18:07:49.032896"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Generation G"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Generation G"], ["tagline", "sheer matte lipstick"], ["price", 18], ["created_at", "2019-11-11 18:07:49.038631"], ["updated_at", "2019-11-11 18:07:49.038631"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Cloud Paint"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Create (1.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cloud Paint"], ["tagline", "seamless cheek color"], ["price", 18], ["created_at", "2019-11-11 18:07:49.044934"], ["updated_at", "2019-11-11 18:07:49.044934"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Boy Brow"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Boy Brow"], ["tagline", "grooming pomade"], ["price", 16], ["created_at", "2019-11-11 18:07:49.052139"], ["updated_at", "2019-11-11 18:07:49.052139"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mProduct Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Priming Moisturizer Rich"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Priming Moisturizer Rich"], ["tagline", "ultrarich moisturizer"], ["price", 35], ["created_at", "2019-11-11 18:07:49.060474"], ["updated_at", "2019-11-11 18:07:49.060474"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Lip Gloss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lip Gloss"], ["tagline", "all shine, no ick"], ["price", 14], ["created_at", "2019-11-11 18:07:49.066686"], ["updated_at", "2019-11-11 18:07:49.066686"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:98
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Skincare"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:98
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skincare"], ["created_at", "2019-11-11 18:07:49.120751"], ["updated_at", "2019-11-11 18:07:49.120751"]]
+  ↳ db/seeds.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Makeup"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Makeup"], ["created_at", "2019-11-11 18:07:49.126080"], ["updated_at", "2019-11-11 18:07:49.126080"]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Body"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Body"], ["created_at", "2019-11-11 18:07:49.130975"], ["updated_at", "2019-11-11 18:07:49.130975"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Fragrance"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fragrance"], ["created_at", "2019-11-11 18:07:49.135583"], ["updated_at", "2019-11-11 18:07:49.135583"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[36mProductCategory Load (1.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:130
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:130
+  [1m[36mProductCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 19], ["category_id", 13], ["created_at", "2019-11-11 18:07:49.178550"], ["updated_at", "2019-11-11 18:07:49.178550"]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+  [1m[36mProductCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 20], ["category_id", 13], ["created_at", "2019-11-11 18:07:49.183897"], ["updated_at", "2019-11-11 18:07:49.183897"]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:138
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:138
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:138
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 21], ["category_id", 13], ["created_at", "2019-11-11 18:07:49.190113"], ["updated_at", "2019-11-11 18:07:49.190113"]]
+  ↳ db/seeds.rb:138
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:138
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:142
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:142
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:142
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 22], ["category_id", 14], ["created_at", "2019-11-11 18:07:49.195542"], ["updated_at", "2019-11-11 18:07:49.195542"]]
+  ↳ db/seeds.rb:142
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:142
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 23], ["category_id", 14], ["created_at", "2019-11-11 18:07:49.202093"], ["updated_at", "2019-11-11 18:07:49.202093"]]
+  ↳ db/seeds.rb:146
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:150
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:150
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:150
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 24], ["category_id", 14], ["created_at", "2019-11-11 18:07:49.209386"], ["updated_at", "2019-11-11 18:07:49.209386"]]
+  ↳ db/seeds.rb:150
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:150
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:154
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:154
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:154
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tomato@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (9.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Tomato"], ["last_name", "Potato"], ["email", "tomato@gmail.com"], ["password_digest", "$2a$12$Qti2YqNPjFCaOgaHyzfnCOW57iSTAJ5vyHNPHWWF7Q6zlmHMcobG2"], ["session_token", "UJMfzCpKAWWU2mGuRlKmtw"], ["created_at", "2019-11-11 18:08:24.181563"], ["updated_at", "2019-11-11 18:08:24.181563"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.8ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 19]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.8ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.7ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.7ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 20]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.4ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.3ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.3ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.3ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.3ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.3ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.3ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.4ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.4ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (5.5ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.4ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.3ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.2ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.2ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mVariation Load (0.2ms)[0m  [1m[34mSELECT "variations".* FROM "variations" WHERE "variations"."product_id" = $1[0m  [["product_id", 26]]
+  ↳ db/seeds.rb:27
+  [1m[36mDescription Load (0.2ms)[0m  [1m[34mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."product_id" = $1 LIMIT $2[0m  [["product_id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mInstruction Load (0.2ms)[0m  [1m[34mSELECT  "instructions".* FROM "instructions" WHERE "instructions"."product_id" = $1 LIMIT $2[0m  [["product_id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Milky Jelly Cleanser"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Milky Jelly Cleanser"], ["tagline", "conditioning face wash"], ["price", 18], ["created_at", "2019-11-11 18:08:24.393639"], ["updated_at", "2019-11-11 18:08:24.393639"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Balm Dotcom"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Balm Dotcom"], ["tagline", "universal skin salve"], ["price", 12], ["created_at", "2019-11-11 18:08:24.400880"], ["updated_at", "2019-11-11 18:08:24.400880"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Solution"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Solution"], ["tagline", "exfoliating skin perfector"], ["price", 24], ["created_at", "2019-11-11 18:08:24.407397"], ["updated_at", "2019-11-11 18:08:24.407397"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Generation G"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Generation G"], ["tagline", "sheer matte lipstick"], ["price", 18], ["created_at", "2019-11-11 18:08:24.412884"], ["updated_at", "2019-11-11 18:08:24.412884"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Cloud Paint"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cloud Paint"], ["tagline", "seamless cheek color"], ["price", 18], ["created_at", "2019-11-11 18:08:24.416812"], ["updated_at", "2019-11-11 18:08:24.416812"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Boy Brow"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Boy Brow"], ["tagline", "grooming pomade"], ["price", 16], ["created_at", "2019-11-11 18:08:24.421215"], ["updated_at", "2019-11-11 18:08:24.421215"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mProduct Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Priming Moisturizer Rich"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Priming Moisturizer Rich"], ["tagline", "ultrarich moisturizer"], ["price", 35], ["created_at", "2019-11-11 18:08:24.432956"], ["updated_at", "2019-11-11 18:08:24.432956"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."name" = $1 LIMIT $2[0m  [["name", "Lip Gloss"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "tagline", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lip Gloss"], ["tagline", "all shine, no ick"], ["price", 14], ["created_at", "2019-11-11 18:08:24.436016"], ["updated_at", "2019-11-11 18:08:24.436016"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:98
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Skincare"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:98
+  [1m[36mCategory Create (7.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skincare"], ["created_at", "2019-11-11 18:08:24.474680"], ["updated_at", "2019-11-11 18:08:24.474680"]]
+  ↳ db/seeds.rb:98
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Makeup"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:101
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Makeup"], ["created_at", "2019-11-11 18:08:24.489654"], ["updated_at", "2019-11-11 18:08:24.489654"]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Body"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:104
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Body"], ["created_at", "2019-11-11 18:08:24.494013"], ["updated_at", "2019-11-11 18:08:24.494013"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Fragrance"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:107
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fragrance"], ["created_at", "2019-11-11 18:08:24.498348"], ["updated_at", "2019-11-11 18:08:24.498348"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[36mProductCategory Load (2.0ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:129
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:129
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mProductCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "product_categories" WHERE "product_categories"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:130
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:130
+  [1m[36mProductCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 27], ["category_id", 17], ["created_at", "2019-11-11 18:08:24.560617"], ["updated_at", "2019-11-11 18:08:24.560617"]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+  [1m[36mProductCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 28], ["category_id", 17], ["created_at", "2019-11-11 18:08:24.565134"], ["updated_at", "2019-11-11 18:08:24.565134"]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:138
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:138
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:138
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 29], ["category_id", 17], ["created_at", "2019-11-11 18:08:24.571834"], ["updated_at", "2019-11-11 18:08:24.571834"]]
+  ↳ db/seeds.rb:138
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:138
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:142
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:142
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:142
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 30], ["category_id", 18], ["created_at", "2019-11-11 18:08:24.577760"], ["updated_at", "2019-11-11 18:08:24.577760"]]
+  ↳ db/seeds.rb:142
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:142
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 31], ["category_id", 18], ["created_at", "2019-11-11 18:08:24.583487"], ["updated_at", "2019-11-11 18:08:24.583487"]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:150
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ db/seeds.rb:150
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:150
+  [1m[36mProductCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 32], ["category_id", 18], ["created_at", "2019-11-11 18:08:24.588941"], ["updated_at", "2019-11-11 18:08:24.588941"]]
+  ↳ db/seeds.rb:150
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:150
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:154
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ db/seeds.rb:154
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:154
+  [1m[36mProductCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 33], ["category_id", 17], ["created_at", "2019-11-11 18:08:24.593430"], ["updated_at", "2019-11-11 18:08:24.593430"]]
+  ↳ db/seeds.rb:154
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:154
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mProductCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 34], ["category_id", 18], ["created_at", "2019-11-11 18:08:24.597990"], ["updated_at", "2019-11-11 18:08:24.597990"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+Started GET "/" for ::1 at 2019-11-11 10:09:06 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jianifan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 2184ms (Views: 2173.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:09:09 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:09:09 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (80.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/index.json.jbuilder (186.0ms)
+Completed 200 OK in 229ms (Views: 96.3ms | ActiveRecord: 107.0ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (100.8ms)
+Completed 200 OK in 237ms (Views: 160.8ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:11:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 171ms (Views: 166.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:11:13 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:11:13 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (13.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendered api/categories/_category.json.jbuilder (0.7ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (89.5ms)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mProductCategory Load (1.0ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (105.6ms)
+Completed 200 OK in 174ms (Views: 159.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:13:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 155ms (Views: 151.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:13:23 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:13:23 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendered api/categories/_category.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (73.6ms)
+Completed 200 OK in 147ms (Views: 145.8ms | ActiveRecord: 1.2ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (157.1ms)
+Completed 200 OK in 172ms (Views: 169.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:16:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 169ms (Views: 165.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:16:26 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:16:26 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (12.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (70.3ms)
+Completed 200 OK in 142ms (Views: 138.1ms | ActiveRecord: 3.4ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (94.2ms)
+Completed 200 OK in 167ms (Views: 153.1ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:16:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:16:33 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:16:33 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (1.0ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (77.7ms)
+Completed 200 OK in 147ms (Views: 145.7ms | ActiveRecord: 1.0ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (167.7ms)
+Completed 200 OK in 181ms (Views: 179.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:16:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 156ms (Views: 151.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:16:39 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:16:39 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by Api::CategoriesController#index as */*
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  [1m[36mProductCategory Load (16.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (135.9ms)
+Completed 200 OK in 150ms (Views: 131.3ms | ActiveRecord: 17.8ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/index.json.jbuilder (97.5ms)
+Completed 200 OK in 174ms (Views: 172.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:16:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 169ms (Views: 164.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:16:59 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:16:59 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (69.8ms)
+Completed 200 OK in 135ms (Views: 132.4ms | ActiveRecord: 1.9ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (88.4ms)
+Completed 200 OK in 164ms (Views: 161.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:17:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:17:09 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:17:09 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (61.4ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.6ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (137.7ms)
+Completed 200 OK in 151ms (Views: 149.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:19:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 180ms (Views: 176.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:19:19 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:19:19 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by Api::CategoriesController#index as */*
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (2.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (76.5ms)
+Completed 200 OK in 145ms (Views: 142.1ms | ActiveRecord: 2.9ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (152.3ms)
+Completed 200 OK in 166ms (Views: 165.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:20:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 162ms (Views: 159.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:20:04 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:20:04 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (89.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (6.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (200.3ms)
+Completed 200 OK in 214ms (Views: 124.2ms | ActiveRecord: 89.7ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (125.7ms)
+Completed 200 OK in 241ms (Views: 234.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:20:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 182ms (Views: 177.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:20:22 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:20:22 -0800
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (3.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (84.5ms)
+Completed 200 OK in 97ms (Views: 92.9ms | ActiveRecord: 3.7ms)
+
+
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (69.8ms)
+Completed 200 OK in 146ms (Views: 144.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:21:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 171ms (Views: 167.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:21:21 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:21:21 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (74.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (281.5ms)
+Completed 200 OK in 310ms (Views: 234.1ms | ActiveRecord: 75.4ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (202.9ms)
+Completed 200 OK in 290ms (Views: 286.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:21:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:21:23 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:21:23 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (7.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (124.2ms)
+Completed 200 OK in 140ms (Views: 135.5ms | ActiveRecord: 3.6ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.8ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (102.6ms)
+Completed 200 OK in 193ms (Views: 185.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:21:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 159ms (Views: 155.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:21:43 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:21:43 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  [1m[36mProductCategory Load (0.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (63.6ms)
+Completed 200 OK in 153ms (Views: 151.1ms | ActiveRecord: 1.9ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (92.6ms)
+Completed 200 OK in 180ms (Views: 177.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:23:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 605ms (Views: 602.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:23:13 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:23:13 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.6ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (70.1ms)
+Completed 200 OK in 137ms (Views: 134.6ms | ActiveRecord: 2.2ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (150.9ms)
+Completed 200 OK in 166ms (Views: 164.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:23:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 232ms (Views: 228.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:23:54 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:23:54 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by Api::CategoriesController#index as */*
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/categories/_category.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (71.7ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+Completed 200 OK in 141ms (Views: 139.4ms | ActiveRecord: 1.1ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (152.4ms)
+Completed 200 OK in 166ms (Views: 164.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:23:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:23:55 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:23:55 -0800
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  [1m[36mCategory Load (3.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/categories/index.json.jbuilder (80.1ms)
+Completed 200 OK in 165ms (Views: 161.1ms | ActiveRecord: 3.9ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mProductCategory Load (0.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (177.1ms)
+Completed 200 OK in 190ms (Views: 187.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:24:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:24:49 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:24:49 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (69.4ms)
+Completed 200 OK in 136ms (Views: 133.7ms | ActiveRecord: 1.9ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (1.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (149.0ms)
+Completed 200 OK in 162ms (Views: 158.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:26:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 165ms (Views: 161.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:26:49 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:26:49 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (10.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/categories/_category.json.jbuilder (0.6ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/categories/index.json.jbuilder (69.3ms)
+  Rendered api/products/index.json.jbuilder (82.5ms)
+Completed 200 OK in 147ms (Views: 144.3ms | ActiveRecord: 2.1ms)
+
+
+Completed 200 OK in 151ms (Views: 140.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:27:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 160ms (Views: 154.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:27:14 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:27:14 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/categories/index.json.jbuilder
+  Rendering api/products/index.json.jbuilder
+  [1m[36mCategory Load (4.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (1.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (78.1ms)
+Completed 200 OK in 171ms (Views: 166.8ms | ActiveRecord: 4.1ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (97.8ms)
+Completed 200 OK in 172ms (Views: 167.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:27:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 168ms (Views: 162.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:27:37 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:27:37 -0800
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (3.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  [1m[36mProductCategory Load (15.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (162.0ms)
+Completed 200 OK in 176ms (Views: 160.1ms | ActiveRecord: 15.8ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (91.1ms)
+Completed 200 OK in 158ms (Views: 153.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:27:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 158ms (Views: 154.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:27:49 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:27:49 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (14.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (48.1ms)
+Completed 200 OK in 125ms (Views: 108.7ms | ActiveRecord: 15.3ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.6ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (63.0ms)
+Completed 200 OK in 162ms (Views: 157.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:28:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 189ms (Views: 184.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:28:03 -0800
+Processing by Api::ProductsController#index as JSON
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:28:03 -0800
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by Api::CategoriesController#index as */*
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  [1m[36mProductCategory Load (14.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (132.5ms)
+Completed 200 OK in 146ms (Views: 130.9ms | ActiveRecord: 14.6ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (80.6ms)
+Completed 200 OK in 163ms (Views: 160.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:30:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 168ms (Views: 164.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:30:02 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:30:02 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (9.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.9ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (76.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+Completed 200 OK in 149ms (Views: 146.9ms | ActiveRecord: 2.0ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (97.7ms)
+Completed 200 OK in 173ms (Views: 162.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:30:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 165ms (Views: 162.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:30:11 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:30:11 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (62.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.6ms)
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (124.8ms)
+Completed 200 OK in 138ms (Views: 74.1ms | ActiveRecord: 63.4ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (78.9ms)
+Completed 200 OK in 155ms (Views: 152.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:56:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 234ms (Views: 229.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:57:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:57:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 372ms (Views: 369.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:57:31 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:57:31 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (5.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/categories/_category.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/categories/_category.json.jbuilder (0.0ms)
+  Rendered api/categories/index.json.jbuilder (36.0ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 1.3ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.0ms)
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (46.5ms)
+Completed 200 OK in 94ms (Views: 88.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:58:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 363ms (Views: 359.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:59:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 363ms (Views: 359.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:59:00 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:59:00 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (35.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendering api/categories/index.json.jbuilder
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/categories/_category.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.0ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (47.5ms)
+Completed 200 OK in 89ms (Views: 85.2ms | ActiveRecord: 3.6ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (101.9ms)
+Completed 200 OK in 115ms (Views: 79.5ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:59:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 380ms (Views: 377.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:59:42 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:59:42 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/categories/_category.json.jbuilder (0.2ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (46.4ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 1.7ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (57.7ms)
+Completed 200 OK in 110ms (Views: 107.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:59:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 10:59:44 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 10:59:44 -0800
+Processing by Api::CategoriesController#index as */*
+Processing by Api::ProductsController#index as JSON
+  Rendering api/categories/index.json.jbuilder
+  Rendering api/products/index.json.jbuilder
+  [1m[36mCategory Load (7.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (1.0ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (70.2ms)
+Completed 200 OK in 117ms (Views: 109.1ms | ActiveRecord: 7.3ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (70.9ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:00:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 11:00:02 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 11:00:02 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (5.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  Rendered api/categories/_category.json.jbuilder (0.7ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (47.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.5ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (66.8ms)
+Completed 200 OK in 115ms (Views: 108.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:00:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 361ms (Views: 358.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 11:00:20 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 11:00:20 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProduct Load (41.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.6ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.4ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (56.0ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 1.1ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (0.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (113.8ms)
+Completed 200 OK in 125ms (Views: 82.7ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:00:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 478ms (Views: 475.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 11:00:34 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 11:00:34 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.0ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/categories/_category.json.jbuilder (0.1ms)
+  Rendered api/categories/index.json.jbuilder (44.6ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.5ms)
+
+
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[36mProductCategory Load (1.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (57.3ms)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:35:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 359ms (Views: 355.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:36:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 362ms (Views: 359.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:38:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 11:39:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 351ms (Views: 348.8ms | ActiveRecord: 0.3ms)
+
+

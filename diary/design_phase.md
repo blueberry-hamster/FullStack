@@ -66,7 +66,14 @@
 1. Debugged my issue. 1-letter typos are the worst,
 2. The product index component is showing on the page. Yay!
 3. Decided to flesh out `categories` in order to make `navbar`.
-4. 
+
+###11/09/19
+1. Was able to make different product index pages work. Needed to use selectors to help fetch the right data from the database. 
+2. Learned how to make stateshape for product shows. Now I have to implement.
+
+###11/11/19
+1. Styled product index page.
+2. 
 
 ** Jbuilder.key_format camelize: :lower
 ** fix casing. 
