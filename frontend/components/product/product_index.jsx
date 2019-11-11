@@ -29,7 +29,6 @@ export default class ProductIndex extends Component {
   }
   
   render() {
-    console.log();
     return (
       <div id='product_index_container'>
         <button onClick={() => this.props.history.push('/products/')}>All Products </button>
@@ -40,21 +39,21 @@ export default class ProductIndex extends Component {
           count={this.props.products.length}
           updateSortParam={this.updateSortParam}
         />
-        <ul>
+        <div>
           {
-            this.props.categories.map(category => {
+            Object.keys(this.props.products).map(category => {
               // let products = 'SORTED PRODUCTS';
               let products = this.props.products;
               return (
                 <ProductCategoryCards 
                   key={category}
                   category={category}
-                  products={products}
+                  products={products[category]}
                 />
               )
             })
           }
-        </ul>
+        </div>
       </div>
     )
   }

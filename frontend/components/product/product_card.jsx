@@ -6,10 +6,10 @@ const ProductCard = props => {
   const productUrlName = product.name.split(' ').join('-');
   return (
     <li className='product_card'>
-      <div>
+      <div className='product_card_image'>
         {/* UNFINISHED quickview function */}
       </div>
-      <div>
+      <div className='product_card_info'>
         <Link to={`/products/${productUrlName}`}>
           <p className='product_name'>{ product.name }</p>
           <p className='product_tagline'>{ product.tagline }</p>

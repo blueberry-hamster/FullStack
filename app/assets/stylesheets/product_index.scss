@@ -9,5 +9,59 @@
   // background-color: rgb(240, 240, 240);
   
   @import "product_title_bar.scss";
+
+  .product_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    
+    padding-top: 2em;
+
+  }
+
+  .product_card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    vertical-align: top;
+
+    box-sizing: border-box;
+    padding: 0px 14px;
+    margin: 28px 0px 0px;
+    width: 25%;
+
+    border-radius: 3px;
+    overflow: hidden;
+
+    .product_card_image {
+      background-color: $medium-pink;
+      height: 250px;
+      // width: 185px;
+      background-size: cover;
+      // width: 100%;
+      transition: opacity 0.25s ease-in-out 0s;
+      background-position: center center;
+    }
+
+    .product_card_info {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 16px 0px;
+      box-sizing: border-box;
+
+      .product_name {
+        color: $black;
+        font-size: 1em;
+        font-weight: bold;
+
+      }
+      .product_tagline {
+        color: $black;
+        font-size: 0.75em;
+      }
+    }
+  }
   
 }

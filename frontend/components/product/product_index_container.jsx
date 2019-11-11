@@ -11,13 +11,21 @@ String.prototype.capitalize = function () {
 const mapStateToProps = (state, ownprops) => {
   const category = ownprops.match.params.category ? ownprops.match.params.category : undefined;
   const categories = category ? [category] : Object.keys(state.entities.categories);
-  console.log(`category: ${category}`);
-  console.log(`categories: ${categories}`);
-  console.log(`keys: ${Object.keys(state.entities.categories)}`);
+  let products = { category: selectProducts(state, category) };
+
+  if (category === undefined) {
+    products = {};
+    categories.forEach(category => {
+      products[category] = selectProducts(state, category)
+    })
+  }
+  // console.log(`category: ${category}`);
+  // console.log(`categories: ${categories}`);
+  // console.log(`keys: ${Object.keys(state.entities.categories)}`);
   return {
   category,
-  categories,
-  products: selectProducts(state, category)
+  // categories,
+  products
   }
 };
 
