@@ -55,7 +55,17 @@ boy_brow = Product.create!(
   tagline: 'grooming pomade',
   price: 16
 )
-# Product.create!(
+priming_mosturizer_rich = Product.create!(
+  name: 'Priming Moisturizer Rich',
+  tagline: 'ultrarich moisturizer',
+  price: 35
+)
+lip_gloss = Product.create!(
+  name: 'Lip Gloss',
+  tagline: 'all shine, no ick',
+  price: 14
+)
+# name = Product.create!(
 #   name: '',
 #   tagline: '',
 #   price:
@@ -141,8 +151,16 @@ ProductCategory.create!(
   product_id: boy_brow.id,
   category_id: makeup.id
 )
+ProductCategory.create!(
+  product_id: priming_mosturizer_rich,
+  category_id: skincare.id
+)
+ProductCategory.create!(
+  product_id: lip_gloss,
+  category_id: makeup.id
+)
 # ProductCategory.create!(
-#   product_id: '7',
+#   product_id: product.id,
 #   category_id: skincare.id
 # )
 # #---------------------------------------------------------
