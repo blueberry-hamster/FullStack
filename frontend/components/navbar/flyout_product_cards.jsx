@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import FlyoutProductCard from './flyout_product_card';
 
 export default function FlyoutMenu(props) {
-  const linkUrl = props.category === 'All' ? '/products' : `/category/${props.category}`;
+  const linkUrl = props.category === 'Shop All' ? '/products' : `/products/${props.category}`;
   return (
-    <div>
-      <h5>{ props.category }</h5>
+    <div className='flyout_product_container'>
+      <h5>Bestsellers</h5>
 
-      <ul className='navFlyoutProductCards'>
+      <ul className='flyout_product_cards'>
         {
           props.products.map(product => (
             <FlyoutProductCard product={product} />

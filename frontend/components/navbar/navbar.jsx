@@ -15,15 +15,19 @@ export default class Navbar extends Component {
   }
   
   render() {
-    const navbarCategories = ['Shop All'].concat(Object.keys(this.props.categories));
-    
+    const navbarCategories = ['Shop All'].concat(this.props.categories);
     return (
-      <ul>
+      <ul id='navbar_container'>
         {
-          navbarCategories.map(category => <NavbarCategoryButton 
-                                            category={category} 
-                                            products={this.props.products[category]}
-                                          /> )
+          navbarCategories.map(category => {
+            const products = category === 'Shop All' ? this.props.allProducts : this.props.products[category];
+          
+            return <NavbarCategoryButton 
+              key={category}
+              category={category} 
+              products={products}
+            />
+          })
         }
       </ul>
     )

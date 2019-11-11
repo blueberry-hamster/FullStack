@@ -33,9 +33,9 @@ export default class ProductIndex extends Component {
     
     return (
       <div id='product_index_container'>
-        <button onClick={() => this.props.history.push('/products/')}>All Products </button>
+        {/* <button onClick={() => this.props.history.push('/products/')}>All Products </button>
         <button onClick={() => this.props.history.push('/products/skincare')}>Skincare </button>
-        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup </button>
+        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup </button> */}
         <ProductTitleBar 
           category={this.props.category}
           count={productCount}

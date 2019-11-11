@@ -10,10 +10,10 @@ const mapStateToProps = state => {
   categories.forEach(category => {
     products[category] = selectProducts(state, category)
   })
-  
   return {
-    categories: state.entities.categories,
-    products: Object.values(state.products)
+    categories,
+    products,
+    allProducts: Object.values(state.entities.products)
   }
   };
 

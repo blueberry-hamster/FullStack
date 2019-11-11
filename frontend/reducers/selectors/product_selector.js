@@ -5,7 +5,6 @@ export const selectProducts = (state, category) => {
   
   const categoryId = state.entities.categories[category].id;
   const filteredProducts = []
-  
   Object.values(state.entities.productCategories).forEach( productCategory => {
     if (categoryId === productCategory.category_id) {
       filteredProducts.push(state.entities.products[productCategory.product_id]);
