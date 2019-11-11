@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: center;
 
+  &:hover, &:hover .flyout_product_container {
+    background-color: $light-pink;
+  }
+
   .navbar_button {
     position: relative;
     display: inline-block;
@@ -24,6 +28,10 @@
 
       .flyout_product_container {
         display: none;
+
+        h5 {
+          font-weight: bold;
+        }
       }
 
       &:hover .flyout_product_container {
@@ -39,7 +47,6 @@
         flex-direction: column;
         box-sizing: border-box;
         
-        background-color: $white;
         border-top: 1px solid $medium-light-grey;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px;
 
@@ -60,6 +67,12 @@
           -webkit-box-align: center;
           margin-bottom: 35px;
 
+          &~ a {
+            color: $black;
+            text-decoration: underline;
+            font-weight: normal;
+          }
+
           .flyout_product_card {
             display: flex;
             flex-direction: column;
@@ -72,6 +85,7 @@
               width: 144px;
               height: 200px;
               background-color: $pink;
+              margin: 15px 0px;
             }
 
             .flyout_product_card_name {
@@ -80,6 +94,7 @@
             }
 
             .flyout_product_card_tagline {
+              // background-color: red;
               font-size: 0.75em;
               font-weight: 300;
               font-weight: normal;
