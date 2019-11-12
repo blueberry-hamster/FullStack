@@ -14,7 +14,7 @@
 class Description < ApplicationRecord
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :title, :body, :notes, presence: true
+  validates :product_id, :title, :what_it_is, :why_its_special, :good_to_know, presence: true
   validates :product_id, uniqueness: true
   #---------------------------------------------------------
 

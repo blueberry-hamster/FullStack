@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 2019_11_07_034653) do
   create_table "descriptions", force: :cascade do |t|
     t.integer "product_id", null: false
     t.string "title", null: false
-    t.text "body", null: false
-    t.text "notes", null: false
+    t.text "what_it_is", null: false
+    t.text "why_its_special", null: false, array: true
+    t.text "good_to_know", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_descriptions_on_product_id", unique: true
