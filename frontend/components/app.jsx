@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util'
 
 import Header from './header/header_container';
@@ -15,11 +15,13 @@ const App = () => (
     <Header />
     <NavbarContainer />
 
-    <AuthRoute path='/signin' component={LoginFormContainer} />
-    <AuthRoute path='/signup' component={SignupFormContainer} />
-    <Route path='/products/:category?' component={ProductIndexContainer} />
-    <Route path='/products/:id' component={ProductIndexContainer} />
-    {/* <Route exact path='/' component={SplashContainer} /> */}
+    <Switch>
+      <AuthRoute path='/signin' component={LoginFormContainer} />
+      <AuthRoute path='/signup' component={SignupFormContainer} />
+      <Route path='/products/:category?' component={ProductIndexContainer} />
+      <Route path='/products/:id' component={ProductIndexContainer} />
+      {/* <Route exact path='/' component={SplashContainer} /> */}
+    </Switch>
   </div>
 );
 

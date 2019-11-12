@@ -57,13 +57,10 @@ export default class ProductIndex extends Component {
           updateSortParam={this.updateSortParam}
         />
         <div>
-          {
-            // let products = 'SORTED PRODUCTS';
-            <ProductCategoryCards 
-              key={this.props.category}
-              products={products}
-            />
-          }
+          <ProductCategoryCards 
+            key={this.props.category}
+            products={products}
+          />
         </div>
       </div>
     )

@@ -46113,3 +46113,426 @@ Processing by Api::ProductsController#index as JSON
 Completed 200 OK in 301ms (Views: 292.3ms | ActiveRecord: 4.7ms)
 
 
+Started GET "/" for ::1 at 2019-11-11 21:47:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 1170ms (Views: 1156.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:47:19 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:47:19 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendering api/categories/index.json.jbuilder
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (44.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mProductCategory Load (4.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.7ms)
+  [1m[36mCategory Load (10.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.3ms)
+  Rendered api/products/_product.json.jbuilder (3.9ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.2ms)
+  Rendered api/categories/index.json.jbuilder (304.3ms)
+Completed 200 OK in 401ms (Views: 352.2ms | ActiveRecord: 44.1ms)
+
+
+  Rendered api/products/_product.json.jbuilder (7.0ms)
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:47:20 -0800
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (2.9ms)
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (2.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (591.3ms)
+Completed 200 OK in 708ms (Views: 683.0ms | ActiveRecord: 20.3ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (1.7ms)
+Started GET "/api/products" for ::1 at 2019-11-11 21:47:20 -0800
+  Rendered api/categories/_category.json.jbuilder (2.2ms)
+  Rendered api/categories/_category.json.jbuilder (1.4ms)
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+Processing by Api::ProductsController#index as JSON
+  Rendered api/categories/index.json.jbuilder (197.8ms)
+Completed 200 OK in 294ms (Views: 284.8ms | ActiveRecord: 5.5ms)
+
+
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (300.5ms)
+Completed 200 OK in 345ms (Views: 330.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:48:04 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:48:04 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+Processing by Api::CategoriesController#index as */*
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (46.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.9ms)
+  [1m[36mProductCategory Load (5.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+  [1m[36mCategory Load (19.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (6.5ms)
+  Rendered api/categories/index.json.jbuilder (230.4ms)
+Completed 200 OK in 281ms (Views: 276.4ms | ActiveRecord: 1.3ms)
+
+
+  Rendered api/products/_product.json.jbuilder (7.0ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/products/_product.json.jbuilder (6.1ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[36mProductCategory Load (1.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (425.6ms)
+Completed 200 OK in 470ms (Views: 393.0ms | ActiveRecord: 72.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 21:50:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 1100ms (Views: 1091.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:50:58 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:50:58 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProductCategory Load (14.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (6.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mCategory Load (19.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (2.0ms)
+  Rendered api/products/_product.json.jbuilder (3.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  Rendered api/categories/_category.json.jbuilder (6.2ms)
+  Rendered api/categories/index.json.jbuilder (294.0ms)
+Completed 200 OK in 451ms (Views: 428.5ms | ActiveRecord: 6.0ms)
+
+
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:50:59 -0800
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (9.2ms)
+Processing by Api::CategoriesController#index as */*
+  [1m[36mProductCategory Load (39.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/index.json.jbuilder (621.2ms)
+Completed 200 OK in 785ms (Views: 703.7ms | ActiveRecord: 76.1ms)
+
+
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+Started GET "/api/products" for ::1 at 2019-11-11 21:50:59 -0800
+  Rendered api/categories/_category.json.jbuilder (2.4ms)
+Processing by Api::ProductsController#index as JSON
+  Rendered api/categories/_category.json.jbuilder (3.3ms)
+  Rendering api/products/index.json.jbuilder
+  Rendered api/categories/_category.json.jbuilder (1.8ms)
+  [1m[36mProduct Load (5.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.2ms)
+  [1m[36mProductCategory Load (5.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/index.json.jbuilder (278.5ms)
+Completed 200 OK in 479ms (Views: 471.2ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mCategory Load (5.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:50:59 -0800
+  Rendered api/products/_product.json.jbuilder (2.4ms)
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (2.4ms)
+  [1m[36mCategory Load (8.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/categories/_category.json.jbuilder (2.3ms)
+  Rendered api/products/_product.json.jbuilder (7.8ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/categories/_category.json.jbuilder (1.3ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/categories/index.json.jbuilder (130.6ms)
+Completed 200 OK in 193ms (Views: 180.9ms | ActiveRecord: 8.9ms)
+
+
+  [1m[36mProductCategory Load (9.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (530.8ms)
+Completed 200 OK in 588ms (Views: 558.0ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:51:00 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mProductCategory Load (1.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (3.0ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (304.0ms)
+Completed 200 OK in 336ms (Views: 325.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:51:09 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:51:09 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (6.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+Processing by Api::CategoriesController#index as */*
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProductCategory Load (57.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (73.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mCategory Load (22.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (2.0ms)
+  Rendered api/products/_product.json.jbuilder (2.4ms)
+  Rendered api/categories/_category.json.jbuilder (1.3ms)
+  Rendered api/products/_product.json.jbuilder (6.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (5.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.2ms)
+  Rendered api/categories/index.json.jbuilder (220.8ms)
+Completed 200 OK in 287ms (Views: 208.9ms | ActiveRecord: 73.8ms)
+
+
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  [1m[36mProductCategory Load (1.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (456.0ms)
+Completed 200 OK in 486ms (Views: 394.2ms | ActiveRecord: 87.9ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:51:54 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:51:54 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (19.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (9.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (21.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (2.4ms)
+  [1m[36mCategory Load (15.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  Rendered api/categories/_category.json.jbuilder (1.4ms)
+  Rendered api/categories/index.json.jbuilder (245.9ms)
+Completed 200 OK in 332ms (Views: 313.1ms | ActiveRecord: 9.3ms)
+
+
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  Rendered api/products/_product.json.jbuilder (5.9ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (403.5ms)
+Completed 200 OK in 472ms (Views: 408.9ms | ActiveRecord: 57.9ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:52:07 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:52:07 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (6.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (10.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (7.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.8ms)
+  [1m[36mCategory Load (18.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/categories/index.json.jbuilder (265.8ms)
+Completed 200 OK in 355ms (Views: 336.1ms | ActiveRecord: 10.1ms)
+
+
+  Rendered api/products/_product.json.jbuilder (5.7ms)
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (6.2ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[36mProductCategory Load (1.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (397.2ms)
+Completed 200 OK in 499ms (Views: 458.0ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 21:53:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 1139ms (Views: 1125.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-11 21:54:00 -0800
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:54:00 -0800
+Processing by Api::ProductsController#index as JSON
+Processing by Api::CategoriesController#index as */*
+  Rendering api/products/index.json.jbuilder
+  Rendering api/categories/index.json.jbuilder
+  [1m[36mProduct Load (15.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (6.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  [1m[36mProductCategory Load (6.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/categories/_category.json.jbuilder (2.2ms)
+  Rendered api/products/_product.json.jbuilder (3.2ms)
+  Rendered api/categories/_category.json.jbuilder (1.4ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/categories/_category.json.jbuilder (1.1ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/categories/_category.json.jbuilder (1.0ms)
+  Rendered api/categories/index.json.jbuilder (348.0ms)
+Completed 200 OK in 463ms (Views: 451.5ms | ActiveRecord: 6.6ms)
+
+
+  Rendered api/products/_product.json.jbuilder (6.5ms)
+Started GET "/api/categories/index" for ::1 at 2019-11-11 21:54:01 -0800
+  Rendered api/products/_product.json.jbuilder (7.7ms)
+Processing by Api::CategoriesController#index as */*
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendering api/categories/index.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[36mCategory Load (4.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/api/categories/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  Rendered api/categories/_category.json.jbuilder (1.9ms)
+  [1m[36mProductCategory Load (18.0ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (648.9ms)
+Completed 200 OK in 799ms (Views: 749.4ms | ActiveRecord: 42.8ms)
+
+
+  Rendered api/categories/_category.json.jbuilder (6.8ms)
+  Rendered api/categories/_category.json.jbuilder (2.0ms)
+Started GET "/api/products" for ::1 at 2019-11-11 21:54:01 -0800
+  Rendered api/categories/_category.json.jbuilder (4.8ms)
+  Rendered api/categories/index.json.jbuilder (266.6ms)
+Completed 200 OK in 341ms (Views: 331.9ms | ActiveRecord: 4.3ms)
+
+
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mProductCategory Load (2.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13], ["product_id", 14], ["product_id", 15], ["product_id", 16]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (2.8ms)
+  Rendered api/products/_product.json.jbuilder (6.2ms)
+  Rendered api/products/_product.json.jbuilder (2.2ms)
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[36mProductCategory Load (1.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ app/views/api/products/index.json.jbuilder:11
+  Rendered api/products/index.json.jbuilder (362.8ms)
+Completed 200 OK in 410ms (Views: 390.9ms | ActiveRecord: 8.1ms)
+
+

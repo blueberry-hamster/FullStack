@@ -16,8 +16,8 @@ const ProductTitleBar = props => {
             <option value="Product Type">Product Type</option>
             <option value="Lowest Price">Lowest Price</option>
             <option value="Highest Price">Highest Price</option>
-            <option value="Top Rated">Top Rated</option>
-            <option value="Best Sellers">Best Sellers</option>
+            {/* <option value="Top Rated">Top Rated</option> */}
+            {/* <option value="Best Sellers">Best Sellers</option> */}
           </select>
           <label htmlFor='productListSort'>
             <span>Sort by:</span>
