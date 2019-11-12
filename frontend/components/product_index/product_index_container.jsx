@@ -6,15 +6,8 @@ import { selectProducts } from '../../reducers/selectors/product_selector';
 
 const mapStateToProps = (state, ownprops) => {
   const category = ownprops.match.params.category ? ownprops.match.params.category : undefined;
-  const categories = category ? [category] : Object.keys(state.entities.categories);
-  let products = { category: selectProducts(state, category) };
+  let products = selectProducts(state, category);
 
-  if (category === undefined) {
-    products = {};
-    categories.forEach(category => {
-      products[category] = selectProducts(state, category)
-    })
-  }
   return {
   category,
   products

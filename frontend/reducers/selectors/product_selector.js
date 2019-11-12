@@ -1,5 +1,5 @@
 export const selectProducts = (state, category) => {
-  // if (!category) return Object.values(state.entities.products);
+  if (!category) return Object.values(state.entities.products);
 
   if (!state.entities.categories[category]) return [] ;
   
