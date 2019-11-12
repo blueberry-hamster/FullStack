@@ -73,6 +73,15 @@
 
 ###11/11/19
 1. Styled product index page.
+2. Added navbar. This was a difficult thing to work on because I had to work with the opening and closing of the flyout menu.
+3. Was able to implement a simple sorting feature on the product index page.
+4. Created backend for single products.
+5. Refactored backend for index, so that category info is included in the product pojo.
+6. Made filestructure for product show.
+7. Seeded some data, and decided to refactor description (the website changed).
+
+###11/12/19
+1. Doing AWS setup.
 2. 
 
 ** Jbuilder.key_format camelize: :lower
