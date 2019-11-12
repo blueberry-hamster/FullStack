@@ -96,7 +96,7 @@
               box-sizing: border-box;
               width: 144px;
               height: 200px;
-              background-color: $pink;
+              background-color: $medium-pink;
               margin: 15px 0px;
             }
 
@@ -130,4 +130,6 @@
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     pointer-events: none;
+    transition: transform .4s ease-in-out;
+    transition-delay: .1s;
 }

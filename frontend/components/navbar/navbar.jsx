@@ -26,10 +26,8 @@ export default class Navbar extends Component {
     const point = 50;
     const $flyoutMenu = $('.flyout_product_container');
     const $menu = $('#navbar_container');
-
     
     if (window.scrollY < point) {
-      // $menu.attr('margin-top', `${48 + 44 + window.scrollY}px`);
       $menu.removeClass('slide_up_enter');
       $flyoutMenu.removeClass('slide_up_enter');
     } else if (window.scrollY >= point) {
