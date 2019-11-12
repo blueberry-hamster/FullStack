@@ -215,7 +215,64 @@ fragrance = Category.create!(
 
 # #---------------------------------------------------------
 # # TAGS
-# Tag.destroy_all
+Tag.destroy_all
+brightening = Tag.create!(
+  name: 'brightening'
+)
+buildable = Tag.create!(
+  name: 'buildable'
+)
+clearing = Tag.create!(
+  name: 'clearing'
+)
+conditioning = Tag.create!(
+  name: 'conditioning'
+)
+conditioning = Tag.create!(
+  name: 'conditioning'
+)
+easy = Tag.create!(
+  name: 'easy'
+)
+enhancing = Tag.create!(
+  name: 'enhancing'
+)
+enhancing = Tag.create!(
+  name: 'enhancing'
+)
+flexible = Tag.create!(
+  name: 'flexible'
+)
+intense_hydration = Tag.create!(
+  name: 'intense hydration'
+)
+long_lasting = Tag.create!(
+  name: 'long lasting'
+)
+mosturizing = Tag.create!(
+  name: 'mosturizing'
+)
+nourishing = Tag.create!(
+  name: 'nourishing'
+)
+oxiginating = Tag.create!(
+  name: 'oxiginating'
+)
+plumping = Tag.create!(
+  name: 'plumping'
+)
+redness_reducing = Tag.create!(
+  name: 'redness reducing'
+)
+smoothing = Tag.create!(
+  name: 'smoothing'
+)
+soothing = Tag.create!(
+  name: 'soothing'
+)
+thickening = Tag.create!(
+  name: 'thickening'
+)
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
@@ -271,8 +328,115 @@ ProductCategory.create!(
 
 # #---------------------------------------------------------
 # # PRODUCT TAGS
-# ProductTag.destroy_all
+ProductTag.destroy_all
+ProductTag.create!(
+  product_id: milky_jelly_cleanser.id,
+  tag_id: smoothing.id
+)
+ProductTag.create!(
+  product_id: milky_jelly_cleanser.id,
+  tag_id: purifying.id
+)
+ProductTag.create!(
+  product_id: milky_jelly_cleanser.id,
+  tag_id: nourishing.id
+)
+ProductTag.create!(
+  product_id: balm_dotcom.id,
+  tag_id: smoothing.id
+)
+ProductTag.create!(
+  product_id: balm_dotcom.id,
+  tag_id: moisturizing.id
+)
+ProductTag.create!(
+  product_id: balm_dotcom.id,
+  tag_id: conditioning.id
+)
+ProductTag.create!(
+  product_id: solution.id,
+  tag_id: clearing.id
+)
+ProductTag.create!(
+  product_id: solution.id,
+  tag_id: brightening.id
+)
+ProductTag.create!(
+  product_id: solution.id,
+  tag_id: smoothing.id
+)
+ProductTag.create!(
+  product_id: generation_g.id,
+  tag_id: buildable.id
+)
+ProductTag.create!(
+  product_id: generation_g.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: generation_g.id,
+  tag_id: easy.id
+)
+ProductTag.create!(
+  product_id: cloud_paint.id,
+  tag_id: easy.id
+)
+ProductTag.create!(
+  product_id: cloud_paint.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: cloud_paint.id,
+  tag_id: plumping.id
+)
+ProductTag.create!(
+  product_id: boy_brow.id,
+  tag_id: thickening.id
+)
+ProductTag.create!(
+  product_id: boy_brow.id,
+  tag_id: conditioning.id
+)
+ProductTag.create!(
+  product_id: boy_brow.id,
+  tag_id: flexible.id
+)
+ProductTag.create!(
+  product_id: priming_mosturizer_rich.id,
+  tag_id: intense_hydration.id
+)
+ProductTag.create!(
+  product_id: priming_mosturizer_rich.id,
+  tag_id: redness_reducing.id
+)
+ProductTag.create!(
+  product_id: priming_mosturizer_rich.id,
+  tag_id: nourishing.id
+)
+ProductTag.create!(
+  product_id: priming_mosturizer_rich.id,
+  tag_id: oxygenating.id
+)
+ProductTag.create!(
+  product_id: lip_gloss.id,
+  tag_id: long_lasting.id
+)
+ProductTag.create!(
+  product_id: lip_gloss.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: lip_gloss.id,
+  tag_id: nourishing.id
+)
+# ProductTag.create!(
+#   product_id: product.id,
+#   tag_id: tag.id
+# )
 # #---------------------------------------------------------
+
+
+
 
 # all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_mosturizer_rich', 'lip_gloss']
 
@@ -283,3 +447,63 @@ ProductCategory.create!(
 #   return
 # end
 # mkdir_script(all_products)
+
+# all_tags = 'brightening buildable clearing conditioning conditioning easy enhancing enhancing flexible intense_hydration long_lasting mosturizing nourishing oxiginating plumping redness_reducing smoothing soothing thickening'
+
+# def seed_tags_script(all_tags) 
+#   all_tags = all_tags.split(" ") #.map(|tag| tag.sub!('_', ' '))
+#   all_tags.each do |tag|
+#     var_name = tag.downcase
+#     tag_name = tag.gsub('_', ' ')
+
+#     puts (
+#       "#{ var_name } = Tag.create!(
+#   name: '#{ tag_name }'
+# )"
+#     )
+#   end
+# end
+# seed_tags_script(all_tags)
+
+# #sort tags
+# puts all_tags.split(" ").sort.join(" ")
+
+# product_tags = [
+#   "milky_jelly_cleanser smoothing purifying nourishing", 
+#   "balm_dotcom smoothing moisturizing conditioning", 
+#   "solution clearing brightening smoothing", 
+#   "generation_g buildable enhancing easy", 
+#   "cloud_paint easy enhancing plumping", 
+#   "boy_brow thickening conditioning flexible", 
+#   "priming_mosturizer_rich intense_hydration redness_reducing nourishing oxygenating", 
+#   "lip_gloss long_lasting enhancing nourishing"
+# ]
+
+# def make_product_tag(product_name, tag_name)
+#   puts (
+#     "ProductTag.create!(
+#   product_id: #{ product_name }.id,
+#   tag_id: #{ tag_name }.id
+# )"
+#   )
+# end
+
+# def mass_make_product_tag(arr)
+#   arr.each do |set|
+#     set = set.split(" ")
+#     product_name = set.first
+#     tags = set[1..-1]
+#     tags.each do |tag_name|
+#       make_product_tag(product_name, tag_name)
+#     end
+#   end
+# end
+# mass_make_product_tag(product_tags)
+
+# https://www.glossier.com/products/boy-brow
+# https://www.glossier.com/products/milky-jelly-cleanser
+# https://www.glossier.com/products/lip-gloss
+# https://www.glossier.com/products/solution
+# https://www.glossier.com/products/balm-dotcom
+# https://www.glossier.com/products/generation-g
+# https://www.glossier.com/products/priming-moisturizer-rich
