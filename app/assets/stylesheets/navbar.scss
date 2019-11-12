@@ -1,7 +1,11 @@
 #navbar_container {
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 400;
+  background-color: $white;
 
   &:hover, &:hover .flyout_product_container {
     background-color: $light-pink;
@@ -50,6 +54,10 @@
         border-top: 1px solid $medium-light-grey;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px;
 
+          &.hidden {
+            display: none;
+          }
+
         h5 {
           display: block;
           margin-top: 25px;
@@ -71,6 +79,10 @@
             color: $black;
             text-decoration: underline;
             font-weight: normal;
+
+            &:hover {
+              color: $navy;
+            }
           }
 
           .flyout_product_card {
