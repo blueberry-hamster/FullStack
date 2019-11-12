@@ -6,7 +6,20 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find_by(name: params[:name])
+    @product = Product
+      .includes(:variations)
+      .includes(:description)
+      .includes(:instruction)
+      .includes(:size)
+      .includes(:product_size)
+      .includes(:category)
+      .includes(:product_category)
+      .includes(:ingredients)
+      .includes(:product_ingredient)
+      .includes(:tags)
+      .includes(:product_tag)
+      .find_by(id: params[:id])
+      
     render "/api/products/show"
   end
 end

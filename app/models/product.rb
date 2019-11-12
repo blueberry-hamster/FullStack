@@ -33,7 +33,7 @@ class Product < ApplicationRecord
   has_many :ingredients, through: :product_ingredient
   
   has_many :product_tag
-  has_many :tag, through: :product_tag
+  has_many :tags, through: :product_tag
   #---------------------------------------------------------
 
   #---------------------------------------------------------

@@ -1,1 +1,20 @@
-json.partial! 'api/products/product', product: @product
+product = @product
+
+variations = product.variations
+description = product.description
+instruction = product.instruction
+size = product.size
+category = product.category
+ingredients = product.ingredients
+tags = product.tags
+
+json.set! product.id do 
+  json.extract! product, :id, :name, :tagline, :price
+  json.set! :variations, variations
+  json.set! :description, description
+  json.set! :instruction, instruction
+  json.set! :size, size
+  json.set! :category, category
+  json.set! :ingredients, ingredients
+  json.set! :tags, tags
+end
