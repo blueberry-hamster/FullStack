@@ -6,7 +6,6 @@ export default function FlyoutProductCard(props) {
   const productUrlName = product.name.split(' ').join('-');
   return (
     <li 
-      key={product.id} 
       className='flyout_product_card'
     >
       <Link to={`/products/${productUrlName}`}>

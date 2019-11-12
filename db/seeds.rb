@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -272,3 +273,13 @@ ProductCategory.create!(
 # # PRODUCT TAGS
 # ProductTag.destroy_all
 # #---------------------------------------------------------
+
+# all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_mosturizer_rich', 'lip_gloss']
+
+# def mkdir_script(prodArr)
+#   prodArr.each do |prod|
+#     puts "mkdir -p #{prod}/{main,variations}"
+#   end
+#   return
+# end
+# mkdir_script(all_products)

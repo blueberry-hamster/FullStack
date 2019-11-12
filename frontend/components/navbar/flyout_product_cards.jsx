@@ -11,7 +11,10 @@ export default function FlyoutMenu(props) {
       <ul className='flyout_product_cards'>
         {
           props.products.splice(0, 6).map(product => (
-            <FlyoutProductCard product={product} />
+            <FlyoutProductCard 
+              key={product.name}
+              product={product} 
+            />
           ))
         }
       </ul>

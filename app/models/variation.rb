@@ -23,6 +23,9 @@ class Variation < ApplicationRecord
   #---------------------------------------------------------
   # ASSOCIATIONS
   belongs_to :product
+
+  has_many_attached :photos
+  has_one_attached :primary_photo
   #---------------------------------------------------------
 
   #---------------------------------------------------------

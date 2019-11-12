@@ -9,6 +9,7 @@ import SignupFormContainer from './user_auth/signup_form_container';
 
 import SplashContainer from './splash/splash_container';
 import ProductIndexContainer from './product_index/product_index_container';
+import ProductShowContainer from './product_show/product_show_container';
 
 const App = () => (
   <div>
@@ -19,7 +20,7 @@ const App = () => (
       <AuthRoute path='/signin' component={LoginFormContainer} />
       <AuthRoute path='/signup' component={SignupFormContainer} />
       <Route path='/products/:category?' component={ProductIndexContainer} />
-      <Route path='/products/:id' component={ProductIndexContainer} />
+      {/* <Route path='/products/:id' component={ProductShowContainer} /> */}
       {/* <Route exact path='/' component={SplashContainer} /> */}
     </Switch>
   </div>
