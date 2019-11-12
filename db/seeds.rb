@@ -80,7 +80,7 @@ lip_gloss = Product.create!(
 # #---------------------------------------------------------
 # # DESCRIPTION
 Description.destroy_all
-milky_jelly_cleanser_description = Description.create!(
+Description.create!(
   product_id: milky_jelly_cleanser.id,
   title: 'Everything a cleanser should be.',
   what_it_is: 'A gentle-yet-effective creamy gel face wash for all skin types',
@@ -91,7 +91,7 @@ milky_jelly_cleanser_description = Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist tested, safe for the eye area, ophthalmologist tested, appropriate for all skin types, soap free, paraben free, sulfate free, cruelty free, non-comedogenic, vegan'
 )
-balm_dotcom_description = Description.create!(
+Description.create!(
   product_id: balm_dotcom.id,
   title: 'Our cult favorite do-everything skin salve.',
   what_it_is: 'A hydrating lip balm packed with antioxidants and natural emollients to nourish dry, chafed skin—in original or seven fun flavors',
@@ -103,7 +103,7 @@ balm_dotcom_description = Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist tested, long-lasting moisture, cruelty free'
 )
-solution_description = Description.create!(
+Description.create!(
   product_id: solution.id,
   title: 'Transforms the look of skin in four weeks.',
   what_it_is: 'A gentle way to slough away dead skin to reveal a fresh, smooth complexion',
@@ -114,7 +114,7 @@ solution_description = Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist-tested, paraben free, appropriate for all skin types, cruelty free, vegan'
 )
-generation_g_description = Description.create!(
+Description.create!(
   product_id: generation_g.id,
   title: 'A new generation of lipstick.',
   what_it_is: 'A lip color that gives the look and finish of just-blotted lipstick, without the blot',
@@ -125,7 +125,7 @@ generation_g_description = Description.create!(
   ],
   good_to_know: 'cruelty free, vegan, paraben free, hypoallergenic, allergy tested, dermatologist tested'
 )
-cloud_paint_description = Description.create!(
+Description.create!(
   product_id: cloud_paint.id,
   title: 'Gel-cream blush you can’t mess up.',
   what_it_is: 'A seamless, buildable gel-cream blush that’s fun and easy to wear',
@@ -136,7 +136,7 @@ cloud_paint_description = Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist-tested, paraben free, fragrance free, cruelty free'
 )
-boy_brow_description = Description.create!(
+Description.create!(
   product_id: boy_brow.id,
   title: 'Fluffy, instantly groomed brows.',
   what_it_is: 'A brushable, creamy wax that visibly thickens, shapes, and grooms brows into place',
@@ -147,7 +147,7 @@ boy_brow_description = Description.create!(
   ],
   good_to_know: 'alcohol free, fragrance free, paraben free, cruelty free, appropriate for all skin types, hypoallergenic, ophthalmologist tested, dermatologist tested'
 )
-priming_mosturizer_rich_description = Description.create!(
+Description.create!(
   product_id: priming_mosturizer_rich.id,
   title: 'A luxurious, buttery face cream.',
   what_it_is: 'A rich, deeply moisturizing yet fast-absorbing face cream for day or night',
@@ -158,7 +158,7 @@ priming_mosturizer_rich_description = Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist tested, appropriate for all skin types, paraben free, cruelty free, non-comedogenic'
 )
-lip_gloss_description = Description.create!(
+Description.create!(
   product_id: lip_gloss.id,
   title: 'High shine without the stickiness.',
   what_it_is: 'A comfortable, long-wearing lip gloss with a glassy finish',

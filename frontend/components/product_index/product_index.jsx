@@ -26,6 +26,29 @@ export default class ProductIndex extends Component {
   updateSortParam(param) {
     this.setState({ sortParam: param})
   }
+
+  // sortProductsByParam(param = 'category', products) {
+  //   let extractedProducts = [];
+  //   Object.values(products).forEach(productList => extractedProducts = extractedProducts.concat(productList));
+  //   // debugger
+  //   switch (param) {
+
+  //     case 'Category':
+  //       return products;
+
+  //     case 'Lowest Price':
+  //       return extractedProducts.slice().sort((a, b) => (a.price > b.price) ? 1 : -1);
+
+  //     case 'Highest Price':
+  //       return extractedProducts.slice().sort((a, b) => (a.price > b.price) ? -1 : 1);
+
+  //     // case 'best sellers':
+  //     //   return
+
+  //     default:
+  //       return products;
+  //   }
+  // }
   
   render() {
     let productCount = 0;
@@ -33,9 +56,6 @@ export default class ProductIndex extends Component {
     
     return (
       <div id='product_index_container'>
-        {/* <button onClick={() => this.props.history.push('/products/')}>All Products </button>
-        <button onClick={() => this.props.history.push('/products/skincare')}>Skincare </button>
-        <button onClick={() => this.props.history.push('/products/makeup')}>Makeup </button> */}
         <ProductTitleBar 
           category={this.props.category}
           count={productCount}
