@@ -1,12 +1,17 @@
 import React from 'react'
+import Tag from './tag';
 
 export default function Tags(props) {
-  debugger
-  return (
-    <div>
-      {
-        props.tags.map(tag => <Tag name={tag.name} />)
-      }
-    </div>
-  )
+  return (<div id='tags-container'>
+    {
+      props.tags.map(tag => {
+        return (
+          <div className='tag'>
+            <Tag name={tag.name} />
+            <p>{ tag.name }</p>
+          </div>
+        )
+      })
+    }
+  </div>)
 }

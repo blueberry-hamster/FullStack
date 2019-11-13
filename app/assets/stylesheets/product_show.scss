@@ -7,8 +7,6 @@
   min-width: 500px;
   max-width: 90%;
 
-  
-
   #product-show-main {
     display: flex;
     flex-direction: row;
@@ -95,7 +93,6 @@
         }
       }
     }
-
   
     #product-show-right-container {
       display: flex;
@@ -152,11 +149,94 @@
         #good-to-know {
           margin-top: 1em;
         }
-        
       }
 
+      #tags-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1.2em 0;
+        box-sizing: border-box;
+
+        .tag {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 25%;
+          
+          svg {
+            max-width: 42px;
+            max-height: 42px;
+          }
+
+          p {
+            text-transform: capitalize;
+            font-size: 0.95em;
+          }
+        }
+      }
+
+      .add-to-cart-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+
+        .adding-btn {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+
+          border-radius: 3px;
+          width: 72px;
+          padding: 6px 0;
+          margin-right: 10px;
+          height: 40px;
+          
+          background-color: $white;
+          border: 1px solid $black;
+          text-align: center;
+
+          .minus-btn, .plus-btn, .num-display {
+            flex: 1 1;
+            text-align: center;
+          }
+
+          button {
+            cursor: pointer;
+          }
+        }
+
+        .add-to-bag-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 40px;
+          width: 100%;
+          margin: 16px 0px;
+          padding: 7px 6px;
+          
+          font-weight: 600;
+          text-align: center;
+          text-transform: uppercase;
+          color: $white;
+          
+          background-color: $black;
+          border-radius: 3px;
+          flex: 1 1 0%;
+          
+          cursor: pointer;
+          transition: all 0.15s linear 0s;
+
+            &:hover {
+              background-color: $light-black;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px, rgba(0, 0, 0, 0.5) 0px 0px 0.5px;
+            }
+        }
+      }
       
     }
   }
-  
 }

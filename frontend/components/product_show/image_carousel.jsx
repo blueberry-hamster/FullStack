@@ -6,7 +6,7 @@ export default class ImageCarousel extends Component {
     super(props);
     this.state = {
       activeImage: null, //should be default img
-      images: ['a', 'b', 'c'] // should be actual inages 
+      images: ['a', 'b', 'c', 'd', 'e'] // should be actual inages 
     }
     this.updateActiveImage = this.updateActiveImage.bind(this);
   }
