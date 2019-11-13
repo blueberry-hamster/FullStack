@@ -4,7 +4,7 @@ import ImageCarouselIcon from './image_carousel_icon';
 export default class ImageCarousel extends Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       activeImage: null, //should be default img
       images: ['a', 'b', 'c'] // should be actual inages 
     }
@@ -30,7 +30,7 @@ export default class ImageCarousel extends Component {
         </div>
         <ul id='carousel-nav'>
           {
-            images.map((image, i) => <ImageCarouselIcon 
+            this.state.images.map((image, i) => <ImageCarouselIcon 
               key={i}
               image={image} 
               updateActiveImage={this.updateActiveImage}

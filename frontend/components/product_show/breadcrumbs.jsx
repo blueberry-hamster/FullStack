@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function Breadcrumbs(props) {
-  const product = props.product.name;
+  const product = props.product;
   const category = product.category.name;
   return (
     <div id='breadcrumbs-container'>

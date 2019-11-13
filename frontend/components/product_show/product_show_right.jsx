@@ -8,6 +8,15 @@ export default class ProductShowRight extends Component {
     const product = this.props.product;
     const tags = product.tags;
     const description = product.description;
+    // console.log(`
+    // product.name: ${product.name}
+    // product.tagline: ${product.tagline}
+    // product.size: ${product.size}
+    // description.title: ${description.title}
+    // description.what_it_is: ${description.what_it_is}
+    // description.why_its_special[0]: ${description.why_its_special[0]}
+    // description.good_to_know: ${description.good_to_know}
+    // `)
     return (
       <div id='product-show-right-container'>
         <div id='product-show-main-info'>
@@ -15,7 +24,7 @@ export default class ProductShowRight extends Component {
           <div id='product-show-title'>
             <h1>{ product.name }</h1>
 
-            <div>
+            <div id='product-under-title'>
               <span>{ product.tagline }</span>
               <span>{ product.size }</span>
             </div>
@@ -24,20 +33,20 @@ export default class ProductShowRight extends Component {
           <div id='product-show-description'>
             <h2>{ description.title }</h2>
 
-            <p>
+            <p id='what-it-is'>
               <strong>What it is:</strong>
               { description.what_it_is }
             </p>
 
-            <p>
+            <p id='why-its-special'>
               <strong>Why it’s special:</strong>
             </p>
 
             <ul>
-              { description.why_its_special.map(bullet => <li>{ bullet }</li>) }
+              { description.why_its_special.map((bullet, i) => <li key={i}>{ bullet }</li>) }
             </ul>
 
-            <p>
+            <p id='good-to-know'>
               <strong>Good to know: </strong>
               { description.good_to_know }
             </p>
@@ -45,8 +54,8 @@ export default class ProductShowRight extends Component {
           </div>
         </div>
         
-        <Tags tags={tags} />
-        <AddToCart product={this.props.product} />
+        {/* <Tags tags={tags} />
+        <AddToCart product={product} /> */}
       </div>
     )
   }
