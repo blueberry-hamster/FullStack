@@ -19,7 +19,7 @@ export default class ProductShow extends Component {
     return (
       <div id='product-show-container'>
         <BreadCrumbs product={product} />
-        <ImageCarousel product={product} /> {/* FIXME pass img getter */}
+        <ImageCarousel product={product} /> 
         <ProductShowRight product={product} />
         {/* FIXME reviews will go here */}
       </div>

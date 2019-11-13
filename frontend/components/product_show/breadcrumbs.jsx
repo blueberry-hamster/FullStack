@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-redux-router';
+import { Link } from 'react-router-dom';
 
 export default function Breadcrumbs(props) {
   const product = props.product.name;

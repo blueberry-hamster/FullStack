@@ -15,7 +15,7 @@ const ProductCard = props => {
           <p className='product_tagline'>{ product.tagline }</p>
         </Link>
         <div>
-          {/* onClick={ props.addToBag(product.id) } */} 
+          {/* onClick={ props.addToBag(productUrlName) } */} 
           <button> 
             <div>{`ADD TO BAG - $${product.price}`}</div>
           </button>

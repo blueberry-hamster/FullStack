@@ -12,7 +12,6 @@ export default class ImageCarousel extends Component {
   }
 
   componentDidMount() {
-    // fetch images
   }
 
   handleClick(e) {
