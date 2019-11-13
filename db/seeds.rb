@@ -228,8 +228,14 @@ clearing = Tag.create!(
 conditioning = Tag.create!(
   name: 'conditioning'
 )
+conditioning = Tag.create!(
+  name: 'conditioning'
+)
 easy = Tag.create!(
   name: 'easy'
+)
+enhancing = Tag.create!(
+  name: 'enhancing'
 )
 enhancing = Tag.create!(
   name: 'enhancing'
@@ -243,20 +249,17 @@ intense_hydration = Tag.create!(
 long_lasting = Tag.create!(
   name: 'long lasting'
 )
-moisturizing = Tag.create!(
-  name: 'moisturizing'
+mosturizing = Tag.create!(
+  name: 'mosturizing'
 )
 nourishing = Tag.create!(
   name: 'nourishing'
 )
-oxygenating = Tag.create!(
-  name: 'oxygenating'
+oxiginating = Tag.create!(
+  name: 'oxiginating'
 )
 plumping = Tag.create!(
   name: 'plumping'
-)
-purifying = Tag.create!(
-  name: 'purifying'
 )
 redness_reducing = Tag.create!(
   name: 'redness reducing'
@@ -445,6 +448,25 @@ ProductTag.create!(
 # end
 # mkdir_script(all_products)
 
+# all_tags = 'brightening buildable clearing conditioning conditioning easy enhancing enhancing flexible intense_hydration long_lasting mosturizing nourishing oxiginating plumping redness_reducing smoothing soothing thickening'
+
+# def seed_tags_script(all_tags) 
+#   all_tags = all_tags.split(" ") #.map(|tag| tag.sub!('_', ' '))
+#   all_tags.each do |tag|
+#     var_name = tag.downcase
+#     tag_name = tag.gsub('_', ' ')
+
+#     puts (
+#       "#{ var_name } = Tag.create!(
+#   name: '#{ tag_name }'
+# )"
+#     )
+#   end
+# end
+# seed_tags_script(all_tags)
+
+# #sort tags
+# puts all_tags.split(" ").sort.join(" ")
 
 # product_tags = [
 #   "milky_jelly_cleanser smoothing purifying nourishing", 
@@ -466,38 +488,17 @@ ProductTag.create!(
 #   )
 # end
 
-# all_tags = []
-
-# def mass_make_product_tag(arr, all_tags)
+# def mass_make_product_tag(arr)
 #   arr.each do |set|
 #     set = set.split(" ")
 #     product_name = set.first
 #     tags = set[1..-1]
 #     tags.each do |tag_name|
-#       all_tags.push(tag_name)
 #       make_product_tag(product_name, tag_name)
 #     end
 #   end
 # end
-# mass_make_product_tag(product_tags, all_tags)
-
-# #sort tags
-# all_tags =  all_tags.uniq.sort.join(" ")
-
-# def seed_tags_script(all_tags) 
-#   all_tags.each do |tag|
-#     var_name = tag.downcase
-#     tag_name = tag.gsub('_', ' ')
-
-#     puts (
-#       "#{ var_name } = Tag.create!(
-#   name: '#{ tag_name }'
-# )"
-#     )
-#   end
-# end
-# seed_tags_script(all_tags)
-
+# mass_make_product_tag(product_tags)
 
 # https://www.glossier.com/products/boy-brow
 # https://www.glossier.com/products/milky-jelly-cleanser
@@ -506,5 +507,3 @@ ProductTag.create!(
 # https://www.glossier.com/products/balm-dotcom
 # https://www.glossier.com/products/generation-g
 # https://www.glossier.com/products/priming-moisturizer-rich
-
-#product.tag_ids = [tag1.id, tag2.id]

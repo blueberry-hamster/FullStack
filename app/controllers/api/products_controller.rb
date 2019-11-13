@@ -8,7 +8,6 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    # debugger
     name = params[:name].gsub('-', ' ')
     @product = Product
       .includes(:variations)

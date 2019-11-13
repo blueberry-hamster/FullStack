@@ -7,7 +7,6 @@ size = product.size
 category = product.category
 ingredients = product.ingredients
 tags = product.tags
-
 json.set! product.name do 
   json.extract! product, :id, :name, :tagline, :price
   json.set! :variations, variations

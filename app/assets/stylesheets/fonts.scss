@@ -6,7 +6,8 @@ $sans-serif: 'Open Sans', Helvetica, "Helvetica Neue", Arial, sans-serif;
 body {
   font-family: $sans-serif;
   font-style: normal;
-  font-size: 100%;
+  font-weight: 300;
+  font-size: 14px;
   background-color: $white;
   color: $black;
   line-height: 1.5;
@@ -15,15 +16,19 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 600;
   color: $black;
   font-size: 2em;
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: 600;
   color: $black;
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+strong {
+  font-weight: 600;
 }
 
 p {

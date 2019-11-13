@@ -11,20 +11,20 @@ export default class ProductShow extends Component {
   }
   
   componentDidMount() {
-    // debugger
     const name = this.props.match.params.name.replace(/-/g, ' ');
     this.props.getProduct(name);    
   }
   
   render() {
     const product = this.props.product;
-    // debugger
     if (product === undefined) return <span></span>;
     return (
       <div id='product-show-container'>
         <BreadCrumbs product={product} />
-        <ImageCarousel product={product} /> 
-        <ProductShowRight product={product} />
+        <div id='product-show-main'>
+          <ImageCarousel product={product} /> {/* FIXME pass img getter */}
+          <ProductShowRight product={product} />
+        </div>
         {/* FIXME reviews will go here */}
       </div>
     )
