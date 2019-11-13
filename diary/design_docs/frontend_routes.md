@@ -3,11 +3,13 @@ Our components are organized as follows:
 
 * `Root`
     * `App`
+        * `Header`
         * `NavBar`
+            * `FlyoutMenu`
         * (main component goes here)
         * `Footer`
-        * The following routes, defined in `App`, will render components between `NavBar` and `Footer`.
 
+* The following routes, defined in `App`, will render components between `NavBar` and `Footer`.
 * `/`
   * `Splash`
 * `/login`
@@ -15,18 +17,22 @@ Our components are organized as follows:
 * `/signup`
   * `SignupForm`
 
-* `/products`
-    * `ProductIndex`
+* `/products/:category?`
+    * `ProductShow`
+        * `ProductTitleBar`
+        * `ProductCard`
 * `/products/:productName`
     * `ProductShow`
+        * `BreadCrumbs`
+        * `ImageCarousel`
+        * `ProductShowRight`
+            * `Tags`
 
-* `/category/:category`
-    * `CategoryShow`
-
-* `/new_checkout`
-    * `CheckoutEmail`
-    * `CheckoutAddress`
-    * `CheckoutShipping`
-    * `CheckoutPayment`
-    * `CheckoutConfirm`
+* `/checkout`
+    * `CheckoutMain`
+        * `CheckoutEmail`
+        * `CheckoutAddress`
+        * `CheckoutShipping`
+        * `CheckoutPayment`
+        * `CheckoutConfirm`
 

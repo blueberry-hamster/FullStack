@@ -8,13 +8,13 @@ export default function Breadcrumbs(props) {
     <div id='breadcrumbs-container'>
       <ul>
         <li>
-          <span onClick={() => props.history.push('/')}>Home</span>
+          <Link to={'/'}>Home</Link>
         </li>
         <li>
-          <span onClick={() => props.history.push('/products')}>Products</span>
+          <Link to={'/products'}>Products</Link>
         </li>
         <li>
-          <span onClick={() => props.history.push(`/poducts/${category}`)}>{ category }</span>
+          <Link to={`/poducts/${category}`}>{ category }</Link>
         </li>
         <li>
           { product.name }

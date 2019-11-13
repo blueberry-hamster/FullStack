@@ -22,18 +22,18 @@ ___
 | `id`           | integer   | not null, primary key     |
 | `name`         | string    | not null, indexed, unique |
 | `tagline`      | string    | not null                  |
+| `category`     | string    | not null                  |
 | `price`        | integer   | not null                  |
 | `created_at`   | datetime  | not null                  |
 | `updated_at`   | datetime  | not null                  |
 * index on `name, unique: true`
-* index on `category, unique: true`
 
 ##  `variations`
 | column name    | data type | details                   |
 |----------------|-----------|---------------------------|
 | `id`           | integer   | not null, primary key     |
-|`product_id`    | string    | not null, indexed, unique, foreign_key|
-|`variation_type`| string    | not null                  |
+| `product_id`   | string    | not null, indexed, unique, foreign_key|
+| `variation_type`| string   | not null                  |
 | `name`         | string    | not null                  |
 | `primary`      | boolean   | not null                  |
 | `stock`        | integer   | not null                  |
@@ -48,8 +48,9 @@ ___
 | `id`           | integer   | not null, primary key     |
 | `product_id`   | string    | not null, indexed, unique, foreign_key|
 | `title`        | string    | not null                  |
-| `body`         | string    | not null                  |
-| `notes`        | string    | not null                  |
+| `what_it_is`   | string    | not null                  |
+| `why_its_special`| array   | not null                  |
+| `good_to_know` | string    | not null                  |
 | `created_at`   | datetime  | not null                  |
 | `updated_at`   | datetime  | not null                  |
 * index on `product_id, unique: true`
@@ -60,7 +61,7 @@ ___
 |----------------|-----------|---------------------------|
 | `id`           | integer   | not null, primary key     |
 | `product_id`   | string    | not null, indexed, unique, foreign_key|
-| `steps`        | blob      | not null                  |
+| `steps`        | array     | not null                  |
 | `created_at`   | datetime  | not null                  |
 | `updated_at`   | datetime  | not null                  |
 * index on `product_id, unique: true`

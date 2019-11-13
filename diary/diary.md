@@ -82,7 +82,18 @@
 
 ###11/12/19
 1. Doing AWS setup.
-2. 
+2. Seeded some photos into AWS.
+3. Started stying the product show page.
+4. Decided to change routes to product name instead of id. Made custom route, changed reducer, modify some names.
+5. Ran into git issue. Can't commit and lost 2 files.
+6. Grabbed tag svgs off of site.
+7. Change fonts slightly. Decided on using a lighter bold.
+
+###11/13/19
+1. Fixed git issue. This was very nerve-wracking. I thought I lost my code.
+2. Styled tags and checkout buttons on product show.
+3. re-alligned product show.
+4. 
 
 ** Jbuilder.key_format camelize: :lower
 ** fix casing. 
