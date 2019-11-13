@@ -8,6 +8,6 @@ export const getProducts = () => (
 export const getProduct = name => (
   $.ajax({
     method: 'GET',
-    url: `/api/product/${name}`
+    url: `/api/products/${name}`
   })
 );

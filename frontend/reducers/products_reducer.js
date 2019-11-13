@@ -9,8 +9,9 @@ const productReducer = (state = {}, action) => {
       return action.payload.products;
     
     case RECEIVE_PRODUCT:
-      newState[action.product.id] = action.product;
-      return newState;
+      // newState[action.product.id] = action.product;
+      debugger
+      return action.product;
   
     default:
       return state;

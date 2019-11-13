@@ -11,11 +11,15 @@ export default class ProductShow extends Component {
   }
   
   componentDidMount() {
-    this.props.getProduct(this.props.match.params.id);    
+    // debugger
+    const name = this.props.match.params.name.replace(/-/g, ' ');
+    this.props.getProduct(name);    
   }
   
   render() {
     const product = this.props.product;
+    // debugger
+    if (product === undefined) return <span></span>;
     return (
       <div id='product-show-container'>
         <BreadCrumbs product={product} />

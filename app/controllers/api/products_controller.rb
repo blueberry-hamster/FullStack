@@ -8,6 +8,8 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
+    # debugger
+    name = params[:name].gsub('-', ' ')
     @product = Product
       .includes(:variations)
       .includes(:description)
@@ -20,7 +22,7 @@ class Api::ProductsController < ApplicationController
       .includes(:product_ingredient)
       .includes(:tags)
       .includes(:product_tag)
-      .find_by(id: params[:id])
+      .find_by(name: name)
       
     render "/api/products/show"
   end
