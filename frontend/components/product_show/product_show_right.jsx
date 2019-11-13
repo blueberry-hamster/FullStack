@@ -8,15 +8,6 @@ export default class ProductShowRight extends Component {
     const product = this.props.product;
     const tags = product.tags;
     const description = product.description;
-    // console.log(`
-    // product.name: ${product.name}
-    // product.tagline: ${product.tagline}
-    // product.size: ${product.size}
-    // description.title: ${description.title}
-    // description.what_it_is: ${description.what_it_is}
-    // description.why_its_special[0]: ${description.why_its_special[0]}
-    // description.good_to_know: ${description.good_to_know}
-    // `)
     return (
       <div id='product-show-right-container'>
         <div id='product-show-main-info'>
@@ -54,8 +45,8 @@ export default class ProductShowRight extends Component {
           </div>
         </div>
         
-        {/* <Tags tags={tags} />
-        <AddToCart product={product} /> */}
+        <Tags tags={tags} />
+        <AddToCart product={product} />
       </div>
     )
   }

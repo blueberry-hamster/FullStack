@@ -14,15 +14,23 @@ export default class ProductShow extends Component {
     const name = this.props.match.params.name.replace(/-/g, ' ');
     this.props.getProduct(name);    
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.name !== prevProps.match.params.name) {
+      this.props.getProduct(this.props.match.params.name.replace(/-/g, ' '));
+    }
+  }
   
   render() {
     const product = this.props.product;
     if (product === undefined) return <span></span>;
     return (
       <div id='product-show-container'>
-        <BreadCrumbs product={product} />
         <div id='product-show-main'>
-          <ImageCarousel product={product} /> {/* FIXME pass img getter */}
+          <div id='product-show-left-container'>
+            <BreadCrumbs product={product} />
+            <ImageCarousel product={product} /> {/* FIXME pass img getter */}
+          </div>
           <ProductShowRight product={product} />
         </div>
         {/* FIXME reviews will go here */}

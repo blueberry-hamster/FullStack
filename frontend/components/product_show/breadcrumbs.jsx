@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 
 export default function Breadcrumbs(props) {
   const product = props.product;
-  const category = product.category.name;
+  const category = product.category.name.toLowerCase();
   return (
     <div id='breadcrumbs-container'>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <span onClick={() => props.history.push('/')}>Home</span>
         </li>
         <li>
-          <Link to={'/products'}>Products</Link>
+          <span onClick={() => props.history.push('/products')}>Products</span>
         </li>
         <li>
-          <Link to={`/poducts/${category}`}>{ category }</Link>
+          <span onClick={() => props.history.push(`/poducts/${category}`)}>{ category }</span>
         </li>
         <li>
           { product.name }

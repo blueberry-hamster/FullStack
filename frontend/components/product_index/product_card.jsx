@@ -10,7 +10,7 @@ const ProductCard = props => {
         {/* UNFINISHED quickview function */}
       </div>
       <div className='product_card_info'>
-        <Link to={`/products/${productUrlName}`}>
+        <Link to={`/product/${productUrlName}`}>
           <p className='product_name'>{ product.name }</p>
           <p className='product_tagline'>{ product.tagline }</p>
         </Link>
