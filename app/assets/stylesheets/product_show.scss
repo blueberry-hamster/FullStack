@@ -7,6 +7,9 @@
   min-width: 500px;
   max-width: 90%;
 
+  // temp
+  padding-bottom: 350px;
+
   #product-show-main {
     display: flex;
     flex-direction: row;
@@ -26,7 +29,7 @@
         font-size: 0.85em;
         text-transform: lowercase;
     
-        span {
+        a {
           color: $black;
     
           &:hover {

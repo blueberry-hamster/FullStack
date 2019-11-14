@@ -5,10 +5,10 @@ const ProductCard = props => {
   const product = props.product;
   const productUrlName = product.name.split(' ').join('-');
   return (
-    <li className='product_card'>
-      <div className='product_card_image'>
+    <li className='product_card' key={product.id}>
+      <Link to={`/product/${productUrlName}`} className='product_card_image'>
         {/* UNFINISHED quickview function */}
-      </div>
+      </Link>
       <div className='product_card_info'>
         <Link to={`/product/${productUrlName}`}>
           <p className='product_name'>{ product.name }</p>

@@ -5,27 +5,27 @@ export default function SkinFirst(props) {
   const products = Object.values(props.products).filter(product => product.category === 'Skincare').slice(0,4);
   
   return (
-    <div id='skin-first-container'>
-      <div id='skin-first-header'>
+    <div className='splash-product-container'>
+      <div className='splash-product-header'>
         <h2>
           Skin first.
         </h2>
         <p>
           Our skincare essentials are designed to make you look and feel your glowy, dewy best before you even think about makeup.
         </p>
-        <button>
+        <button onClick={() => props.history.push('/products/skincare')}>
           SHOP ALL SKINCARE
         </button>
       </div>
-      <div id='skin-first-show-container'>
-        <div id='skin-first-img'>
+      <div className='splash-product-show-container'>
+        <div className='splash-product-img'>
           {/* FIXME IMG GOES HERE  */}
         </div>
-        <div id='skin-fist-cards'>
+        <ul className='splash-product-cards'>
           {
             products.map(product => <ProductCard product={product} />)
           }
-        </div>
+        </ul>
       </div>
     </div>
   )

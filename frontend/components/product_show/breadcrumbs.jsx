@@ -14,7 +14,7 @@ export default function Breadcrumbs(props) {
           <Link to={'/products'}>Products</Link>
         </li>
         <li>
-          <Link to={`/poducts/${category}`}>{ category }</Link>
+          <Link to={`/products/${category}`}>{ category }</Link>
         </li>
         <li>
           { product.name }

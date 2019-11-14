@@ -1,7 +1,7 @@
 import React from 'react'
 import GLogo from './g_logo';
 
-export default function MainFrame() {
+export default function MainFrame(props) {
   return (
     <div id='main-frame'>
       <GLogo />
@@ -15,7 +15,7 @@ export default function MainFrame() {
         <p id='splash-subtitle'>
           Find your makeup and skincare favorites, and save with sets
         </p>
-        <button>
+        <button onClick={() => props.history.push('/products')}>
           SHOP ALL
         </button>
       </div>

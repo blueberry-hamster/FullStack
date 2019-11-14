@@ -3,6 +3,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 74px 8px 30px 8px;
+  padding-bottom: 150px;
   
   min-width: 500px;
   max-width: 900px;
@@ -19,95 +20,6 @@
     
     padding-top: 2em;
 
+    @import "product_card.scss";
   }
-
-  .product_card {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column nowrap;
-    position: relative;
-    vertical-align: top;
-    flex-grow: 1;
-
-    box-sizing: border-box;
-    padding: 0px 14px;
-    margin: 28px 0px 0px;
-    width: 25%;
-    height: 100%;
-
-    .product_card_image {
-      border-top-right-radius: 3px;
-      border-top-left-radius: 3px;
-      background-color: $medium-pink;
-      height: 250px;
-      width: 100%;
-      background-size: cover;
-      transition: opacity 0.25s ease-in-out 0s;
-      background-position: center center;
-    }
-
-    .product_card_info {
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px;
-      display: flex;
-      flex-direction: column;
-      padding: 16px 16px 0px;
-      box-sizing: border-box;
-      background-color: $light-pink;
-
-      .product_name {
-        color: $black;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-      
-      .product_tagline {
-        color: $black;
-        font-size: 0.90em;
-        font-weight: 400;
-        margin: 3px 0px;
-      }
-      
-      a:hover {
-        .product_name, .product_tagline {
-          color: $navy;
-          text-decoration: underline;
-        }
-      }
-
-      button {
-        position: relative;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin: 16px 0px;
-        padding: 7px 6px;
-        width: 100%;
-        height: auto;
-        min-height: 40px;
-        
-        color: $black;
-        background-color: $white;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 0.75em;
-
-        box-shadow: none;
-        -webkit-appearance: none;
-        cursor: pointer;
-
-        max-width: unset;
-        transition: all 0.15s linear 0s;
-        
-        border: 1px solid $black;
-        border-radius: 3px;
-
-        &:hover {
-          box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px, rgba(0, 0, 0, 0.5) 0px 0px 0.5px;
-        }
-      }
-    }
-  }
-  
 }
