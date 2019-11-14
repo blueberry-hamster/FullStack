@@ -31,8 +31,6 @@ milky_jelly_cleanser = Product.create!(
   tagline: 'conditioning face wash',
   price: 18
 )
-milky_jelly_cleanser_img_0 = open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/products/milky_jelly_cleanser/main/Default-1.jpg')
-milky_jelly_cleanser.photos.attach(io: milky_jelly_cleanser_img_0, filename: 'Default-1.jpg')
 balm_dotcom = Product.create!(
   name: 'Balm Dotcom',
   tagline: 'universal skin salve',
@@ -448,23 +446,20 @@ fast_absorbtion = Tag.create!(
 smudge_resistant = Tag.create!(
   name: 'smudge resistant'
 )
-long_lasting = Tag.create!(
-  name: 'long lasting'
-)
 lengthening = Tag.create!(
   name: 'lengthening'
 )
 sheer = Tag.create!(
   name: 'sheer'
 )
-enhancing = Tag.create!(
-  name: 'enhancing'
-)
 energizing = Tag.create!(
   name: 'energizing'
 )
 illuminating = Tag.create!(
   name: 'illuminating'
+)
+hydrating = Tag.create!(
+  name: 'hydrating'
 )
 # #---------------------------------------------------------
 
@@ -791,11 +786,17 @@ ProductTag.create!(
 #   tag_id: tag.id
 # )
 # #---------------------------------------------------------
+# SEED IMAGES
+# #---------------------------------------------------------
+# milky_jelly_cleanser.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/products/milky_jelly_cleanser/0.jpg'), filename: '0.jpg')
+
+# #---------------------------------------------------------
+# #---------------------------------------------------------
 
 
 
 
-all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_moisturizer_rich', 'lip_gloss', 'futuredew', 'pro_tip', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'haloscope', 'brow_flick', 'super_bounce', 'super_glow', 'priming_moisturizer']
+# all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_moisturizer_rich', 'lip_gloss', 'futuredew', 'pro_tip', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'haloscope', 'brow_flick', 'super_bounce', 'super_glow', 'priming_moisturizer']
 
 # def mkdir_script(prodArr)
 #   prodArr.each do |prod|

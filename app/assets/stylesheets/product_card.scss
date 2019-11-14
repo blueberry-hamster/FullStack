@@ -10,13 +10,14 @@
     padding: 0px 14px;
     margin: 28px 0px 0px;
     width: 25%;
+    max-width: 25%;
     height: 100%;
 
     .product_card_image {
       border-top-right-radius: 3px;
       border-top-left-radius: 3px;
       background-color: $medium-pink;
-      height: 250px;
+      height: 230px;
       width: 100%;
       background-size: cover;
       transition: opacity 0.25s ease-in-out 0s;
