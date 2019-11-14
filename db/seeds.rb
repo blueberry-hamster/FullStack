@@ -788,15 +788,126 @@ ProductTag.create!(
 # #---------------------------------------------------------
 # SEED IMAGES
 # #---------------------------------------------------------
-# milky_jelly_cleanser.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/products/milky_jelly_cleanser/0.jpg'), filename: '0.jpg')
+milky_jelly_cleanser.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/milky_jelly_cleanser/0.jpg'), filename: '0.jpg')
+milky_jelly_cleanser.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/milky_jelly_cleanser/1.jpg'), filename: '1.jpg')
+milky_jelly_cleanser.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/milky_jelly_cleanser/2.jpg'), filename: '2.jpg')
 
+balm_dotcom.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/balm_dotcom/0.png'), filename: '0.png')
+balm_dotcom.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/balm_dotcom/1.png'), filename: '1.png')
+balm_dotcom.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/balm_dotcom/2.png'), filename: '2.png')
+
+solution.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/solution/0.jpg'), filename: '0.jpg')
+solution.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/solution/1.jpg'), filename: '1.jpg')
+solution.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/solution/2.jpg'), filename: '2.jpg')
+
+generation_g.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/generation_g/0.jpg'), filename: '0.jpg')
+generation_g.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/generation_g/1.jpg'), filename: '1.jpg')
+generation_g.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/generation_g/2.jpg'), filename: '2.jpg')
+
+cloud_paint.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/cloud_paint/0.jpg'), filename: '0.jpg')
+cloud_paint.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/cloud_paint/1.jpg'), filename: '1.jpg')
+cloud_paint.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/cloud_paint/2.jpg'), filename: '2.jpg')
+
+boy_brow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/boy_brow/0.jpg'), filename: '0.jpg')
+boy_brow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/boy_brow/1.jpg'), filename: '1.jpg')
+boy_brow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/boy_brow/2.jpg'), filename: '2.jpg')
+
+priming_moisturizer_rich.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer_rich/0.jpg'), filename: '0.jpg')
+priming_moisturizer_rich.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer_rich/1.jpg'), filename: '1.jpg')
+priming_moisturizer_rich.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer_rich/2.jpg'), filename: '2.jpg')
+
+lip_gloss.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lip_gloss/0.jpg'), filename: '0.jpg')
+lip_gloss.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lip_gloss/1.jpg'), filename: '1.jpg')
+lip_gloss.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lip_gloss/2.jpg'), filename: '2.jpg')
+
+futuredew.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/futuredew/0.png'), filename: '0.png')
+futuredew.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/futuredew/1.jpg'), filename: '1.jpg')
+futuredew.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/futuredew/2.png'), filename: '2.png')
+
+pro_tip.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/pro_tip/0.jpg'), filename: '0.jpg')
+pro_tip.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/pro_tip/1.jpg'), filename: '1.jpg')
+pro_tip.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/pro_tip/2.jpg'), filename: '2.jpg')
+
+body_hero_daily_oil_wash.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_oil_wash/0.jpg'), filename: '0.jpg')
+body_hero_daily_oil_wash.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_oil_wash/1.jpg'), filename: '1.jpg')
+body_hero_daily_oil_wash.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_oil_wash/2.jpg'), filename: '2.jpg')
+
+body_hero_daily_perfecting_cream.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_perfecting_cream/0.jpg'), filename: '0.jpg')
+body_hero_daily_perfecting_cream.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_perfecting_cream/1.jpg'), filename: '1.jpg')
+body_hero_daily_perfecting_cream.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/body_hero_daily_perfecting_cream/2.jpg'), filename: '2.jpg')
+
+lash_stick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lash_stick/0.jpg'), filename: '0.jpg')
+lash_stick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lash_stick/1.jpg'), filename: '1.jpg')
+lash_stick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/lash_stick/2.jpg'), filename: '2.jpg')
+
+haloscope.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/haloscope/0.jpg'), filename: '0.jpg')
+haloscope.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/haloscope/1.jpg'), filename: '1.jpg')
+haloscope.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/haloscope/2.jpg'), filename: '2.png')
+
+brow_flick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/brow_flick/0.jpg'), filename: '0.jpg')
+brow_flick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/brow_flick/1.jpg'), filename: '1.jpg')
+brow_flick.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/brow_flick/2.jpg'), filename: '2.jpg')
+
+super_bounce.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_bounce/0.jpg'), filename: '0.jpg')
+super_bounce.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_bounce/1.jpg'), filename: '1.jpg')
+super_bounce.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_bounce/2.jpg'), filename: '2.jpg')
+
+super_glow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_glow/0.jpg'), filename: '0.jpg')
+super_glow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_glow/1.jpg'), filename: '1.jpg')
+super_glow.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/super_glow/2.jpg'), filename: '2.jpg')
+
+priming_moisturizer.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer/0.jpg'), filename: '0.jpg')
+priming_moisturizer.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer/1.jpg'), filename: '1.jpg')
+priming_moisturizer.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/priming_moisturizer/2.jpg'), filename: '2.jpg')
+# #---------------------------------------------------------
+# CLEAR SEED IMAGES
+# #---------------------------------------------------------
+milky_jelly_cleanser.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/milky_jelly_cleanser.webp'), filename: 'milky_jelly_cleanser.jpg')
+
+balm_dotcom.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/balm_dotcom.webp'), filename: 'balm_dotcom.jpg')
+
+solution.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/solution.webp'), filename: 'solution.jpg')
+
+generation_g.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/generation_g.webp'), filename: 'generation_g.jpg')
+
+cloud_paint.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/cloud_paint.webp'), filename: 'cloud_paint.jpg')
+
+boy_brow.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/boy_brow.webp'), filename: 'boy_brow.jpg')
+
+lip_gloss.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/lip_gloss.webp'), filename: 'lip_gloss.jpg')
+
+futuredew.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/futuredew.webp'), filename: 'futuredew.jpg')
+
+body_hero_daily_oil_wash.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/body_hero_daily_oil_wash.webp'), filename: 'body_hero_daily_oil_wash.jpg')
+
+body_hero_daily_perfecting_cream.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/body_hero_daily_perfecting_cream.webp'), filename: 'body_hero_daily_perfecting_cream.jpg')
+
+lash_stick.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/lash_stick.webp'), filename: 'lash_stick.jpg')
+
+brow_flick.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/brow_flick.webp'), filename: 'brow_flick.jpg')
 # #---------------------------------------------------------
 # #---------------------------------------------------------
-
-
-
 
 # all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_moisturizer_rich', 'lip_gloss', 'futuredew', 'pro_tip', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'haloscope', 'brow_flick', 'super_bounce', 'super_glow', 'priming_moisturizer']
+
+# clear_photo_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'lip_gloss', 'futuredew', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'brow_flick']
+# def seed_clear_images(products)
+#   products.each do |product|
+#     puts "#{ product }.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/#{ product }.webp'), filename: '#{ product }.jpg')"
+#     puts ""
+#   end
+# end
+# seed_clear_images(clear_photo_products)
+
+# def seed_images(products)
+#   products.each do |product|
+#     (0..2).each do |num|
+#       puts "#{ product }.photos.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/#{ product }/#{ num }.jpg'), filename: '#{ num }.jpg')"
+#     end
+#     puts ""
+#   end
+# end
+# seed_images(all_products)
 
 # def mkdir_script(prodArr)
 #   prodArr.each do |prod|

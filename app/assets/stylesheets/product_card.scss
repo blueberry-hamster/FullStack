@@ -17,11 +17,16 @@
       border-top-right-radius: 3px;
       border-top-left-radius: 3px;
       background-color: $medium-pink;
-      height: 230px;
+      height: 275px;
       width: 100%;
       background-size: cover;
       transition: opacity 0.25s ease-in-out 0s;
       background-position: center center;
+
+      img {
+        width: inherit;
+        // height: inherit;
+      }
     }
 
     .product_card_info {

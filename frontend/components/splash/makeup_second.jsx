@@ -24,7 +24,7 @@ export default function SkinFirst(props) {
           }
         </ul>
         <div className='splash-product-img'>
-          {/* FIXME IMG GOES HERE  */}
+          <img src="https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_assets/makeup_second.jpg" alt="girl with lipstick"/>
         </div>
       </div>
     </div>

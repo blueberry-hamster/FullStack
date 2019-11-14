@@ -6,7 +6,9 @@ export default function MainFrame(props) {
     <div id='main-frame'>
       <GLogo />
       <div id='splash-img'>
-        {/* FIXME IMG GOES HERE */}
+        <video autoPlay loop>
+          <source src="https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_assets/front_video.mp4" type="video/mp4"></source>
+        </video>
       </div>
       <div id='splash-right'>
         <h2 id='splash-title'>

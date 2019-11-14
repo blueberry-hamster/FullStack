@@ -30,8 +30,9 @@ export default class ProductIndex extends Component {
     let productsCopy = products.slice();
     
     switch (param) {
-      case 'Category':
-        return productsCopy.sort((a, b) => (a.category > b.category) ? 1 : -1);
+      case 'Product Type':
+        return productsCopy.sort((a, b) => {
+          return (a.category > b.category) ? -1 : 1});
 
       case 'Lowest Price':
         return productsCopy.sort((a, b) => (a.price > b.price) ? 1 : -1);

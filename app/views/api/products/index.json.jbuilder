@@ -7,6 +7,10 @@ json.products do
       if product.photos.attached?
         json.photoUrls product.photos.map { |photo| url_for(photo)}
       end
+      if product.clear_photo.attached?
+        # debugger
+        json.clear_photo url_for(product.clear_photo)
+      end
     end
   end
 end

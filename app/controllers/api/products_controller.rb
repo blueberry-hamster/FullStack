@@ -1,6 +1,6 @@
 class Api::ProductsController < ApplicationController
   def index
-    @products = Product.all 
+    @products = Product.with_attached_photos.all 
       .includes(:product_category)
       .includes(:category)
 
@@ -11,6 +11,7 @@ class Api::ProductsController < ApplicationController
   def show
     name = params[:name].gsub('-', ' ')
     @product = Product
+      .with_attached_photos
       .includes(:variations)
       .includes(:description)
       .includes(:instruction)

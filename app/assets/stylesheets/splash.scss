@@ -16,28 +16,33 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    min-height: 420px;
+    min-height: 530px;
     border-bottom: 1px solid $medium-light-grey;
 
     svg {
       position: absolute;
-      top: 17px;
-      right: 346px;
-      height: 130px;
+      top: 60px;
+      right: 256px;
+      height: 150px;
     }
 
     #splash-img {
-      padding-right: 16px;
-      padding-left: 16px;
-      height: 365px;
-      width: 650px;
+      margin-right: 16px;
+      margin-left: 16px;
+      height: 452px;
+      width: 842px;
       background-color: $pink;
+      
+      video {
+        width: inherit;
+      }
     }
 
     #splash-right {
       padding-right: 16px;
       padding-left: 16px;
-      height: 365px;
+      padding-bottom: 55px;
+      height: inherit;
       width: 315px;
 
       box-sizing: border-box;
@@ -113,7 +118,7 @@
 
       li {
         .product_card_image {
-          height: 300px;
+          height: 330px;
         }
 
         .product_card_info {
@@ -244,19 +249,26 @@
       width: 100%;
 
       .splash-product-img {
-        padding: 0 1em;
-        width: 50%;
-        height: 798px;
+        margin: 0 1em;
+        width: 55%;
+        height: 850px;
+        overflow: hidden;
         background-color: $pink;
+
+        img {
+          width: 100%;
+
+        }
       }
 
       .splash-product-cards {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 45%;
+        width: 40%;
 
         li {
+          max-width: 50%;
           width: 50%;
           height: 50%;
           margin-top: 0em;

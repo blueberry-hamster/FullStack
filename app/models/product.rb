@@ -36,6 +36,7 @@ class Product < ApplicationRecord
   has_many :tags, through: :product_tag
 
   has_many_attached :photos
+  has_one_attached :clear_photo
   #---------------------------------------------------------
 
   #---------------------------------------------------------

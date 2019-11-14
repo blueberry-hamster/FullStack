@@ -4,6 +4,7 @@ import FlyoutProductCard from './flyout_product_card';
 
 export default function FlyoutMenu(props) {
   const linkUrl = props.category === 'Shop All' ? '/products' : `/products/${props.category}`;
+  // debugger
   return (
     <div className='flyout_product_container slide_up'>
       <h5>Bestsellers</h5>

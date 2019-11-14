@@ -7,7 +7,7 @@ export default function Tags(props) {
       props.tags.map(tag => {
         return (
           <div className='tag'>
-            <Tag name={tag.name} />
+            <Tag name={tag.name} key={tag.name} />
             <p>{ tag.name }</p>
           </div>
         )

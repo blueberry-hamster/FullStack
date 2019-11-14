@@ -6,12 +6,15 @@ export default class ImageCarousel extends Component {
     super(props);
     this.state = {
       activeImage: null, //should be default img
-      images: ['a', 'b', 'c', 'd', 'e'] // should be actual inages 
+      images: ['a', 'b', 'c'] // should be actual inages 
     }
     this.updateActiveImage = this.updateActiveImage.bind(this);
   }
 
   componentDidMount() {
+    const { photoUrls } = this.props.product;
+    this.setState({ activeImage: photoUrls[0] })
+    this.setState({ images: photoUrls })
   }
 
   handleClick(e) {
@@ -26,7 +29,7 @@ export default class ImageCarousel extends Component {
     return (
       <div id='image-carousel'>
         <div id='carousel-main-image'>
-
+          <img src={this.state.activeImage} alt="photo" />
         </div>
         <ul id='carousel-nav'>
           {

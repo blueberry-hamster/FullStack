@@ -29,7 +29,7 @@ export default class ProductShow extends Component {
         <div id='product-show-main'>
           <div id='product-show-left-container'>
             <BreadCrumbs product={product} history={this.props.history} />
-            <ImageCarousel product={product} /> {/* FIXME pass img getter */}
+            <ImageCarousel product={product} />
           </div>
           <ProductShowRight product={product} />
         </div>

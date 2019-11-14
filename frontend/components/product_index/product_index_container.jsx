@@ -9,8 +9,9 @@ const mapStateToProps = (state, ownprops) => {
   let products = selectProducts(state, category);
 
   return {
-  category,
-  products
+    categories: Object.values(state.entities.categories),
+    category,
+    products
   }
 };
 

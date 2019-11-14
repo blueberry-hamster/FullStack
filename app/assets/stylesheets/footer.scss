@@ -1,11 +1,71 @@
 #footer-container {
-  // margin-top: 20em;
-  padding: 40px 0px 120px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 50px 50px 50px 50px;
   box-sizing: border-box;
+  min-height: 200px;
+  width: 100%;
   
   color: $white;
   background-color: $black;
 
-  // temp
-  height: 300px
+  svg {
+    fill: $white;
+    height: 32px;
+  }
+
+  #footer-base {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #footer-base-left {
+      display: flex;
+      flex-direction: column;
+      justify-self: flex-start;
+      position: absolute;
+      left: 116px;
+
+      #footer-base-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 250px;
+
+        p {
+          padding-bottom: 15px;
+        }
+  
+        a {
+          color: $light-grey;
+          font-size: 0.85em;
+          text-decoration: underline;
+          transition: all 0.15s linear 0s;
+  
+          &:hover{
+            color: $grey;
+          }
+        }
+      }
+    }
+
+    #footer-base-icons {
+      display: flex;
+      flex-direction: row;
+
+      a {
+        &:hover svg {
+          fill: $grey;
+        }
+        
+        svg {
+          transition: all 0.15s linear 0s;
+          margin: 10px;
+          width: 22px;
+        }
+      }
+    }
+  }
 }

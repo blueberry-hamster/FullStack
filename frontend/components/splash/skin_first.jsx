@@ -19,11 +19,11 @@ export default function SkinFirst(props) {
       </div>
       <div className='splash-product-show-container'>
         <div className='splash-product-img'>
-          {/* FIXME IMG GOES HERE  */}
+          <img src="https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_assets/skin_first.jpg" alt="girl with glowing skin"/>
         </div>
         <ul className='splash-product-cards'>
           {
-            products.map(product => <ProductCard product={product} />)
+            products.map((product, i) => <ProductCard product={product} key={i} />)
           }
         </ul>
       </div>

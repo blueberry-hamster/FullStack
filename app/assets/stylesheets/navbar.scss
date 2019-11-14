@@ -96,8 +96,13 @@
               box-sizing: border-box;
               width: 144px;
               height: 200px;
-              background-color: $medium-pink;
+              // background-color: $medium-pink;
               margin: 15px 0px;
+
+              img {
+                width: inherit;
+                height: inherit;
+              }
             }
 
             .flyout_product_card_name {
