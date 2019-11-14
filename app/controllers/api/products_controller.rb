@@ -1,8 +1,9 @@
 class Api::ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.all 
       .includes(:product_category)
       .includes(:category)
+
     @product_categories = ProductCategory.all
     render '/api/products/index'
   end

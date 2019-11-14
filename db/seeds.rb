@@ -31,6 +31,8 @@ milky_jelly_cleanser = Product.create!(
   tagline: 'conditioning face wash',
   price: 18
 )
+milky_jelly_cleanser_img_0 = open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/products/milky_jelly_cleanser/main/Default-1.jpg')
+milky_jelly_cleanser.photos.attach(io: milky_jelly_cleanser_img_0, filename: 'Default-1.jpg')
 balm_dotcom = Product.create!(
   name: 'Balm Dotcom',
   tagline: 'universal skin salve',
@@ -56,7 +58,7 @@ boy_brow = Product.create!(
   tagline: 'grooming pomade',
   price: 16
 )
-priming_mosturizer_rich = Product.create!(
+priming_moisturizer_rich = Product.create!(
   name: 'Priming Moisturizer Rich',
   tagline: 'ultrarich moisturizer',
   price: 35
@@ -66,10 +68,60 @@ lip_gloss = Product.create!(
   tagline: 'all shine, no ick',
   price: 14
 )
+body_hero_daily_oil_wash = Product.create!(
+  name: 'Body Hero Daily Oil Wash',
+  tagline: 'oil-froth body cleanser',
+  price: 18
+)
+body_hero_daily_perfecting_cream = Product.create!(
+  name: 'Body Hero Daily Perfecting Cream',
+  tagline: 'skin-enhancing body moisturizer',
+  price: 22
+)
+pro_tip = Product.create!(
+  name: 'Pro Tip',
+  tagline: 'brush point liquid eyeliner',
+  price: 16
+)
+futuredew = Product.create!(
+  name: 'Futuredew',
+  tagline: 'oil serum hybrid',
+  price: 24
+)
+lash_stick = Product.create!(
+  name: 'Lash Stick',
+  tagline: 'film form mascara',
+  price: 16
+)
+brow_flick = Product.create!(
+  name: 'Brow Flick',
+  tagline: 'microfine detailing pen',
+  price: 18
+)
+haloscope = Product.create!(
+  name: 'Haloscope',
+  tagline: 'dew effect highlighter',
+  price: 22
+)
+super_bounce = Product.create!(
+  name: 'Super Bounce',
+  tagline: 'hyaluronic acid + vitamin b5 serum',
+  price: 28
+)
+super_glow = Product.create!(
+  name: 'Super Glow',
+  tagline: 'vitamin c + magnesium serum',
+  price: 28
+)
+priming_moisturizer = Product.create!(
+  name: 'Priming Moisturizer',
+  tagline: 'buildable hydrating creme',
+  price: 22
+)
 # name = Product.create!(
 #   name: '',
 #   tagline: '',
-#   price:
+#   price: 
 # )
 #---------------------------------------------------------
 
@@ -149,7 +201,7 @@ Description.create!(
   good_to_know: 'alcohol free, fragrance free, paraben free, cruelty free, appropriate for all skin types, hypoallergenic, ophthalmologist tested, dermatologist tested'
 )
 Description.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   title: 'A luxurious, buttery face cream.',
   what_it_is: 'A rich, deeply moisturizing yet fast-absorbing face cream for day or night',
   why_its_special: [
@@ -170,11 +222,125 @@ Description.create!(
   ],
   good_to_know: 'hypoallergenic, dermatologist tested, paraben free, alcohol free, cruelty free, vegan'
 )
-# productt_description = Description.create!(
-#   product_id: productt.id,
+body_hero_daily_oil_wash_description = Description.create!(
+  product_id: body_hero_daily_oil_wash.id,
+  title: 'Body wash goes luxe.',
+  what_it_is: 'An oil cleanser inspired by the ones for your face, made for your body',
+  why_its_special: [
+    'Seven-oil blend attracts grime and sweat like a magnet, lifting it from your skin',
+    'Turns frothy when it mixes with water, then washes away without drying out skin',
+    'Antioxidant-rich mix of Cactus Flower Extract, Prickly Pear Extract, and Yucca Extract leaves skin visibly soft and supremely clean'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist tested, gynecologist tested, soap free, paraben free, cruelty free, vegan'
+)
+body_hero_daily_perfecting_cream_description = Description.create!(
+  product_id: body_hero_daily_perfecting_cream.id,
+  title: 'A skincare-grade body lotion.',
+  what_it_is: 'A body cream inspired by face products—that does more than just moisturize',
+  why_its_special: [
+    'An antioxidant-rich mix of Cactus Flower Extract, Prickly Pear Extract, and Yucca Extract keeps skin moisturized all day with zero residue and zero stickiness (so you can put your clothes on now)',
+    'Tiny light-reflecting particles and brightening plant extracts give skin an instant, radiant glow',
+    'Orange Blossom Neroli Blend gives a subtle, baby-fresh scent'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist tested, paraben free, cruelty free'
+)
+pro_tip_description = Description.create!(
+  product_id: pro_tip.id,
+  title: 'Get a smooth, precise line every time.',
+  what_it_is: 'Pro Tip is everything you want in a liquid liner.',
+  why_its_special: [
+    'It draws the sharpest line, comes in the truest black, and doesn’t budge.',
+    'The pen’s brush tip was designed with flexible fibers that hug the curve of the lash line, allowing for precise definition.',
+    'Its densely-pigmented, buildable formula dries quickly so it’s smudge resistant and stays put for up to 12 hours.',
+    'Plus, an internal ball shaker lets the formula flow through evenly, giving you a smooth line that doesn’t drag, every time.'
+  ],
+  good_to_know: 'Dries quickly, smudge-resistant, longwearing (up to 12 hours), ophthalmologist tested, safe for contact lens wearers, hypoallergenic, dermatologist tested, vegan, cruelty free'
+)
+futuredew_description = Description.create!(
+  product_id: futuredew.id,
+  title: 'An instant dewy glow that lasts.',
+  what_it_is: 'A shortcut to the way your skin looks after a full skincare routine—dewy, glowing, cared-for—in one long-wearing product',
+  why_its_special: [
+    'Nourishing oils (that don’t feel greasy) immediately give you a gleamy, well-moisturized look that lasts up to 12 hours',
+    'Powerful plant-based extracts work to make your skin look brighter, instantly and over time',
+    'Use it as the last step in your skincare routine after moisturizer, serums, and sunscreen',
+    'Doesn’t interfere with makeup—just makes skin dewier',
+  ],
+  good_to_know: 'hypoallergenic, dermatologist tested, cruelty free, vegan, non-comedogenic, good for all skin types'
+)
+lash_stick_description = Description.create!(
+  product_id: lash_stick.id,
+  title: 'Extensions without the extensions.',
+  what_it_is: 'The perfect everyday black mascara',
+  why_its_special: [
+    'Curls and sculpts as it lengthens, creating a natural “baby extension” effect without clumping',
+    'Teeny-tiny fibers coat lashes from root to tip, while flexible film-forming polymers lift and lock each fiber into place',
+    'Water-resistant (not waterproof), so it washes off easily with warm water or Milky Oil at the end of your day'
+  ],
+  good_to_know: 'cruelty free, paraben free, fragrance free, hypoallergenic, allergy tested, dermatologist tested, ophthalmologist tested, suitable for sensitive eyes and contact lens wearers, non-irritating'
+)
+brow_flick_description = Description.create!(
+  product_id: brow_flick.id,
+  title: 'More brow for your brow.',
+  what_it_is: 'A brush-tip detailing pen that fills in and defines brows',
+  why_its_special: [
+    'Fills and defines the brow arch, extends the tail, and adds depth to sparse areas',
+    'The pen’s brush-tip creates featherlight strokes that actually look real',
+    'Comes in three sheer shades: Blond, Brown, and Black'
+  ],
+  good_to_know: 'ophthalmologist tested, smudge-proof, longwearing, vegan, paraben free, cruelty free, dairy-free, soy-free, gluten-free, hypoallergenic, dermatologist tested'
+)
+haloscope_description = Description.create!(
+  product_id: haloscope.id,
+  title: 'Find your light.',
+  what_it_is: 'A crystal-infused highlighter with skin conditioning benefits',
+  why_its_special: [
+    'The stick’s outer core (the “halo”) is formulated with genuine crystal extracts for an all-day glow that’s not glittery',
+    'The solid, oil-based inner core is made from vitamin-rich moisturizers for a hydrated, dewy finish',
+    'Comes in three blendable shades that work on everyone'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist-tested, paraben free, fragrance free, cruelty free'
+)
+super_bounce_description = Description.create!(
+  product_id: super_bounce.id,
+  title: 'Heavyweight hydration, featherweight feel.',
+  what_it_is: 'A daily serum for mega hydration on all levels',
+  why_its_special: [
+    'Made with three molecular weights of Hyaluronic Acid that soak into skin without any stickiness or residue',
+    'Soothing Pro-Vitamin B5 helps keep skin soft, smooth and healthy looking',
+    'Ideal for long haul flights, dry conditions, or anything else that zaps skin of its “bounce” (also great under makeup)'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist-tested, paraben free, fragrance free, appropriate for all skin types, cruelty free'
+)
+super_glow_description = Description.create!(
+  product_id: super_glow.id,
+  title: 'Brighter skin, bottled.',
+  what_it_is: 'A daily serum that gives your skin that lit-from-within look, all the time',
+  why_its_special: [
+    'Vitamin C and Magnesium visibly energizes skin and makes it look even',
+    'Milky emulsion soaks in immediately with no sticky residue',
+    'Skin looks radiant and feels recharged, like a fresh battery at 100%'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist-tested, paraben free, fragrance free, appropriate for all skin types, cruelty free'
+)
+priming_moisturizer_description = Description.create!(
+  product_id: priming_moisturizer.id,
+  title: 'Light and buildable moisture for a dewy, smooth canvas.',
+  what_it_is: 'A moisturizer that instantly brings out the best in your skin, making it fresh and glowing',
+  why_its_special: [
+    'Anti-Redness Complex soothes while the Oxygenating Agent breathes life into stressed skin, giving it a clean, dewy, balanced finish',
+    'Lightweight, buildable texture means you can apply one or more layers depending on the climate, season, or how your skin’s feeling',
+    'The ideal base for Perfecting Skin Tint, this creme visibly evens out skin texture and minimizes the look of pores'
+  ],
+  good_to_know: 'hypoallergenic, dermatologist tested, appropriate for all skin types, long-lasting moisture, paraben free, fragrance free, cruelty free, non-comedogenic'
+)
+# productt _description = Description.create!(
+#   product_id: productt .id,
 #   title: '',
 #   what_it_is: '',
 #   why_its_special: [
+#     '',
+#     '',
 #     ''
 #   ],
 #   good_to_know: ''
@@ -203,9 +369,9 @@ makeup = Category.create!(
 body = Category.create!(
   name: 'Body'
 )
-fragrance = Category.create!(
-  name: 'Fragrance'
-)
+# fragrance = Category.create!(
+#   name: 'Fragrance'
+# )
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
@@ -228,14 +394,8 @@ clearing = Tag.create!(
 conditioning = Tag.create!(
   name: 'conditioning'
 )
-conditioning = Tag.create!(
-  name: 'conditioning'
-)
 easy = Tag.create!(
   name: 'easy'
-)
-enhancing = Tag.create!(
-  name: 'enhancing'
 )
 enhancing = Tag.create!(
   name: 'enhancing'
@@ -249,17 +409,20 @@ intense_hydration = Tag.create!(
 long_lasting = Tag.create!(
   name: 'long lasting'
 )
-mosturizing = Tag.create!(
-  name: 'mosturizing'
+moisturizing = Tag.create!(
+  name: 'moisturizing'
 )
 nourishing = Tag.create!(
   name: 'nourishing'
 )
-oxiginating = Tag.create!(
-  name: 'oxiginating'
+oxygenating = Tag.create!(
+  name: 'oxygenating'
 )
 plumping = Tag.create!(
   name: 'plumping'
+)
+purifying = Tag.create!(
+  name: 'purifying'
 )
 redness_reducing = Tag.create!(
   name: 'redness reducing'
@@ -272,6 +435,36 @@ soothing = Tag.create!(
 )
 thickening = Tag.create!(
   name: 'thickening'
+)
+gynecologist_tested = Tag.create!(
+  name: 'gynecologist tested'
+)
+softening = Tag.create!(
+  name: 'softening'
+)
+fast_absorbtion = Tag.create!(
+  name: 'fast absorbtion'
+)
+smudge_resistant = Tag.create!(
+  name: 'smudge resistant'
+)
+long_lasting = Tag.create!(
+  name: 'long lasting'
+)
+lengthening = Tag.create!(
+  name: 'lengthening'
+)
+sheer = Tag.create!(
+  name: 'sheer'
+)
+enhancing = Tag.create!(
+  name: 'enhancing'
+)
+energizing = Tag.create!(
+  name: 'energizing'
+)
+illuminating = Tag.create!(
+  name: 'illuminating'
 )
 # #---------------------------------------------------------
 
@@ -308,12 +501,52 @@ ProductCategory.create!(
   category_id: makeup.id
 )
 ProductCategory.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   category_id: skincare.id
 )
 ProductCategory.create!(
   product_id: lip_gloss.id,
   category_id: makeup.id
+)
+ProductCategory.create!(
+  product_id: futuredew.id,
+  category_id: skincare.id
+)
+ProductCategory.create!(
+  product_id: pro_tip.id,
+  category_id: makeup.id
+)
+ProductCategory.create!(
+  product_id: body_hero_daily_oil_wash.id,
+  category_id: body.id
+)
+ProductCategory.create!(
+  product_id: body_hero_daily_perfecting_cream.id,
+  category_id: body.id
+)
+ProductCategory.create!(
+  product_id: lash_stick.id,
+  category_id: makeup.id
+)
+ProductCategory.create!(
+  product_id: brow_flick.id,
+  category_id: makeup.id
+)
+ProductCategory.create!(
+  product_id: haloscope.id,
+  category_id: makeup.id
+)
+ProductCategory.create!(
+  product_id: super_bounce.id,
+  category_id: skincare.id
+)
+ProductCategory.create!(
+  product_id: super_glow.id,
+  category_id: skincare.id
+)
+ProductCategory.create!(
+  product_id: priming_moisturizer.id,
+  category_id: skincare.id
 )
 # ProductCategory.create!(
 #   product_id: product.id,
@@ -402,19 +635,19 @@ ProductTag.create!(
   tag_id: flexible.id
 )
 ProductTag.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   tag_id: intense_hydration.id
 )
 ProductTag.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   tag_id: redness_reducing.id
 )
 ProductTag.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   tag_id: nourishing.id
 )
 ProductTag.create!(
-  product_id: priming_mosturizer_rich.id,
+  product_id: priming_moisturizer_rich.id,
   tag_id: oxygenating.id
 )
 ProductTag.create!(
@@ -429,6 +662,130 @@ ProductTag.create!(
   product_id: lip_gloss.id,
   tag_id: nourishing.id
 )
+ProductTag.create!(
+  product_id: futuredew.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: futuredew.id,
+  tag_id: nourishing.id
+)
+ProductTag.create!(
+  product_id: futuredew.id,
+  tag_id: moisturizing.id
+)
+ProductTag.create!(
+  product_id: pro_tip.id,
+  tag_id: smudge_resistant.id
+)
+ProductTag.create!(
+  product_id: pro_tip.id,
+  tag_id: buildable.id
+)
+ProductTag.create!(
+  product_id: pro_tip.id,
+  tag_id: long_lasting.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_perfecting_cream.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_perfecting_cream.id,
+  tag_id: fast_absorbtion.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_perfecting_cream.id,
+  tag_id: intense_hydration.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_oil_wash.id,
+  tag_id: gynecologist_tested.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_oil_wash.id,
+  tag_id: purifying.id
+)
+ProductTag.create!(
+  product_id: body_hero_daily_oil_wash.id,
+  tag_id: softening.id
+)
+ProductTag.create!(
+  product_id: lash_stick.id,
+  tag_id: conditioning.id
+)
+ProductTag.create!(
+  product_id: lash_stick.id,
+  tag_id: lengthening.id
+)
+ProductTag.create!(
+  product_id: lash_stick.id,
+  tag_id: smudge_resistant.id
+)
+ProductTag.create!(
+  product_id: brow_flick.id,
+  tag_id: smudge_resistant.id
+)
+ProductTag.create!(
+  product_id: brow_flick.id,
+  tag_id: sheer.id
+)
+ProductTag.create!(
+  product_id: brow_flick.id,
+  tag_id: buildable.id
+)
+ProductTag.create!(
+  product_id: haloscope.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: haloscope.id,
+  tag_id: nourishing.id
+)
+ProductTag.create!(
+  product_id: haloscope.id,
+  tag_id: easy.id
+)
+ProductTag.create!(
+  product_id: super_bounce.id,
+  tag_id: softening.id
+)
+ProductTag.create!(
+  product_id: super_bounce.id,
+  tag_id: hydrating.id
+)
+ProductTag.create!(
+  product_id: super_bounce.id,
+  tag_id: soothing.id
+)
+ProductTag.create!(
+  product_id: super_glow.id,
+  tag_id: enhancing.id
+)
+ProductTag.create!(
+  product_id: super_glow.id,
+  tag_id: energizing.id
+)
+ProductTag.create!(
+  product_id: super_glow.id,
+  tag_id: illuminating.id
+)
+ProductTag.create!(
+  product_id: priming_moisturizer.id,
+  tag_id: soothing.id
+)
+ProductTag.create!(
+  product_id: priming_moisturizer.id,
+  tag_id: redness_reducing.id
+)
+ProductTag.create!(
+  product_id: priming_moisturizer.id,
+  tag_id: oxygenating.id
+)
+ProductTag.create!(
+  product_id: priming_moisturizer.id,
+  tag_id: buildable.id
+)
 # ProductTag.create!(
 #   product_id: product.id,
 #   tag_id: tag.id
@@ -438,7 +795,7 @@ ProductTag.create!(
 
 
 
-# all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_mosturizer_rich', 'lip_gloss']
+all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_moisturizer_rich', 'lip_gloss', 'futuredew', 'pro_tip', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'haloscope', 'brow_flick', 'super_bounce', 'super_glow', 'priming_moisturizer']
 
 # def mkdir_script(prodArr)
 #   prodArr.each do |prod|
@@ -448,7 +805,7 @@ ProductTag.create!(
 # end
 # mkdir_script(all_products)
 
-# all_tags = 'brightening buildable clearing conditioning conditioning easy enhancing enhancing flexible intense_hydration long_lasting mosturizing nourishing oxiginating plumping redness_reducing smoothing soothing thickening'
+# all_tags = 'brightening buildable clearing conditioning conditioning easy enhancing enhancing flexible intense_hydration long_lasting moisturizing nourishing oxygenating plumping redness_reducing smoothing soothing thickening'
 
 # def seed_tags_script(all_tags) 
 #   all_tags = all_tags.split(" ") #.map(|tag| tag.sub!('_', ' '))
@@ -475,8 +832,22 @@ ProductTag.create!(
 #   "generation_g buildable enhancing easy", 
 #   "cloud_paint easy enhancing plumping", 
 #   "boy_brow thickening conditioning flexible", 
-#   "priming_mosturizer_rich intense_hydration redness_reducing nourishing oxygenating", 
-#   "lip_gloss long_lasting enhancing nourishing"
+#   "priming_moisturizer_rich intense_hydration redness_reducing nourishing oxygenating", 
+#   "lip_gloss long_lasting enhancing nourishing",
+#   "futuredew enhancing nourishing moisturizing",
+#   "pro_tip smudge_resistant buildable long_lasting",
+#   "body_hero_daily_perfecting_cream enhancing fast_absorbtion intense_hydration",
+#   "body_hero_daily_oil_wash gynecologist_tested purifying softening",
+#   "lash_stick conditioning lengthening smudge_resistant",
+#   "brow_flick smudge_resistant sheer buildable",
+#   "haloscope enhancing nourishing easy",
+#   "super_bounce softening hydrating soothing",
+#   "super_glow enhancing energizing illuminating",
+#   "priming_moisturizer soothing redness_reducing oxygenating buildable",
+# ]
+
+# new_product_tags = [
+#   ""
 # ]
 
 # def make_product_tag(product_name, tag_name)
@@ -498,7 +869,7 @@ ProductTag.create!(
 #     end
 #   end
 # end
-# mass_make_product_tag(product_tags)
+# mass_make_product_tag(new_product_tags)
 
 # https://www.glossier.com/products/boy-brow
 # https://www.glossier.com/products/milky-jelly-cleanser

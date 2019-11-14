@@ -3,6 +3,10 @@ json.products do
     json.set! product.id do 
       json.partial! 'api/products/product', product: product
       json.set! :category, product.category.name
+
+      if product.photos.attached?
+        json.photoUrls product.photos.map { |photo| url_for(photo)}
+      end
     end
   end
 end

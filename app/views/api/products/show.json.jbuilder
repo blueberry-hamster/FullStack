@@ -16,4 +16,7 @@ json.set! product.name do
   json.set! :category, category
   json.set! :ingredients, ingredients
   json.set! :tags, tags
+  # if product.photos.attached?
+  #   json.photoUrls product.photos.map { |photo| url_for(photo)}
+  # end
 end

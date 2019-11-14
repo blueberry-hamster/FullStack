@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = props => {
   const product = props.product;
+  // debugger
+  // if (!product.photoUrls) return null;
+  // const { photoUrls } = props.product;
   const productUrlName = product.name.split(' ').join('-');
   return (
     <li className='product_card' key={product.id}>
       <Link to={`/product/${productUrlName}`} className='product_card_image'>
-        {/* UNFINISHED quickview function */}
+        {/* <img src={ photoUrls[0] } alt="photo" /> */}
       </Link>
       <div className='product_card_info'>
         <Link to={`/product/${productUrlName}`}>
