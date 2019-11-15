@@ -7,8 +7,21 @@ require 'open-uri'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #---------------------------------------------------------
-# USERS
+ProductTag.destroy_all
+ProductSize.destroy_all
+ProductCategory.destroy_all
+ProductIngredient.destroy_all
+Size.destroy_all
+Category.destroy_all
+Ingredient.destroy_all
+Tag.destroy_all
+Description.destroy_all
+Instruction.destroy_all
+Variation.destroy_all
 User.destroy_all
+Product.destroy_all
+
+# USERS
 User.create(
   first_name: 'Tomato', 
   last_name: 'Potato', 
@@ -25,7 +38,6 @@ User.create(
 
 #---------------------------------------------------------
 # PRODUCTS
-Product.destroy_all
 milky_jelly_cleanser = Product.create!(
   name: 'Milky Jelly Cleanser',
   tagline: 'conditioning face wash',
@@ -125,12 +137,12 @@ priming_moisturizer = Product.create!(
 
 # #---------------------------------------------------------
 # # VARIATIONS
-# Variation.destroy_all
+# 
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # DESCRIPTION
-Description.destroy_all
+
 Description.create!(
   product_id: milky_jelly_cleanser.id,
   title: 'Everything a cleanser should be.',
@@ -347,17 +359,17 @@ priming_moisturizer_description = Description.create!(
 
 # #---------------------------------------------------------
 # # INSTRUCTIONS
-# Instruction.destroy_all
+# 
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # SIZES
-# Size.destroy_all
+# 
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # CATEGORIES
-Category.destroy_all
+
 skincare = Category.create!(
   name: 'Skincare'
 )
@@ -374,12 +386,12 @@ body = Category.create!(
 
 # #---------------------------------------------------------
 # # INGREDIENTS
-# Ingredient.destroy_all
+#
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # TAGS
-Tag.destroy_all
+
 brightening = Tag.create!(
   name: 'brightening'
 )
@@ -465,12 +477,12 @@ hydrating = Tag.create!(
 
 # #---------------------------------------------------------
 # # PRODUCT SIZES
-# ProductSize.destroy_all
+# 
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # PRODUCT CATEGORIES
-ProductCategory.destroy_all
+
 ProductCategory.create!(
   product_id: milky_jelly_cleanser.id,
   category_id: skincare.id
@@ -551,12 +563,12 @@ ProductCategory.create!(
 
 # #---------------------------------------------------------
 # # PRODUCT INGREDIENTS
-# ProductIngredient.destroy_all
+# 
 # #---------------------------------------------------------
 
 # #---------------------------------------------------------
 # # PRODUCT TAGS
-ProductTag.destroy_all
+
 ProductTag.create!(
   product_id: milky_jelly_cleanser.id,
   tag_id: smoothing.id
