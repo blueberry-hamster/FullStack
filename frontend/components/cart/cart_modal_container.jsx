@@ -8,8 +8,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getCart: () => dispatch(getCart()),
-  removeFromCart: product => dispatch(removeFromCart(product)),
-  addToCart: product => dispatch(addToCart(product)),
+  removeFromCart: (product, quantity) => dispatch(removeFromCart(product, quantity)),
+  addToCart: (product, quantity) => dispatch(addToCart(product, quantity)),
+  // openCartModal: () => dispatch(openCartModal()),
+  closeCartModal: () => dispatch(closeCartModal()),
   // checkout: cart => dispatch(checkout(cart))
 });
 

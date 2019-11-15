@@ -15,6 +15,12 @@ export default function CartModalCheckout(props) {
         <p>Estimated Total</p>
         <p>{ `$${ total }` }</p>
       </div>
+      <button 
+        className='checkout-btn'
+        // onClick={props.checkout(props.cart)}
+      >
+        CHECKOUT
+      </button>
       <p className='terms-of-service-disclaimer'>
         By checking out, I agree to the Terms of Use and acknowledge that I have read the Privacy Policy. Shipping and promotions calculated in checkout.
       </p>

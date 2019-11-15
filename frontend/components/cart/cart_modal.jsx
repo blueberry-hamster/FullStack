@@ -29,8 +29,10 @@ export default class CartModal extends Component {
         />
         <CartModalCheckout 
           cart={cart} 
-          {/* checkoutCart={this.props.checkoutCart} */}
         /> 
+        {/* checkoutCart={this.props.checkoutCart} */}
+
+        <div id='cart-modal-page-overlay'></div>
       </div>
     )
   }

@@ -5,8 +5,8 @@ export default class ImageCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeImage: null, //should be default img
-      images: ['a', 'b', 'c'] // should be actual inages 
+      activeImage: null,
+      images: []
     }
     this.updateActiveImage = this.updateActiveImage.bind(this);
   }
@@ -29,7 +29,7 @@ export default class ImageCarousel extends Component {
     return (
       <div id='image-carousel'>
         <div id='carousel-main-image'>
-          <img src={this.state.activeImage} alt="photo" />
+          <img src={this.state.activeImage} alt={`image of ${this.state.activeImage}`} />
         </div>
         <ul id='carousel-nav'>
           {

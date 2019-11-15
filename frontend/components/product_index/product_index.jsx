@@ -18,7 +18,6 @@ export default class ProductIndex extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.category !== this.props.match.params.category) {
-      console.log('new category', this.props.match.params.category);
     } 
   }
 
