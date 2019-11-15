@@ -885,15 +885,25 @@ body_hero_daily_perfecting_cream.clear_photo.attach(io: open('https://glossier-d
 lash_stick.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/lash_stick.webp'), filename: 'lash_stick.jpg')
 
 brow_flick.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/brow_flick.webp'), filename: 'brow_flick.jpg')
+
+priming_moisturizer_rich.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/priming_moisturizer_rich.png'), filename: 'priming_moisturizer_rich.png')
+
+super_bounce.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/super_bounce.png'), filename: 'super_bounce.png')
+
+super_glow.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/super_glow.png'), filename: 'super_glow.png')
+
+lash_stick.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/lash_stick.png'), filename: 'lash_stick.png')
+
+haloscope.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/haloscope.png'), filename: 'haloscope.png')
 # #---------------------------------------------------------
 # #---------------------------------------------------------
 
 # all_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'priming_moisturizer_rich', 'lip_gloss', 'futuredew', 'pro_tip', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'haloscope', 'brow_flick', 'super_bounce', 'super_glow', 'priming_moisturizer']
 
-# clear_photo_products = ['milky_jelly_cleanser', 'balm_dotcom', 'solution', 'generation_g', 'cloud_paint', 'boy_brow', 'lip_gloss', 'futuredew', 'body_hero_daily_oil_wash', 'body_hero_daily_perfecting_cream', 'lash_stick', 'brow_flick']
+# clear_photo_products = ['priming_moisturizer', 'priming_moisturizer_rich', 'super_bounce', 'super_glow', 'lash_stick', 'haloscope']
 # def seed_clear_images(products)
 #   products.each do |product|
-#     puts "#{ product }.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/#{ product }.webp'), filename: '#{ product }.jpg')"
+#     puts "#{ product }.clear_photo.attach(io: open('https://glossier-demo-seeds.s3-us-west-1.amazonaws.com/_clear_bg/#{ product }.png'), filename: '#{ product }.png')"
 #     puts ""
 #   end
 # end
