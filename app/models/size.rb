@@ -18,8 +18,8 @@ class Size < ApplicationRecord
 
   #---------------------------------------------------------
   # ASSOCIATIONS
-  has_many :product_size
-  has_many :product, through: :product_size
+  has_many :product_sizes
+  has_many :product, through: :product_sizes
   #---------------------------------------------------------
 
   #---------------------------------------------------------

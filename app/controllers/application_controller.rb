@@ -28,5 +28,13 @@ class ApplicationController < ActionController::Base
   def user_params 
     params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
+  
+  def cart_params
+    params.require(:cart).permit(:user_id)
+  end
+
+  def cart_item_params
+    params.require(:cart_item).permit(:id, :product_id, :cart_id, :quantity)
+  end
 
 end

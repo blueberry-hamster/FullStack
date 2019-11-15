@@ -18,8 +18,8 @@ class Ingredient < ApplicationRecord
   #---------------------------------------------------------
   # ASSOCIATIONS
   #---------------------------------------------------------
-  has_many :product_ingredient
-  has_many :products, through: :product_ingredient
+  has_many :product_ingredients
+  has_many :products, through: :product_ingredients
 
 
   #---------------------------------------------------------

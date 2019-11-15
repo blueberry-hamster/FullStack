@@ -3,8 +3,8 @@
 # Table name: product_ingredients
 #
 #  id            :bigint           not null, primary key
-#  product_id    :string           not null
-#  ingredient_id :string           not null
+#  product_id    :integer          not null
+#  ingredient_id :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #

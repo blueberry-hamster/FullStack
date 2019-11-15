@@ -3,7 +3,7 @@
 # Table name: variations
 #
 #  id             :bigint           not null, primary key
-#  product_id     :string           not null
+#  product_id     :integer          not null
 #  variation_type :string           not null
 #  name           :string           not null
 #  primary        :boolean          default(TRUE), not null

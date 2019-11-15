@@ -16,8 +16,8 @@ class Tag < ApplicationRecord
 
   #---------------------------------------------------------
   # ASSOCIATIONS
-  has_many :product_tag
-  has_many :products, through: :product_tag
+  has_many :product_tags
+  has_many :products, through: :product_tags
 
   has_one_attached :icon
   #---------------------------------------------------------
