@@ -9,9 +9,9 @@ class Api::CartItemsController < ApplicationController
 
   def update
     @cart_item = CartItem.find(cart_item_params[:id])
-    @cart_item.destroy if cart_item_params[:quantity] == 0
 
     if @cart_item.update(cart_item_params)
+      @cart_item.destroy if cart_item_params[:quantity] == 0
       render "api/cart_items/#{ @cart_item.id }"
     else
       render json: @cart_item.errors.full_messages, status: 422
