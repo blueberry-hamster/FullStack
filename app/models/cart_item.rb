@@ -14,13 +14,13 @@ class CartItem < ApplicationRecord
   
   #---------------------------------------------------------
   # VALIDATIONS
-  validates :product_id, :cart_id, presence: true
+  validates :product_id, :cart_id, :quantity, presence: true
   #---------------------------------------------------------
 
   #---------------------------------------------------------
   # ASSOCIATIONS
-  has_one :product
-  has_one :cart
+  belongs_to :product, foreign_key: :product_id, class_name: 'Product'
+  belongs_to :cart, foreign_key: :cart_id, class_name: 'Cart'
   #---------------------------------------------------------
 
   #---------------------------------------------------------

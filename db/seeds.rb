@@ -9,12 +9,13 @@ require 'open-uri'
 #---------------------------------------------------------
 # USERS
 User.destroy_all
-User.create(
+tomato = User.create(
   first_name: 'Tomato', 
   last_name: 'Potato', 
   email: 'tomato@gmail.com', 
   password: 'password'
 )
+Cart.new({ user_id: tomato.id })
 # User.create(
 #   first_name: '',
 #   last_name: '',

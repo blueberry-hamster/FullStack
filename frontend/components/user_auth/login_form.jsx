@@ -45,11 +45,11 @@ export default class SignupForm extends Component {
         $btn.disabled = false; 
       } else {
         $btn.disabled = true; 
-      };
+      }
 
       // update state
       this.setState({ [key]: e.currentTarget.value
-      })};
+      });};
   }
 
   handleDemoLogin(email, password) {
@@ -67,7 +67,7 @@ export default class SignupForm extends Component {
       }, 
       () => setTimeout(() => {
         this.handleDemoLogin(email, password);
-      }, 100))
+      }, 100));
     } else {
       this.props.loginUser(this.state)
         .then(() => this.props.history.push('/'));
@@ -75,7 +75,8 @@ export default class SignupForm extends Component {
     }
   }
 
-  handleDemo() {
+  handleDemo(e) {
+    e.preventDefault();
     this.setState({ email: '', password: '' }, () => {
       const email ='tomato@gmail.com'.split('');
       const password ='password'.split('');

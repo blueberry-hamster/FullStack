@@ -103,7 +103,12 @@
 3. Completed splash with images, a video, and a modified footer.
 4. Designed, and wrote components for cart.
 5. Created a branch to keep working on cart.
-6. 
+
+###12/2/19
+1. Reaquantied myself with the project!
+2. Created cart item actions.
+3. Made a ui slice of state and cart modal actions.
+4. I can now connect the frontend with the backend, but I need to drop the database and re-seed, so I can create carts on user creation.
 
 ** Jbuilder.key_format camelize: :lower
 ** fix casing. 

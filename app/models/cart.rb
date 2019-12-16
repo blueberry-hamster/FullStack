@@ -16,7 +16,7 @@ class Cart < ApplicationRecord
 
   #---------------------------------------------------------
   # ASSOCIATIONS
-  has_many :cart_items
+  has_many :cart_items, foreign_key: :cart_id, class_name: 'CartItem'
   belongs_to :user
   #---------------------------------------------------------
 
