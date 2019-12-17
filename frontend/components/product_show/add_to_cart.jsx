@@ -30,7 +30,6 @@ export default class AddToCart extends Component {
   }
 
   addItemsToCart() {
-    // debugger
     if (this.props.cart[this.props.product.id]) {
       let currentItem = this.props.cart[this.props.product.id];
       this.props.updateCartItem({ 
