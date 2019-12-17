@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import { getProduct } from '../../actions/product_actions';
 import { getCart } from "../../actions/cart_actions";
-import { createCartItem, updateCartItem, destroyCartItem } from "../../actions/cart_item_actions";
+import { createCartItem, updateCartItem } from "../../actions/cart_item_actions";
 // import getImages
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,7 +18,6 @@ const mapDispatchToProps = dispatch => ({
   getCart: () => dispatch(getCart()),
   createCartItem: (cart_item) => dispatch(createCartItem(cart_item)),
   updateCartItem: (cart_item) => dispatch(updateCartItem(cart_item)),
-  destroyCartItem: (cart_item_id) => dispatch(destroyCartItem(cart_item_id)),
 });
 
 

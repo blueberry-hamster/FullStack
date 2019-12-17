@@ -16,11 +16,12 @@ export default class AddToCart extends Component {
     let oldCount = this.state.productCount;
     switch (change) {
       case 'add':
-        this.setState({ productCount: oldCount + 1 });
+        let newCount = oldCount === 10 ? 10 : (oldCount + 1);
+        this.setState({ productCount: newCount });
         break;
 
       case 'subtract':
-        const newCount = (oldCount - 1) < 1 ? 1 : (oldCount - 1);
+        newCount = (oldCount - 1) < 1 ? 1 : (oldCount - 1);
         this.setState({ productCount: newCount });
         break;
     
@@ -32,7 +33,7 @@ export default class AddToCart extends Component {
   addItemsToCart() {
     if (this.props.cart[this.props.product.id]) {
       let currentItem = this.props.cart[this.props.product.id];
-      let newCount = (this.state.productCount + currentItem.quantity);
+      let newCount = this.state.productCount + currentItem.quantity;
       this.props.updateCartItem({ 
         quantity: newCount,
         product_id: this.props.product.id,
@@ -45,6 +46,9 @@ export default class AddToCart extends Component {
           quantity: this.state.productCount
         });
     }
+
+    //reset number to 1
+    this.setState({ productCount: 1 });
   }
   
   render() {

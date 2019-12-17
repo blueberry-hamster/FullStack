@@ -37,7 +37,6 @@ export default class ProductShow extends Component {
             cart={this.props.cart}
             createCartItem={this.props.createCartItem}
             updateCartItem={this.props.updateCartItem}
-            destroyCartItem={this.props.destroyCartItem}
           />
         </div>
         {/* FIXME reviews will go here */}

@@ -10,7 +10,7 @@ class Api::CartItemsController < ApplicationController
 
   def update
     @cart_item = CartItem.find_by(product_id: cart_item_params[:product_id])
-    # debugger
+    
     if @cart_item.update(cart_item_params)
       # @cart_item.destroy if cart_item_params[:quantity] == 0
       render "api/cart_items/show"
@@ -26,6 +26,3 @@ class Api::CartItemsController < ApplicationController
 
 end
  
-def cart_item_params
-    params.require(:cart_item).permit(:id, :product_id, :cart_id, :quantity)
-  end
