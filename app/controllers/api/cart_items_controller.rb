@@ -2,8 +2,7 @@ class Api::CartItemsController < ApplicationController
   def create
     @cart_item = CartItem.new(cart_item_params)
     if @cart_item.save
-      @cart_items = current_user.cart.cart_items
-      render "api/cart_items/index"
+      render "api/cart_items/show"
     else
       render json: @cart_item.errors.full_messages, status: 422
     end
@@ -11,11 +10,10 @@ class Api::CartItemsController < ApplicationController
 
   def update
     @cart_item = CartItem.find_by(product_id: cart_item_params[:product_id])
-
+    # debugger
     if @cart_item.update(cart_item_params)
       # @cart_item.destroy if cart_item_params[:quantity] == 0
-      @cart_items = current_user.cart.cart_items
-      render "api/cart_items/index"
+      render "api/cart_items/show"
     else
       render json: @cart_item.errors.full_messages, status: 422
     end
@@ -27,3 +25,7 @@ class Api::CartItemsController < ApplicationController
   end
 
 end
+ 
+def cart_item_params
+    params.require(:cart_item).permit(:id, :product_id, :cart_id, :quantity)
+  end

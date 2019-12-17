@@ -11,7 +11,6 @@ const cartReducer = (state = {}, action) => {
       return action.cart;
     
     case RECEIVE_CART_ITEM:
-      debugger
       let itemId = Object.keys(action.cartItem)[0];
       let cartItem = Object.values(action.cartItem)[0];
       newState[itemId] = cartItem;

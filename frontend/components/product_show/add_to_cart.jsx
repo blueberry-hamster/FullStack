@@ -32,9 +32,11 @@ export default class AddToCart extends Component {
   addItemsToCart() {
     if (this.props.cart[this.props.product.id]) {
       let currentItem = this.props.cart[this.props.product.id];
+      let newCount = (this.state.productCount + currentItem.quantity);
       this.props.updateCartItem({ 
-        quantity: this.state.productCount + currentItem.quantity,
-        product_id: this.props.product.id
+        quantity: newCount,
+        product_id: this.props.product.id,
+        cart_id: this.props.cart.id
       });
     } else {
         this.props.createCartItem({ 

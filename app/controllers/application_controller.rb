@@ -33,8 +33,7 @@ class ApplicationController < ActionController::Base
     params.require(:cart).permit(:user_id)
   end
 
-  def cart_item_params
-    params.require(:cart_item).permit(:id, :product_id, :cart_id, :quantity)
-  end
+ 
 
 end
+
