@@ -1,6 +1,6 @@
-export const getCart = cart_id => (
+export const getCart = () => (
   $.ajax({
     method: 'GET',
-    url: `/api/carts/${ cart_id }`
+    url: `/api/carts/show`
   })
 );

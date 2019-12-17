@@ -17,7 +17,7 @@ const closeCart = () => ({
   type: CLOSE_CART_MODAL
 });
 
-export const getCart = cartId => dispatch => CartApiUtil.getCart(cartId)
+export const getCart = () => dispatch => CartApiUtil.getCart()
   .then(cart => dispatch(receiveCart(cart)));
 
 export const openCartModal = () => dispatch(openCart());
