@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class CartModalEdit extends Component {
   constructor(props) {
@@ -6,27 +6,27 @@ export default class CartModalEdit extends Component {
     this.state = {
       originalQuantity: this.props.quantity,
       quantity: this.props.quantity,
-    }
+    };
   }
 
   addItem() {
-    if (this.state.quantity <= 50) this.setState({ quantity: this.state.quantity + 1 })
+    if (this.state.quantity <= 50) this.setState({ quantity: this.state.quantity + 1 });
   }
 
   removeItem() {
-    if (this.state.quantity > 0) this.setState({ quantity: this.state.quantity - 1 })
+    if (this.state.quantity > 0) this.setState({ quantity: this.state.quantity - 1 });
   }
 
   handleUpdate() {
     const difference = this.state.originalQuantity = this.state.quantity;
 
     if (difference > 0){
-      this.props.addToCart(this.props.product, difference)
+      this.props.addToCart(this.props.product, difference);
     } else {
-      this.props.removeFromCart(this.props.product, difference)
+      this.props.removeFromCart(this.props.product, difference);
     }
 
-    this.props.closeEdit()
+    this.props.closeEdit();
   }
   
   render() {

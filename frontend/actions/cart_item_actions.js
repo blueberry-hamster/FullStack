@@ -11,7 +11,7 @@ const receiveCartItem = cartItem => ({
 const removeCartItem = cartItemId => ({
   type: REMOVE_CART_ITEM,
   cartItemId
-})
+});
 
 export const createCartItem = cartItemParams => dispatch => CartItemApiUtil.createCartItem(cartItemParams)
   .then(cartItem => dispatch(receiveCartItem(cartItem)));

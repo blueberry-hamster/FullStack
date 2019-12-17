@@ -15,7 +15,8 @@ tomato = User.create(
   email: 'tomato@gmail.com', 
   password: 'password'
 )
-Cart.new({ user_id: tomato.id })
+cart = Cart.create({ user_id: tomato.id })
+
 # User.create(
 #   first_name: '',
 #   last_name: '',
@@ -32,6 +33,7 @@ milky_jelly_cleanser = Product.create!(
   tagline: 'conditioning face wash',
   price: 18
 )
+item = CartItem.create({ cart_id: cart.id, product_id: milky_jelly_cleanser.id, quantity: 1 }) #FOR TESTING FIXME
 balm_dotcom = Product.create!(
   name: 'Balm Dotcom',
   tagline: 'universal skin salve',

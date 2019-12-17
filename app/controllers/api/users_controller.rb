@@ -3,7 +3,6 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      # Cart.new({ cart: { user_id: @user.id } })
       cart = Cart.create({ user_id: @user.id })
       cart.save
       render 'api/users/show'

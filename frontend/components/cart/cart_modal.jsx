@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import CartModalTopBar from './cart_modal_topbar';
 import CartModalBody from './cart_modal_body';
@@ -8,7 +8,7 @@ export default class CartModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    }
+    };
   }
   
   componentDidMount() {

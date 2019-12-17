@@ -5,8 +5,8 @@ export default class CartModalProductCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editOpen = false
-    }
+      editOpen: false
+    };
     this.openEdit = this.openEdit.bind(this);
     this.closeEdit = this.closeEdit.bind(this);
   }

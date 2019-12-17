@@ -12,7 +12,7 @@ class Api::CartItemsController < ApplicationController
     @cart_item = CartItem.find(cart_item_params[:id])
 
     if @cart_item.update(cart_item_params)
-      @cart_item.destroy if cart_item_params[:quantity] == 0
+      # @cart_item.destroy if cart_item_params[:quantity] == 0
       render "api/cart_items/index"
     else
       render json: @cart_item.errors.full_messages, status: 422
@@ -23,10 +23,5 @@ class Api::CartItemsController < ApplicationController
     @cart_item = CartItem.find(params[:id])
     @cart_item.destroy
   end
-
-  # def index
-  #   @cart_items = current_user.cart_items
-  #   render "api/cart_items/index"
-  # end
 
 end
