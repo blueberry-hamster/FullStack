@@ -8,6 +8,9 @@ export default class AddToCart extends Component {
     };
     this.changeProductCount = this.changeProductCount.bind(this);
   }
+
+  componentDidMount() {
+  }
   
   changeProductCount(change) {
     let oldCount = this.state.productCount;
@@ -17,12 +20,29 @@ export default class AddToCart extends Component {
         break;
 
       case 'subtract':
-        const newCount = (oldCount - 1) < 0 ? 0 : (oldCount - 1);
+        const newCount = (oldCount - 1) < 1 ? 1 : (oldCount - 1);
         this.setState({ productCount: newCount });
         break;
     
       default:
         break;
+    }
+  }
+
+  addItemsToCart() {
+    // debugger
+    if (this.props.cart[this.props.product.id]) {
+      let currentItem = this.props.cart[this.props.product.id];
+      this.props.updateCartItem({ 
+        quantity: this.state.productCount + currentItem.quantity,
+        product_id: this.props.product.id
+      });
+    } else {
+        this.props.createCartItem({ 
+          product_id: this.props.product.id, 
+          cart_id: this.props.cart.id,
+          quantity: this.state.productCount
+        });
     }
   }
   
@@ -40,8 +60,11 @@ export default class AddToCart extends Component {
             +
           </button>
         </div>
-        <button className='add-to-bag-btn'>
-          {`ADD TO BAG - $${this.props.product.price}`}
+        <button 
+          className='add-to-bag-btn'
+          onClick={() => this.addItemsToCart()}
+        >
+          {`ADD TO BAG - $${ this.props.product.price * this.state.productCount }`}
         </button>
       </div>
     )

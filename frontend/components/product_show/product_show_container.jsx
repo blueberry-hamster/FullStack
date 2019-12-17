@@ -9,14 +9,16 @@ const mapStateToProps = (state, ownProps) => {
   const name = ownProps.match.params.name.replace(/-/g, ' ');
   return {
   product: state.entities.product[name],
-  cart: state.entities.cart
+  cart: state.entities.cart,
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   getProduct: name => dispatch(getProduct(name)),
   getCart: () => dispatch(getCart()),
-  
+  createCartItem: (cart_item) => dispatch(createCartItem(cart_item)),
+  updateCartItem: (cart_item) => dispatch(updateCartItem(cart_item)),
+  destroyCartItem: (cart_item_id) => dispatch(destroyCartItem(cart_item_id)),
 });
 
 

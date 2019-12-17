@@ -46,7 +46,13 @@ export default class ProductShowRight extends Component {
         </div>
         
         <Tags tags={tags} />
-        <AddToCart product={product} />
+        <AddToCart 
+          product={product}
+          cart={this.props.cart}
+          createCartItem={this.props.createCartItem}
+          updateCartItem={this.props.updateCartItem}
+          destroyCartItem={this.props.destroyCartItem}
+        />
       </div>
     )
   }

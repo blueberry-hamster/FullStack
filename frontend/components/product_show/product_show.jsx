@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import BreadCrumbs from './breadcrumbs';
 import ImageCarousel from './image_carousel';
@@ -13,6 +13,7 @@ export default class ProductShow extends Component {
   componentDidMount() {
     const name = this.props.match.params.name.replace(/-/g, ' ');
     this.props.getProduct(name);    
+    this.props.getCart();
   }
 
   componentDidUpdate(prevProps) {
@@ -31,7 +32,13 @@ export default class ProductShow extends Component {
             <BreadCrumbs product={product} history={this.props.history} />
             <ImageCarousel product={product} />
           </div>
-          <ProductShowRight product={product} />
+          <ProductShowRight 
+            product={product}
+            cart={this.props.cart}
+            createCartItem={this.props.createCartItem}
+            updateCartItem={this.props.updateCartItem}
+            destroyCartItem={this.props.destroyCartItem}
+          />
         </div>
         {/* FIXME reviews will go here */}
       </div>

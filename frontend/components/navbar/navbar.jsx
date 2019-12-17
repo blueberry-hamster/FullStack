@@ -7,7 +7,7 @@ export default class Navbar extends Component {
     this.state = {
       activeCategory: 'Shop All',
       scrollY: 0
-    }
+    };
     this.handleScroll = this.handleScroll.bind(this);
   }
 
