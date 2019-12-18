@@ -1,8 +1,7 @@
 import React from 'react';
 
 const CartModalTopbar = props => {
-  let numItems = 0;
-  props.cart.items.foreach(item => numItems += item.quantity);
+  let numItems = Object.values(props.cart).length;
 
   return (
     <div id='cart-modal-topbar-container'>

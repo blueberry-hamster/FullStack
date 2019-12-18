@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import CartModalTopBar from './cart_modal_topbar';
+import CartModalTopBar from './cart_modal_topbar';
 // import CartModalBody from './cart_modal_body';
 // import CartModalCheckout from './cart_modal_checkout';
 
@@ -20,9 +20,15 @@ export default class CartModal extends Component {
     const cart = this.props.cart;
     
     return (
+      
       <div id='cart-modal-container'>
-        {/* <CartModalTopBar cart={cart}/>
-        <CartModalBody 
+        <div 
+          id='cart-modal-page-overlay'
+          onClick={() => this.props.closeModal()}
+        ></div>
+
+        <CartModalTopBar cart={cart}/>
+        {/* <CartModalBody 
           cart={cart} 
           removeFromCart={this.props.removeFromCart}
           addToCart={this.props.addToCart}
@@ -31,8 +37,7 @@ export default class CartModal extends Component {
           cart={cart} 
         />  */}
         {/* checkoutCart={this.props.checkoutCart} */}
-
-        <div id='cart-modal-page-overlay'></div>
+        
       </div>
     )
   }

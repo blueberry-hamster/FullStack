@@ -31,7 +31,7 @@ export default class Header extends Component {
           </li>
           <li 
             id='cart_icon'
-            onClick={() => this.props.openCartModal('cart')}
+            onClick={() => this.props.openModal('cart')}
           >
             <CartIcon />
           </li>

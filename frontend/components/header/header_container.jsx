@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/session_actions';
-import { openCartModal } from "../../actions/cart_actions";
+import { openModal } from "../../actions/modal_actions";
 import Header from './header';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logoutUser: user => dispatch(logoutUser(user)),
-  openCartModal: modal => dispatch(openCartModal(modal)),
+  openModal: modal => dispatch(openModal(modal)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
