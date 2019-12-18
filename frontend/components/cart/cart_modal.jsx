@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import CartModalTopBar from './cart_modal_topbar';
 // import CartModalBody from './cart_modal_body';
-// import CartModalCheckout from './cart_modal_checkout';
+import CartModalCheckout from './cart_modal_checkout';
 
 export default class CartModal extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ export default class CartModal extends Component {
   
   componentDidMount() {
     this.props.getCart();
+    this.props.getProducts();
   }
   
 
@@ -37,10 +38,11 @@ export default class CartModal extends Component {
             cart={cart} 
             removeFromCart={this.props.removeFromCart}
             addToCart={this.props.addToCart}
-          />
+          /> */}
           <CartModalCheckout 
             cart={cart} 
-          />  */}
+            products={this.props.products}
+          />  
           {/* checkoutCart={this.props.checkoutCart} */}
         </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartModalTopbar = props => {
-  let numItems = Object.values(props.cart).length;
+  let numItems = Object.values(props.cart).length - 1;
 
   return (
     <div id='cart-modal-topbar-container'>
