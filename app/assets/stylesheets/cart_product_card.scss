@@ -60,6 +60,7 @@ div.cart-modal-product-card {
       line-height: 14px;
       border-top: 1px solid rgb(217, 217, 217);
       background: $white;
+      cursor: pointer;
 
       &:nth-child(2) {
         border-left: 1px solid rgb(217, 217, 217);

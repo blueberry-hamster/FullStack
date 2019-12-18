@@ -10,12 +10,16 @@ const CartModalBody = props => {
           props.cartItems.map((item, i) => 
             <CartModalProductCard 
               key={i}
-              product={props.products[item.id]}
+              cartItemId = {item.id}
+              product={props.products[item.product_id]}
               quantity={item.quantity}
               destroyCartItem={props.destroyCartItem}
             />
           )
         }
+      </div>
+
+      <div className='divider'>
       </div>
 
       <div className='cost-display'>
@@ -27,7 +31,7 @@ const CartModalBody = props => {
 
         <div className='item tax'>
           <p>Tax</p>
-          <p>{`$${ props.subtotal * props.taxRate }`}</p>
+          <p>{`$${(props.subtotal * props.taxRate).toFixed(2)}`}</p>
         </div>
 
         <div className='item shipping'>

@@ -51,13 +51,14 @@ class CartModalProductCard extends Component {
           </div>
 
         </div>
+        
         <div className='edit-remove-buttons'>
 
           <button onClick={() => this.openEdit()}>
               Edit
           </button>
 
-            <button onClick={this.props.destroyCartItem}>
+            <button onClick={() => this.props.destroyCartItem(this.props.cartItemId)}>
               Remove
           </button>
 

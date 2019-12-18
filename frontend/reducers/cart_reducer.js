@@ -11,13 +11,13 @@ const cartReducer = (state = {}, action) => {
       return action.cart;
     
     case RECEIVE_CART_ITEM:
-      let itemId = Object.keys(action.cartItem)[0];
+      let productId = Object.keys(action.cartItem)[0];
       let cartItem = Object.values(action.cartItem)[0];
-      newState[itemId] = cartItem;
+      newState.cartItems[productId] = cartItem;
       return newState;
     
     case REMOVE_CART_ITEM:
-      delete newState[itemId];
+      delete newState.cartItems[Object.keys(action.cartItem)[0]];
       return newState;
       
     default:

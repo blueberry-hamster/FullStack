@@ -8,9 +8,9 @@ const receiveCartItem = cartItem => ({
   cartItem
 });
 
-const removeCartItem = cartItemId => ({
+const removeCartItem = cartItem => ({
   type: REMOVE_CART_ITEM,
-  cartItemId
+  cartItem
 });
 
 export const createCartItem = cartItemParams => dispatch => CartItemApiUtil.createCartItem(cartItemParams)
@@ -20,4 +20,4 @@ export const updateCartItem = cartItemParams => dispatch => CartItemApiUtil.upda
   .then(cartItem => dispatch(receiveCartItem(cartItem)));
 
 export const destroyCartItem = cartItemId => dispatch => CartItemApiUtil.destroyCartItem(cartItemId)
-  .then( () => dispatch(removeCartItem(cartItemId)));
+  .then( cartItem => dispatch(removeCartItem(cartItem)));

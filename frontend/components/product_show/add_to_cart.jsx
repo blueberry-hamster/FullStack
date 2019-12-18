@@ -31,18 +31,21 @@ export default class AddToCart extends Component {
   }
 
   addItemsToCart() {
-    if (this.props.cart[this.props.product.id]) {
-      let currentItem = this.props.cart[this.props.product.id];
+    const cartItems = this.props.cart.cartItems;
+    const product = this.props.product;
+
+    if (cartItems[product.id]) {
+      let currentItem = cartItems[product.id];
       let newCount = this.state.productCount + currentItem.quantity;
       this.props.updateCartItem({ 
         quantity: newCount,
-        product_id: this.props.product.id,
-        cart_id: this.props.cart.id
+        product_id: product.id,
+        cart_id: this.props.cart.cartId
       });
     } else {
         this.props.createCartItem({ 
-          product_id: this.props.product.id, 
-          cart_id: this.props.cart.id,
+          product_id: product.id, 
+          cart_id: this.props.cart.cartId,
           quantity: this.state.productCount
         });
     }

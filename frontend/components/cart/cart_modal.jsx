@@ -18,11 +18,11 @@ export default class CartModal extends Component {
   
 
   render() {
+    const cartItems = Object.values(this.props.cart.cartItems);
     let totalPrice = 0;
     let totalCount = 0;
     
-    const numItems = Object.values(this.props.cart).length - 1;
-    const cartItems = Object.values(this.props.cart).slice(0, numItems);
+    const numItems = cartItems.length;
 
     for (let i = 0; i < numItems; i++) {
       const item = cartItems[i];
