@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import CartModalTopBar from './cart_modal_topbar';
-import CartModalBody from './cart_modal_body';
-import CartModalCheckout from './cart_modal_checkout';
+// import CartModalTopBar from './cart_modal_topbar';
+// import CartModalBody from './cart_modal_body';
+// import CartModalCheckout from './cart_modal_checkout';
 
 export default class CartModal extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class CartModal extends Component {
   }
   
   componentDidMount() {
-    this.props.getcart();
+    this.props.getCart();
   }
   
 
@@ -21,7 +21,7 @@ export default class CartModal extends Component {
     
     return (
       <div id='cart-modal-container'>
-        <CartModalTopBar cart={cart}/>
+        {/* <CartModalTopBar cart={cart}/>
         <CartModalBody 
           cart={cart} 
           removeFromCart={this.props.removeFromCart}
@@ -29,7 +29,7 @@ export default class CartModal extends Component {
         />
         <CartModalCheckout 
           cart={cart} 
-        /> 
+        />  */}
         {/* checkoutCart={this.props.checkoutCart} */}
 
         <div id='cart-modal-page-overlay'></div>

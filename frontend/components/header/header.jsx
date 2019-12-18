@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NoUserSubnav from './no_user_subnav';
 import UserSubnav from './user_subnav';
+
 import Logo from './_logo';
 import UserIcon from './_user_icon';
 import CartIcon from './_cart_icon';
@@ -28,7 +29,10 @@ export default class Header extends Component {
             <UserIcon />
             { subnav }
           </li>
-          <li id='cart_icon'>
+          <li 
+            id='cart_icon'
+            onClick={() => this.props.openCartModal('cart')}
+          >
             <CartIcon />
           </li>
         </ul>
