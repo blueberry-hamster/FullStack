@@ -4,7 +4,7 @@ import CartModalProductCard from './cart_modal_product_card';
 const CartModalBody = props => {
   let total = 0;
   props.cart.items.foreach(item => total += (item.quantity * item.price));
-  let taxRate = 0.8; //FIXME you can update taxrate based upon user address info
+  let taxRate = 0.08; //FIXME you can update taxrate based upon user address info
   let shippingCost = 5; //FIXME can change shipping cost based on total in the future
   
   return (
