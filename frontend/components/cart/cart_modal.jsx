@@ -23,21 +23,27 @@ export default class CartModal extends Component {
       
       <div id='cart-modal-container'>
         <div 
-          id='cart-modal-page-overlay'
+          className='cart-modal-page-overlay'
           onClick={() => this.props.closeModal()}
-        ></div>
+        >
+        </div>
 
-        <CartModalTopBar cart={cart}/>
-        {/* <CartModalBody 
-          cart={cart} 
-          removeFromCart={this.props.removeFromCart}
-          addToCart={this.props.addToCart}
-        />
-        <CartModalCheckout 
-          cart={cart} 
-        />  */}
-        {/* checkoutCart={this.props.checkoutCart} */}
-        
+        <div className='cart-body-container'>
+          <CartModalTopBar 
+            cart={cart}
+            closeModal={this.props.closeModal}
+          />
+          {/* <CartModalBody 
+            cart={cart} 
+            removeFromCart={this.props.removeFromCart}
+            addToCart={this.props.addToCart}
+          />
+          <CartModalCheckout 
+            cart={cart} 
+          />  */}
+          {/* checkoutCart={this.props.checkoutCart} */}
+        </div>
+
       </div>
     )
   }

@@ -7,8 +7,9 @@ div#cart-modal-container {
   height: 100vh;
   width: 100vw;
   z-index: 999;
+  transition: opacity 666ms ease 0s;
 
-  div#cart-modal-page-overlay {
+  div.cart-modal-page-overlay {
     height: 100vh;
     width: 100vw;
     background-color: $milk;
@@ -17,5 +18,54 @@ div#cart-modal-container {
     top: 0px;
     z-index: 900;
     transition: opacity 666ms ease 0s;
+  }
+
+  div.cart-body-container {
+    z-index: 1000;
+    
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+    width: 376px;
+    // width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: $white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px, rgba(0, 0, 0, 0.1) 0px 0px 1px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform 0.48s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+    div#cart-modal-topbar-container {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+      height: 48px;
+      margin-bottom: 1px;
+      box-shadow: rgb(217, 217, 217) 0px 1px 0px;
+      flex: 0 0 auto;
+      padding: 0px 16px;
+      background: $white;
+
+      div.left-container {
+        button {
+          width: 14px;
+          cursor: pointer;
+        }
+        span {
+          font-size: 0.95em;
+          font-weight: 700;
+          margin: 0px 0px 0px 16px;
+        }
+      }
+    }
   }
 }
