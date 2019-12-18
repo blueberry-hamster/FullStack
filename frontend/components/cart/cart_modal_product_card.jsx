@@ -1,7 +1,7 @@
-import React from 'react';
-import CartModalEdit from './cart_modal_edit';
+import React, { Component } from 'react';
+// import CartModalEdit from './cart_modal_edit';
 
-export default class CartModalProductCard extends Component {
+class CartModalProductCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,25 +20,25 @@ export default class CartModalProductCard extends Component {
   }
   
   render() {
-    const product = props.product,
+    const product = this.props.product,
       price = product.price,
       name = product.name,
       imgUrl = product.clear_photo,
-      quantity = props.quantity;
+      quantity = this.props.quantity;
 
-    let edit = this.state.editOpen ? 
-      <CartModalEdit 
-        product={product}
-        quantity={quantity}
-        closeEdit={this.closeEdit} 
-        removeFromCart={this.props.removeFromCart}
-        addToCart={this.props.addToCart}
-      /> :
-      '';
+    // let edit = this.state.editOpen ? 
+    //   <CartModalEdit 
+    //     product={product}
+    //     quantity={quantity}
+    //     closeEdit={this.closeEdit} 
+    //     removeFromCart={this.props.removeFromCart}
+    //     addToCart={this.props.addToCart}
+    //   /> :
+    //   '';
     
     return (
       <div className='cart-modal-product-card'>
-        { edit } 
+        {/* { edit }  */}
         <div className='product-display'>
 
           <div className='product-description'>
@@ -57,7 +57,7 @@ export default class CartModalProductCard extends Component {
               Edit
           </button>
 
-            <button onClick={props.removeFromCart(product, quantity)}>
+            <button onClick={this.props.destroyCartItem}>
               Remove
           </button>
 
@@ -66,3 +66,5 @@ export default class CartModalProductCard extends Component {
     )
   }
 }
+
+export default CartModalProductCard;

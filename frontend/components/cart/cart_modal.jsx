@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CartModalTopBar from './cart_modal_topbar';
-// import CartModalBody from './cart_modal_body';
+import CartModalBody from './cart_modal_body';
 import CartModalCheckout from './cart_modal_checkout';
 
 export default class CartModal extends Component {
@@ -32,9 +32,9 @@ export default class CartModal extends Component {
       totalCount += (cartItems[i].quantity);
     }
 
-    let taxRate = 0.08; //FIXME you can update taxrate based upon user address info
-    let shippingCost = 5; //FIXME can change shipping cost based on total in the future
-
+    const taxRate = 0.08; //FIXME you can update taxrate based upon user address info
+    const shippingCost = 5.00; //FIXME can change shipping cost based on total in the future
+    const subtotal = totalPrice.toFixed(2);
     totalPrice = (totalPrice + (totalPrice * taxRate) + shippingCost).toFixed(2);
     
     return (
@@ -51,11 +51,15 @@ export default class CartModal extends Component {
             totalCount={totalCount}
             closeModal={this.props.closeModal}
           />
-          {/* <CartModalBody 
-            cart={cart} 
-            removeFromCart={this.props.removeFromCart}
-            addToCart={this.props.addToCart}
-          /> */}
+          <CartModalBody 
+            subtotal={subtotal}
+            taxRate={taxRate}
+            shippingCost={shippingCost}
+            cartItems={cartItems} 
+            products={this.props.products}
+            updateCartItem={this.props.updateCartItem}
+            destroyCartItem={this.props.destroyCartItem}
+          />
           <CartModalCheckout 
             totalPrice={totalPrice} 
             products={this.props.products}

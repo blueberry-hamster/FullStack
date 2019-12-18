@@ -2,20 +2,17 @@ import React from 'react';
 import CartModalProductCard from './cart_modal_product_card';
 
 const CartModalBody = props => {
-  let total = 0;
-  props.cart.items.foreach(item => total += (item.quantity * item.price));
-  let taxRate = 0.08; //FIXME you can update taxrate based upon user address info
-  let shippingCost = 5; //FIXME can change shipping cost based on total in the future
   
   return (
     <div id='cart-modal-body-container'>
       <div className='product-card-container'>
         {
-          cart.items.map((item, i) => 
+          props.cartItems.map((item, i) => 
             <CartModalProductCard 
               key={i}
-              product={item.product}
+              product={props.products[item.id]}
               quantity={item.quantity}
+              destroyCartItem={props.destroyCartItem}
             />
           )
         }
@@ -23,19 +20,19 @@ const CartModalBody = props => {
 
       <div className='cost-display'>
 
-        <div className='subtotal'>
+        <div className='item subtotal'>
           <p>Subtotal</p>
-          <p>{`$${ total }`}</p>
+          <p>{`$${ props.subtotal }`}</p>
         </div>
 
-        <div className='tax'>
+        <div className='item tax'>
           <p>Tax</p>
-          <p>{`$${ total + (total * taxRate) }`}</p>
+          <p>{`$${ props.subtotal * props.taxRate }`}</p>
         </div>
 
-        <div className='shipping'>
+        <div className='item shipping'>
           <p>Shipping</p>
-          <p>{`$${ shippingCost }`}</p>
+          <p>{`$${ props.shippingCost }`}</p>
         </div>
         
       </div>
