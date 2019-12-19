@@ -10,6 +10,10 @@ export default function ProductCategoryCards(props) {
             <ProductCard
               key={product.id}
               product={product}
+              cart={props.cart}
+              createCartItem={props.createCartItem}
+              updateCartItem={props.updateCartItem}
+              openModal={props.openModal}
             />
           ))
         }

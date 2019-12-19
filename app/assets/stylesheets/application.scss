@@ -21,6 +21,8 @@
 @import "colors.scss";
 @import "fonts.scss";
 @import "layout.scss";
+@import "mixins.scss";
+@import "animations.scss";
 
 // Grid
 @import "grid.scss";
@@ -33,6 +35,9 @@
 @import "product_index.scss";
 @import "product_show.scss";
 @import "navbar.scss";
+@import "cart_product_card.scss";
+@import "cart_product_edit.scss";
+@import "cart.scss";
 
 
 

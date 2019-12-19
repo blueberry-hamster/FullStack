@@ -93,7 +93,22 @@
 1. Fixed git issue. This was very nerve-wracking. I thought I lost my code.
 2. Styled tags and checkout buttons on product show.
 3. re-alligned product show.
-4. 
+4. Wrote scripts for seeding images.
+5. Restructured files for easy seeding.
+6. Seeded images.
+
+###11/14/19
+1. Seeded `clear_photo` images.
+2. Connected images with components. Fiddled with sizes.
+3. Completed splash with images, a video, and a modified footer.
+4. Designed, and wrote components for cart.
+5. Created a branch to keep working on cart.
+
+###12/2/19
+1. Reaquantied myself with the project!
+2. Created cart item actions.
+3. Made a ui slice of state and cart modal actions.
+4. I can now connect the frontend with the backend, but I need to drop the database and re-seed, so I can create carts on user creation.
 
 ** Jbuilder.key_format camelize: :lower
 ** fix casing. 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util'
+import { AuthRoute } from '../util/route_util';
 
+import Modal from './modal/modal';
 import Header from './header/header_container';
 import NavbarContainer from './navbar/navbar_container';
 import LoginFormContainer from './user_auth/login_form_container';
@@ -14,6 +15,8 @@ import ProductShowContainer from './product_show/product_show_container';
 
 const App = () => (
   <div>
+    <Modal />
+    
     <Header />
     <NavbarContainer />
 

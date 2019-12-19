@@ -3,7 +3,7 @@
 # Table name: instructions
 #
 #  id         :bigint           not null, primary key
-#  product_id :string           not null
+#  product_id :integer          not null
 #  steps      :text             not null, is an Array
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

@@ -25,7 +25,8 @@ class User < ApplicationRecord
   
   #---------------------------------------------------------
   # ASSOCIATIONS
-  
+  has_one :cart, foreign_key: :user_id, class_name: 'Cart'
+  has_many :cart_items, through: :cart
   #---------------------------------------------------------
   
   #---------------------------------------------------------

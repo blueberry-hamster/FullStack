@@ -7,6 +7,7 @@ require 'open-uri'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #---------------------------------------------------------
+Product.destroy_all
 ProductTag.destroy_all
 ProductSize.destroy_all
 ProductCategory.destroy_all
@@ -19,15 +20,15 @@ Description.destroy_all
 Instruction.destroy_all
 Variation.destroy_all
 User.destroy_all
-Product.destroy_all
 
-# USERS
-User.create(
+tomato = User.create(
   first_name: 'Tomato', 
   last_name: 'Potato', 
   email: 'tomato@gmail.com', 
   password: 'password'
 )
+cart = Cart.create({ user_id: tomato.id })
+
 # User.create(
 #   first_name: '',
 #   last_name: '',
@@ -43,6 +44,7 @@ milky_jelly_cleanser = Product.create!(
   tagline: 'conditioning face wash',
   price: 18
 )
+item = CartItem.create({ cart_id: cart.id, product_id: milky_jelly_cleanser.id, quantity: 1 }) #FOR TESTING FIXME
 balm_dotcom = Product.create!(
   name: 'Balm Dotcom',
   tagline: 'universal skin salve',

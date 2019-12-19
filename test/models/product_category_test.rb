@@ -3,8 +3,8 @@
 # Table name: product_categories
 #
 #  id          :bigint           not null, primary key
-#  product_id  :string           not null
-#  category_id :string           not null
+#  product_id  :integer          not null
+#  category_id :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
