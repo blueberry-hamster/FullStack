@@ -29,6 +29,7 @@ class CartModalProductCard extends Component {
     let edit = this.state.editOpen ? 
       <CartModalEdit 
         product={product}
+        cartItemId={this.props.cartItemId}
         quantity={quantity}
         closeEdit={this.closeEdit} 
         destroyCartItem={this.props.destroyCartItem}
@@ -38,7 +39,7 @@ class CartModalProductCard extends Component {
     
     return (
       <div className='cart-modal-product-card'>
-        {/* { edit }  */}
+        { edit } 
         <div className='product-display'>
 
           <div className='product-description'>
