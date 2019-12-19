@@ -5,6 +5,7 @@ import { getCategories } from '../../actions/category_actions';
 import { selectProducts } from '../../reducers/selectors/product_selector';
 import { getCart } from "../../actions/cart_actions";
 import { createCartItem, updateCartItem } from "../../actions/cart_item_actions";
+import { openModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownprops) => {
   const category = ownprops.match.params.category ? ownprops.match.params.category : undefined;
@@ -19,6 +20,7 @@ const mapStateToProps = (state, ownprops) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  openModal: modal => dispatch(openModal(modal)),
   getProducts: () => dispatch(getProducts()),
   getCategories: () => dispatch(getCategories()),
   getCart: () => dispatch(getCart()),

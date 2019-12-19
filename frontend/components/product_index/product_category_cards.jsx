@@ -13,6 +13,7 @@ export default function ProductCategoryCards(props) {
               cart={props.cart}
               createCartItem={props.createCartItem}
               updateCartItem={props.updateCartItem}
+              openModal={props.openModal}
             />
           ))
         }

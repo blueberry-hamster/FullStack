@@ -46,6 +46,8 @@ export default class CartModalEdit extends Component {
   }
   
   render() {
+    if (!this.props.product) return null;
+    
     const product = this.props.product,
       price = product.price,
       name = product.name,

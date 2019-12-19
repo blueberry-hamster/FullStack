@@ -11,7 +11,7 @@ export default class ProductCard extends Component {
     const product = this.props.product;
     
     if (cartItems[product.id]) {
-      let currentItem = cartItems[product.product_id];
+      let currentItem = cartItems[product.id];
       let newCount = 1 + currentItem.quantity;
       this.props.updateCartItem({
         quantity: newCount,
@@ -25,9 +25,12 @@ export default class ProductCard extends Component {
         quantity: 1
       });
     }
+    this.props.openModal('cart');
   }
   
   render() {
+    if(!this.props.product) return null;
+    
     const product = this.props.product;
     const productUrlName = product.name.split(' ').join('-');
 
