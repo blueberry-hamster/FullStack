@@ -52,6 +52,7 @@ export default class AddToCart extends Component {
 
     //reset number to 1
     this.setState({ productCount: 1 });
+    this.props.openModal('cart')
   }
   
   render() {

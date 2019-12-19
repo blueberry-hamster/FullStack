@@ -26,7 +26,7 @@ export default class CartModal extends Component {
 
     for (let i = 0; i < numItems; i++) {
       const item = cartItems[i];
-      const itemPrice = this.props.products[item.id].price;
+      const itemPrice = this.props.products[item.product_id].price;
 
       totalPrice += (item.quantity * itemPrice);
       totalCount += (cartItems[i].quantity);

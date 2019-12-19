@@ -37,6 +37,7 @@ export default class ProductShow extends Component {
             cart={this.props.cart}
             createCartItem={this.props.createCartItem}
             updateCartItem={this.props.updateCartItem}
+            openModal={this.props.openModal}
           />
         </div>
         {/* FIXME reviews will go here */}

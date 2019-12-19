@@ -51,6 +51,7 @@ export default class ProductShowRight extends Component {
           cart={this.props.cart}
           createCartItem={this.props.createCartItem}
           updateCartItem={this.props.updateCartItem}
+          openModal={this.props.openModal}
         />
       </div>
     )

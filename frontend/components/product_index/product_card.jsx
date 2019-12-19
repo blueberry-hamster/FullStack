@@ -11,7 +11,7 @@ export default class ProductCard extends Component {
     const product = this.props.product;
     
     if (cartItems[product.id]) {
-      let currentItem = cartItems[product.id];
+      let currentItem = cartItems[product.product_id];
       let newCount = 1 + currentItem.quantity;
       this.props.updateCartItem({
         quantity: newCount,

@@ -10,6 +10,36 @@ import CartIcon from './_cart_icon';
 export default class Header extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      numCartItems: 0,
+    };
+    this.updateNum = this.updateNum.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.getCart();
+    if (this.props.cart.cartItems) this.updateNum();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.cart != this.props.cart) {
+      this.updateNum();
+    }
+  }
+  
+  updateNum() {
+    const numItems = Object.values(this.props.cart.cartItems).length;
+    let totalCount = 0;
+
+    for (let i = 0; i < numItems; i++) {
+      totalCount += (Object.values(this.props.cart.cartItems)[i].quantity);
+    }
+
+    if (totalCount > 99) {
+      this.setState({ numCartItems: '99+' });
+    } else {
+      this.setState({ numCartItems: totalCount });
+    }
   }
   
   render() {
@@ -20,7 +50,7 @@ export default class Header extends Component {
       
     return (
       <div id='header'>
-        <ul id='header_left_menu'>
+        <ul className='header_left_menu'>
           <div></div>
         </ul>
         <Link id='main_logo' to='/'><Logo /></Link>
@@ -33,6 +63,7 @@ export default class Header extends Component {
             id='cart_icon'
             onClick={() => this.props.openModal('cart')}
           >
+            <p className='num-product'>{ this.state.numCartItems }</p>
             <CartIcon />
           </li>
         </ul>

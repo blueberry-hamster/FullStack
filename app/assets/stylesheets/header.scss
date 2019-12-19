@@ -55,8 +55,16 @@
   }
 
   #header_right_menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
+
+    .num-product {
+      position: absolute;
+      font-size: 0.9em;
+      top: 3px;
+      cursor: pointer;
+    }
   }
 
   #header_left_menu {
