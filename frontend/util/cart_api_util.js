@@ -4,3 +4,11 @@ export const getCart = () => (
     url: `/api/carts/show`
   })
 );
+
+export const newCart = userId => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/carts/create',
+    data: { cart: userId }
+  })
+);

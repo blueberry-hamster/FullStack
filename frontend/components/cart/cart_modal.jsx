@@ -37,6 +37,8 @@ export default class CartModal extends Component {
   
 
   render() {
+    if (!this.props.cart) return null;
+    
     const cartItems = Object.values(this.props.cart.cartItems);
     let totalPrice = 0;
     let totalCount = 0;

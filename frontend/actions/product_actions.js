@@ -6,13 +6,13 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 const receiveProducts = payload => ({
   type: RECEIVE_PRODUCTS,
   payload
-})
+});
 
 // FIXME change to payload with all the info
 const receiveProduct = product => ({
   type: RECEIVE_PRODUCT,
   product
-})
+});
 
 export const getProducts = () => dispatch => ProductApiUtil.getProducts()
   .then(payload => dispatch(receiveProducts(payload)));

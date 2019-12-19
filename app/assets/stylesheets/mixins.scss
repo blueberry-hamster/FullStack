@@ -25,6 +25,11 @@
   border-style: solid;
   border-image: initial;
   border-color: rgb(0, 0, 0);
+
+  &:hover {
+    background-color: #333333;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px, rgba(0, 0, 0, 0.5) 0px 0px 0.5px;
+  }
 }
 
 @mixin flex-centered {

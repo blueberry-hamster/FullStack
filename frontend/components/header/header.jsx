@@ -28,6 +28,8 @@ export default class Header extends Component {
   }
   
   updateNum() {
+    if (!this.props.cart) return 0;
+    
     const numItems = Object.values(this.props.cart.cartItems).length;
     let totalCount = 0;
 
