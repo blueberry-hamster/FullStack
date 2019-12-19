@@ -74,6 +74,7 @@ export default class CartModal extends Component {
             taxRate={taxRate}
             shippingCost={shippingCost}
             cartItems={cartItems} 
+            cartId={this.props.cart.cartId}
             products={this.props.products}
             updateCartItem={this.props.updateCartItem}
             destroyCartItem={this.props.destroyCartItem}

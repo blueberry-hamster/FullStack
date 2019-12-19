@@ -10,9 +10,11 @@ const CartModalBody = props => {
           props.cartItems.map((item, i) => 
             <CartModalProductCard 
               key={i}
-              cartItemId = {item.id}
+              cartItemId={item.id}
+              cartId={props.cartId}
               product={props.products[item.product_id]}
               quantity={item.quantity}
+              updateCartItem={props.updateCartItem}
               destroyCartItem={props.destroyCartItem}
             />
           )

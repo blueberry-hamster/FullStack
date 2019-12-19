@@ -6,6 +6,7 @@ export default class CartModalEdit extends Component {
     this.state = {
       quantity: 0,
     };
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   componentDidMount() {
@@ -35,7 +36,7 @@ export default class CartModalEdit extends Component {
       this.props.updateCartItem({
         quantity: this.state.quantity,
         product_id: this.props.product.id,
-        cart_id: this.props.cart.cartId
+        cart_id: this.props.cartId
       });
     } else {
       this.props.destroyCartItem(this.props.cartItemId);
@@ -69,6 +70,7 @@ export default class CartModalEdit extends Component {
             <p className='product_name'>{name}</p>
             <p>{product.tagline}</p>
           </div>
+          <div className='divider'></div>
         </div>
 
         <div className='add-to-cart-container'>
@@ -79,7 +81,7 @@ export default class CartModalEdit extends Component {
             >
               -
             </button>
-            <div className='num-display'>{quantity}</div>
+            <div className='num-display'>{this.state.quantity}</div>
             <button 
               className='plus-btn'
               onClick={() => this.changeProductCount('add')}
@@ -92,7 +94,7 @@ export default class CartModalEdit extends Component {
             className='update-btn'
             onClick={this.handleUpdate}
           >
-            {`UPDATE SELECTION - $${price * quantity}`}
+            {`UPDATE SELECTION - $${price * this.state.quantity}`}
           </button>
 
         </div>
