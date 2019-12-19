@@ -37,7 +37,7 @@ export default class CartModalEdit extends Component {
       quantity = this.props.quantity;
     
     return (
-      <div id='cart-modal-edit-container'>
+      <div className='cart-modal-edit-container .slide-in-bottom'>
         <div className='edit-header'>
           <div className='left'>
             <p>{name}</p>

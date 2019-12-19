@@ -14,6 +14,25 @@ export default class CartModal extends Component {
   componentDidMount() {
     this.props.getCart();
     this.props.getProducts();
+
+    // handle exit animation
+    const overlay = document.querySelector('.cart-modal-page-overlay');
+    const xBtn = document.querySelector('#base-ui-close');
+    const cartBody = document.querySelector('.cart-body-container');
+
+    overlay.addEventListener('click', () => {
+      window.setTimeout(() => this.props.closeModal(), 300);
+      cartBody.style.transition = "all 0.3s ease-in-out";
+      cartBody.style.right = "-1000px";
+    });
+
+    xBtn.addEventListener('click', e => {
+      e.preventDefault();
+      
+      window.setTimeout(() => this.props.closeModal(), 300);
+      cartBody.style.transition = "all 0.3s ease-in-out";
+      cartBody.style.right = "-1000px";
+    });
   }
   
 
@@ -42,11 +61,10 @@ export default class CartModal extends Component {
       <div id='cart-modal-container'>
         <div 
           className='cart-modal-page-overlay'
-          onClick={() => this.props.closeModal()}
         >
         </div>
 
-        <div className='cart-body-container'>
+        <div className='cart-body-container slide-in-right'>
           <CartModalTopBar 
             totalCount={totalCount}
             closeModal={this.props.closeModal}

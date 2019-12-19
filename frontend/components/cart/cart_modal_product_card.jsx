@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import CartModalEdit from './cart_modal_edit';
+import CartModalEdit from './cart_modal_edit';
 
 class CartModalProductCard extends Component {
   constructor(props) {
@@ -26,15 +26,15 @@ class CartModalProductCard extends Component {
       imgUrl = product.clear_photo,
       quantity = this.props.quantity;
 
-    // let edit = this.state.editOpen ? 
-    //   <CartModalEdit 
-    //     product={product}
-    //     quantity={quantity}
-    //     closeEdit={this.closeEdit} 
-    //     removeFromCart={this.props.removeFromCart}
-    //     addToCart={this.props.addToCart}
-    //   /> :
-    //   '';
+    let edit = this.state.editOpen ? 
+      <CartModalEdit 
+        product={product}
+        quantity={quantity}
+        closeEdit={this.closeEdit} 
+        destroyCartItem={this.props.destroyCartItem}
+        updateCartItem={this.props.updateCartItem}
+      /> :
+      '';
     
     return (
       <div className='cart-modal-product-card'>
