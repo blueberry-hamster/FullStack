@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import MainFrame from './main_frame';
 import Inspired from './inspired';
 import About from './about';
@@ -12,7 +12,13 @@ export default class Splash extends Component {
   }
 
   componentDidMount() {
-    this.props.getProducts()
+    this.props.getProducts();
+    if (!this.props.session) {
+      this.props.getIp();
+    }
+    if (this.props.session && this.props.session.id && this.props.session.id.split('.').length > 1) {
+      this.props.getDefaultCart(this.props.session.id);
+    }
   }
   
   render() {

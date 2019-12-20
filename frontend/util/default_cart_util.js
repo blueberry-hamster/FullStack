@@ -1,12 +1,15 @@
 import { getCart, newCart } from '../actions/cart_actions';
 
 export const defaultCart = ip => {
-  const existingCart = getCart(ip);
-  if (!existingCart) {
-    return newCart(ip);
-  } else {
-    return existingCart;
-  }
+  dispatch(getCart()).then( res => {
+    debugger
+    res ? nil : newCart(ip);
+  });
+  // if (!existingCart) {
+  //   return newCart(ip);
+  // } else {
+  //   return existingCart;
+  // }
 };
 
 export const mergeDefaultCart = (defaultCartItems, userCartItems) => {

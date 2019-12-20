@@ -5,11 +5,10 @@ import { openModal } from "../../actions/modal_actions";
 import { getUserIp, defaultCart } from "../../util/default_cart_util";
 import Header from './header';
 
-const mapStateToProps = (state, ip) => {
-  const cart = state.session.id ? state.entities.cart : defaultCart(ip);
+const mapStateToProps = (state) => {
   return {
   user: state.entities.users[state.session.id],
-  cart,
+  cart: state.entities.cart,
   };
 };
 

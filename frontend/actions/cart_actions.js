@@ -10,5 +10,10 @@ const receiveCart = cart => ({
 export const getCart = () => dispatch => CartApiUtil.getCart()
   .then(cart => dispatch(receiveCart(cart)));
 
-export const newCart = userId => dispatch => CartApiUtil.newCart()
-  .then(cart => dispatch(receiveCart(cart)));
+// export const newCart = userId => dispatch => CartApiUtil.newCart()
+//   .then(cart => dispatch(receiveCart(cart)));
+
+export const getDefaultCart = ip => dispatch(receiveCart({
+  userId: ip,
+  cartItems: {} 
+}));

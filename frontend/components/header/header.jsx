@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NoUserSubnav from './no_user_subnav';
 import UserSubnav from './user_subnav';
+import { defaultCart } from "../../util/default_cart_util";
 
 import Logo from './_logo';
 import UserIcon from './_user_icon';
@@ -17,7 +18,9 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
+    
     this.props.getCart();
+    
     if (this.props.cart.cartItems) this.updateNum();
   }
 

@@ -10,6 +10,7 @@ export default class AddToCart extends Component {
   }
 
   componentDidMount() {
+    
   }
   
   changeProductCount(change) {

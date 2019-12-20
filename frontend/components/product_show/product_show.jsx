@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import BreadCrumbs from './breadcrumbs';
 import ImageCarousel from './image_carousel';
 import ProductShowRight from './product_show_right';
+import { defaultCart } from "../../util/default_cart_util";
 
 export default class ProductShow extends Component {
   constructor(props) {
@@ -13,7 +14,9 @@ export default class ProductShow extends Component {
   componentDidMount() {
     const name = this.props.match.params.name.replace(/-/g, ' ');
     this.props.getProduct(name);    
-    this.props.getCart();
+
+    this.props.user ? this.props.getCart() : defaultCart(Window.ip);
+    // this.props.getCart();
   }
 
   componentDidUpdate(prevProps) {
