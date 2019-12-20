@@ -12,8 +12,7 @@ export default class CartModal extends Component {
   }
   
   componentDidMount() {
-    this.props.getCart();
-    this.props.getProducts();
+    if (this.props.currentUser) this.props.getCart();
 
     // handle exit animation
     const overlay = document.querySelector('.cart-modal-page-overlay');

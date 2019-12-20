@@ -16,14 +16,13 @@ const mapStateToProps = (state, ownprops) => {
     category,
     products,
     cart: state.entities.cart,
+    currentUser: state.entities.users[state.session.id],
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   openModal: modal => dispatch(openModal(modal)),
-  getProducts: () => dispatch(getProducts()),
-  getCategories: () => dispatch(getCategories()),
-  getCart: () => dispatch(getCart()),
+  
   createCartItem: (cart_item) => dispatch(createCartItem(cart_item)),
   updateCartItem: (cart_item) => dispatch(updateCartItem(cart_item)),
 });

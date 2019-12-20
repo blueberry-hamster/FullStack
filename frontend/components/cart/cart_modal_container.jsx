@@ -8,11 +8,10 @@ import { getProducts } from "../../actions/product_actions";
 const mapStateToProps = state => ({
   cart: state.entities.cart,
   products: state.entities.products,
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = dispatch => ({
-  getCart: () => dispatch(getCart()),
-  getProducts: () => dispatch(getProducts()),
   updateCartItem: (params) => dispatch(updateCartItem(params)),
   destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId)),
   closeModal: () => dispatch(closeModal()),

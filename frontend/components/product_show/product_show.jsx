@@ -14,9 +14,6 @@ export default class ProductShow extends Component {
   componentDidMount() {
     const name = this.props.match.params.name.replace(/-/g, ' ');
     this.props.getProduct(name);    
-
-    this.props.user ? this.props.getCart() : defaultCart(Window.ip);
-    // this.props.getCart();
   }
 
   componentDidUpdate(prevProps) {

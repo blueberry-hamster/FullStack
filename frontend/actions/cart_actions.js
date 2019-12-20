@@ -14,6 +14,6 @@ export const getCart = () => dispatch => CartApiUtil.getCart()
 //   .then(cart => dispatch(receiveCart(cart)));
 
 export const getDefaultCart = ip => dispatch(receiveCart({
-  userId: ip,
+  cartId: ip,
   cartItems: {} 
 }));

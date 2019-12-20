@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ProductTitleBar from './product_title_bar';
 import ProductCategoryCards from './product_category_cards';
-import { defaultCart } from "../../util/default_cart_util";
 
 export default class ProductIndex extends Component {
   constructor(props) {
@@ -15,9 +14,6 @@ export default class ProductIndex extends Component {
   componentDidMount() {
     this.props.getProducts();
     this.props.getCategories();
-
-    this.props.user ? this.props.getCart() : defaultCart(Window.ip);
-    // this.props.getCart();
   }
 
   componentDidUpdate(prevProps) {

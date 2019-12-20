@@ -18,9 +18,21 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
+    this.props.getProducts();
+    this.props.getCategories();
     
-    this.props.getCart();
+    let that = this;
+    if (!this.props.session.id) {
+      this.props.getIp().then(
+        () => {
+          if (that.props.session.id.split('.').length > 1) {
+            that.props.getDefaultCart(that.props.session.id);
+          }
+        }
+      );
+    }
     
+    if (this.props.user) this.props.getCart();
     if (this.props.cart.cartItems) this.updateNum();
   }
 

@@ -12,13 +12,7 @@ export default class Splash extends Component {
   }
 
   componentDidMount() {
-    this.props.getProducts();
-    if (!this.props.session) {
-      this.props.getIp();
-    }
-    if (this.props.session && this.props.session.id && this.props.session.id.split('.').length > 1) {
-      this.props.getDefaultCart(this.props.session.id);
-    }
+    
   }
   
   render() {
