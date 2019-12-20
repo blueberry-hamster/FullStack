@@ -23,7 +23,7 @@ export default class SignupForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.loginUser(this.state)
-      .then(() => this.props.history.push('/'))
+      .then(( ) => this.props.history.push('/'))
       .fail(() => {
         const $input = $('#password');
         $input.addClass('invalid');
