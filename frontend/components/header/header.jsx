@@ -21,18 +21,20 @@ export default class Header extends Component {
     this.props.getProducts();
     this.props.getCategories();
     
+    // set session to ip if not logged in
     let that = this;
     if (!this.props.session.id) {
       this.props.getIp().then(
         () => {
           if (that.props.session.id.split('.').length > 1) {
+            
             that.props.getDefaultCart(that.props.session.id);
           }
         }
       );
     }
     
-    if (this.props.user) this.props.getCart();
+    if (this.props.currentUser) this.props.getCart(this.props.user.id);
     if (this.props.cart.cartItems) this.updateNum();
   }
 

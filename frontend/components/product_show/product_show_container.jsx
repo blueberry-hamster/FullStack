@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import { getProduct } from '../../actions/product_actions';
-import { getCart } from "../../actions/cart_actions";
 import { createCartItem, updateCartItem } from "../../actions/cart_item_actions";
 import { openModal } from "../../actions/modal_actions";
 

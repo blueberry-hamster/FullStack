@@ -4,6 +4,7 @@ import { loginUser } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   errors: state.errors.session,
+  cart: state.entities.cart,
 });
 
 const mapDispatchToProps = dispatch => ({

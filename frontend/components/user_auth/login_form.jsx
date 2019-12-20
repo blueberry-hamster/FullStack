@@ -22,8 +22,11 @@ export default class SignupForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const oldCart = this.props.cart;
     this.props.loginUser(this.state)
-      .then(( ) => this.props.history.push('/'))
+      .then(() => {
+        this.props.history.push('/');
+      })
       .fail(() => {
         const $input = $('#password');
         $input.addClass('invalid');
@@ -60,7 +63,7 @@ export default class SignupForm extends Component {
       }, 
       () => setTimeout(() => {
         this.handleDemoLogin(email, password);
-      }, 100))
+      }, 100));
     } else if (password.length > 0) {
       this.setState({
         password: this.state.password += password.shift()

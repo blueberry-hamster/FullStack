@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   logoutUser: user => dispatch(logoutUser(user)),
   openModal: modal => dispatch(openModal(modal)),
-  getCart: () => dispatch(getCart()),
+  getCart: userId => dispatch(getCart(userId)),
   getIp: () => dispatch(getIpAddress()),
   getDefaultCart: ip => dispatch(getDefaultCart(ip)),
   getProducts: () => dispatch(getProducts()),
