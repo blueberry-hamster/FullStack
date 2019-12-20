@@ -12,8 +12,6 @@ export default class ProductIndex extends Component {
   }
 
   componentDidMount() {
-    this.props.getProducts();
-    this.props.getCategories();
   }
 
   componentDidUpdate(prevProps) {

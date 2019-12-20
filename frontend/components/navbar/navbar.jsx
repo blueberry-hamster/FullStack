@@ -12,8 +12,6 @@ export default class Navbar extends Component {
   }
 
   componentDidMount() {
-    this.props.getProducts();
-    this.props.getCategories();
 
     window.addEventListener('scroll', this.handleScroll);
   }

@@ -1,9 +1,6 @@
 import { connect } from 'react-redux';
 import ProductIndex from './product_index';
-import { getProducts } from '../../actions/product_actions';
-import { getCategories } from '../../actions/category_actions';
 import { selectProducts } from '../../reducers/selectors/product_selector';
-import { getCart } from "../../actions/cart_actions";
 import { createCartItem, updateCartItem } from "../../actions/cart_item_actions";
 import { openModal } from "../../actions/modal_actions";
 
