@@ -36,7 +36,6 @@ export default class CartModal extends Component {
   
 
   render() {
-    debugger
     if (!this.props.cart) return null;
     
     const cartItems = Object.values(this.props.cart.cartItems);
@@ -80,6 +79,9 @@ export default class CartModal extends Component {
             products={this.props.products}
             updateCartItem={this.props.updateCartItem}
             destroyCartItem={this.props.destroyCartItem}
+            updateTempCartItem={this.props.updateTempCartItem}
+            removeTempCartItem={this.props.removeTempCartItem}
+            currentUser={this.props.currentUser}
           />
           <CartModalCheckout 
             totalPrice={totalPrice} 

@@ -23,4 +23,4 @@ export const destroyCartItem = cartItemId => dispatch => CartItemApiUtil.destroy
   .then( cartItem => dispatch(removeCartItem(cartItem)));
 
 export const updateTempCartItem = cartItem => dispatch(receiveCartItem(cartItem));
-export const removeTempCartItem = cartItem => dispatch(receiveCartItem(cartItem));
+export const removeTempCartItem = cartItem => dispatch(removeCartItem(cartItem));

@@ -33,10 +33,7 @@ export default class AddToCart extends Component {
     }
   }
 
-  addToDatabase() {
-    const cartItems = this.props.cart.cartItems;
-    const product = this.props.product;
-    
+  addToDatabase(cartItems, product) {
     if (cartItems[product.id]) {
       let currentItem = cartItems[product.id];
       let newCount = this.state.productCount + currentItem.quantity;
@@ -55,9 +52,7 @@ export default class AddToCart extends Component {
     }
   }
 
-  addToTemp() {
-    const cartItems = this.props.cart.cartItems;
-    const product = this.props.product;
+  addToTemp(cartItems, product) {
     const currentItem = cartItems[product.id];
     const currentQuantity = currentItem ?  currentItem.quantity : 0;
     const newCount = this.state.productCount + currentQuantity;
@@ -73,12 +68,14 @@ export default class AddToCart extends Component {
   }
 
   addItemsToCart() {
+    const cartItems = this.props.cart.cartItems;
+    const product = this.props.product;
+    
     if (this.props.currentUser) {
-      this.addToDatabase();
+      this.addToDatabase(cartItems, product);
     } else {
-      this.addToTemp();
+      this.addToTemp(cartItems, product);
     }
-
     //reset number to 1
     this.setState({ productCount: 1 });
     this.props.openModal('cart');

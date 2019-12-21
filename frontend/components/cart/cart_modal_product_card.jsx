@@ -18,6 +18,14 @@ class CartModalProductCard extends Component {
   closeEdit() {
     this.setState({ editOpen: false });
   }
+
+  handleDelete() {
+    if (this.props.currentUser) {
+      this.props.destroyCartItem(this.props.cartItemId);
+    } else {
+      this.props.removeTempCartItem(this.props.cartItem)
+    }
+  }
   
   render() {
     const product = this.props.product,
@@ -30,11 +38,15 @@ class CartModalProductCard extends Component {
       <CartModalEdit 
         product={product}
         cartId={this.props.cartId}
+        cartItems={this.props.cartItems} 
         cartItemId={this.props.cartItemId}
         quantity={quantity}
         closeEdit={this.closeEdit} 
         destroyCartItem={this.props.destroyCartItem}
         updateCartItem={this.props.updateCartItem}
+        updateTempCartItem={this.props.updateTempCartItem}
+        removeTempCartItem={this.props.removeTempCartItem}
+        currentUser={this.props.currentUser}
       /> :
       '';
     
@@ -60,7 +72,7 @@ class CartModalProductCard extends Component {
               Edit
           </button>
 
-            <button onClick={() => this.props.destroyCartItem(this.props.cartItemId)}>
+            <button onClick={() => this.handleDelete()}>
               Remove
           </button>
 

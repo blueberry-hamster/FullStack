@@ -6,13 +6,33 @@ export default class ProductCard extends Component {
     super(props);
   }
   
-  addItemToCart() {
-    const cartItems = this.props.cart.cartItems;
-    const product = this.props.product;
+  // addItemToCart() {
+  //   const cartItems = this.props.cart.cartItems;
+  //   const product = this.props.product;
     
+  //   if (cartItems[product.id]) {
+  //     let currentItem = cartItems[product.id];
+  //     let newCount = 1 + currentItem.quantity;
+  //     this.props.updateCartItem({
+  //       quantity: newCount,
+  //       product_id: product.id,
+  //       cart_id: this.props.cart.cartId
+  //     });
+  //   } else {
+  //     this.props.createCartItem({
+  //       product_id: product.id,
+  //       cart_id: this.props.cart.cartId,
+  //       quantity: 1
+  //     });
+  //   }
+  //   this.props.openModal('cart');
+  // }
+
+  addToDatabase(cartItems, product) {
     if (cartItems[product.id]) {
       let currentItem = cartItems[product.id];
       let newCount = 1 + currentItem.quantity;
+
       this.props.updateCartItem({
         quantity: newCount,
         product_id: product.id,
@@ -24,6 +44,32 @@ export default class ProductCard extends Component {
         cart_id: this.props.cart.cartId,
         quantity: 1
       });
+    }
+  }
+
+  addToTemp(cartItems, product) {
+    const currentItem = cartItems[product.id];
+    const currentQuantity = currentItem ? currentItem.quantity : 1;
+    const newCount = currentQuantity;
+
+    this.props.updateTempCartItem({
+      [product.id]: {
+        quantity: newCount,
+        product_id: product.id,
+        cart_id: this.props.cart.cartId
+      }
+    });
+
+  }
+
+  addItemsToCart() {
+    const cartItems = this.props.cart.cartItems;
+    const product = this.props.product;
+
+    if (this.props.currentUser) {
+      this.addToDatabase(cartItems, product);
+    } else {
+      this.addToTemp(cartItems, product);
     }
     this.props.openModal('cart');
   }
