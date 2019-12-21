@@ -56,16 +56,18 @@ export default class AddToCart extends Component {
   }
 
   addToTemp() {
-    debugger
     const cartItems = this.props.cart.cartItems;
     const product = this.props.product;
     const currentItem = cartItems[product.id];
-    const newCount = this.state.productCount + currentItem.quantity;
+    const currentQuantity = currentItem ?  currentItem.quantity : 0;
+    const newCount = this.state.productCount + currentQuantity;
 
     this.props.updateTempCartItem({
-      quantity: newCount,
-      product_id: product.id,
-      cart_id: this.props.cart.cartId
+      [product.id] : {
+        quantity: newCount,
+        product_id: product.id,
+        cart_id: this.props.cart.cartId
+      }
     });
     
   }
