@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NoUserSubnav from './no_user_subnav';
 import UserSubnav from './user_subnav';
-import { defaultCart } from "../../util/default_cart_util";
-
 import Logo from './_logo';
 import UserIcon from './_user_icon';
 import CartIcon from './_cart_icon';
@@ -25,9 +23,9 @@ export default class Header extends Component {
     let that = this;
     if (!this.props.session.id) {
       this.props.getIp().then(
-        () => {
+        res => {
           if (that.props.session.id.split('.').length > 1) {
-            
+            // this.props.newCart(res.ip);
             that.props.getDefaultCart(that.props.session.id);
           }
         }

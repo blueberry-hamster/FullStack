@@ -5,10 +5,10 @@ export const getCart = () => (
   })
 );
 
-export const newCart = userId => (
+export const newCart = user_id => (
   $.ajax({
     method: 'POST',
     url: 'api/carts/create',
-    data: { cart: userId }
+    data: { cart: {user_id} }
   })
 );

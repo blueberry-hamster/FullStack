@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import { getProduct } from '../../actions/product_actions';
-import { createCartItem, updateCartItem } from "../../actions/cart_item_actions";
+import { createCartItem, updateCartItem, updateTempCartItem } from "../../actions/cart_item_actions";
 import { openModal } from "../../actions/modal_actions";
 
 // import getImages
@@ -20,6 +20,7 @@ const mapDispatchToProps = dispatch => ({
   getProduct: name => dispatch(getProduct(name)),
   createCartItem: (cart_item) => dispatch(createCartItem(cart_item)),
   updateCartItem: (cart_item) => dispatch(updateCartItem(cart_item)),
+  updateTempCartItem: (cart_item) => dispatch(updateTempCartItem(cart_item)),
 });
 
 

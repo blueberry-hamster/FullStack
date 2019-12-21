@@ -1,9 +1,9 @@
 import { getCart, newCart } from '../actions/cart_actions';
 
 export const defaultCart = ip => {
-  dispatch(getCart()).then( res => {
-    debugger
-    res ? nil : newCart(ip);
+  debugger
+  dispatch(getCart(ip)).then( cart => {
+    if (!cart) dispatch(newCart(ip));
   });
   // if (!existingCart) {
   //   return newCart(ip);

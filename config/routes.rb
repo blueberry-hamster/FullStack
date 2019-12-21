@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   namespace :api do
     get 'categories/index'
   end
+
+  namespace :api do 
+    post 'carts/create'
+  end
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "static_pages#root"
   
@@ -22,7 +27,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index]
     resources :products, only: [:show], param: :name
     # resources :categories, only: [:index] ?? FIXME why doesn't this one work like the one above?
-    resources :carts, only: [:create, :show]
+    resources :carts, only: [:show]
     resources :cart_items, only: [:create, :update, :destroy]
   end
 end

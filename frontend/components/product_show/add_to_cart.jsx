@@ -7,6 +7,8 @@ export default class AddToCart extends Component {
       productCount: 1,
     };
     this.changeProductCount = this.changeProductCount.bind(this);
+    this.addToDatabase = this.addToDatabase.bind(this);
+    this.addToTemp = this.addToTemp.bind(this);
   }
 
   componentDidMount() {
@@ -31,24 +33,48 @@ export default class AddToCart extends Component {
     }
   }
 
-  addItemsToCart() {
+  addToDatabase() {
     const cartItems = this.props.cart.cartItems;
     const product = this.props.product;
-
+    
     if (cartItems[product.id]) {
       let currentItem = cartItems[product.id];
       let newCount = this.state.productCount + currentItem.quantity;
-      this.props.updateCartItem({ 
+
+      this.props.updateCartItem({
         quantity: newCount,
         product_id: product.id,
         cart_id: this.props.cart.cartId
       });
     } else {
-        this.props.createCartItem({ 
-          product_id: product.id, 
-          cart_id: this.props.cart.cartId,
-          quantity: this.state.productCount
-        });
+      this.props.createCartItem({
+        product_id: product.id,
+        cart_id: this.props.cart.cartId,
+        quantity: this.state.productCount
+      });
+    }
+  }
+
+  addToTemp() {
+    debugger
+    const cartItems = this.props.cart.cartItems;
+    const product = this.props.product;
+    const currentItem = cartItems[product.id];
+    const newCount = this.state.productCount + currentItem.quantity;
+
+    this.props.updateTempCartItem({
+      quantity: newCount,
+      product_id: product.id,
+      cart_id: this.props.cart.cartId
+    });
+    
+  }
+
+  addItemsToCart() {
+    if (this.props.currentUser) {
+      this.addToDatabase();
+    } else {
+      this.addToTemp();
     }
 
     //reset number to 1

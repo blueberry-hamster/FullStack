@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import BreadCrumbs from './breadcrumbs';
 import ImageCarousel from './image_carousel';
 import ProductShowRight from './product_show_right';
-import { defaultCart } from "../../util/default_cart_util";
 
 export default class ProductShow extends Component {
   constructor(props) {
@@ -37,7 +36,9 @@ export default class ProductShow extends Component {
             cart={this.props.cart}
             createCartItem={this.props.createCartItem}
             updateCartItem={this.props.updateCartItem}
+            updateTempCartItem={this.props.updateTempCartItem}
             openModal={this.props.openModal}
+            currentUser={this.props.currentUser}
           />
         </div>
         {/* FIXME reviews will go here */}
