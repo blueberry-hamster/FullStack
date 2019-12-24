@@ -23,7 +23,7 @@ class CartModalProductCard extends Component {
     if (this.props.currentUser) {
       this.props.destroyCartItem(this.props.cartItemId);
     } else {
-      this.props.removeTempCartItem(this.props.cartItem)
+      this.props.removeTempCartItem(this.props.cartItem);
     }
   }
   
@@ -38,7 +38,7 @@ class CartModalProductCard extends Component {
       <CartModalEdit 
         product={product}
         cartId={this.props.cartId}
-        cartItems={this.props.cartItems} 
+        cartItem={this.props.cartItem} 
         cartItemId={this.props.cartItemId}
         quantity={quantity}
         closeEdit={this.closeEdit} 

@@ -53,7 +53,7 @@ export default class CartModal extends Component {
     }
 
     const taxRate = 0.08; //FIXME you can update taxrate based upon user address info
-    const shippingCost = totalPrice === 0 || totalPrice > 15 ? 5.00 : 0; //FIXME can change shipping cost based on total in the future
+    const shippingCost = (totalPrice === 0 || totalPrice > 30) ? 0 : 5.00; //FIXME can change shipping cost based on total in the future
     const subtotal = totalPrice.toFixed(2);
     totalPrice = (totalPrice + (totalPrice * taxRate) + shippingCost).toFixed(2);
     

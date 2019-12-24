@@ -31,8 +31,8 @@ export default class CartModalEdit extends Component {
     }
   }
 
-  handleUpdate() {
-    if (this.state.quantity > 0){
+  updateDatabase() {
+    if (this.state.quantity > 0) {
       this.props.updateCartItem({
         quantity: this.state.quantity,
         product_id: this.props.product.id,
@@ -40,6 +40,26 @@ export default class CartModalEdit extends Component {
       });
     } else {
       this.props.destroyCartItem(this.props.cartItemId);
+    }
+  }
+
+  updateTemp() {
+    if (this.state.quantity > 0) {
+      this.props.updateTempCartItem({
+        quantity: this.state.quantity,
+        product_id: this.props.product.id,
+        cart_id: this.props.cartId
+      });
+    } else {
+      this.props.removeTempCartItem(this.props.cartItem);
+    }
+  }
+
+  handleUpdate() {
+    if (this.props.currentUser) {
+      this.updateDatabase();
+    } else {
+      this.updateTemp();
     }
 
     this.props.closeEdit();

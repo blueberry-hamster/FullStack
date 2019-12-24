@@ -61,6 +61,7 @@ export default class ProductIndex extends Component {
             cart={this.props.cart}
             createCartItem={this.props.createCartItem}
             updateCartItem={this.props.updateCartItem}
+            updateTempCartItem={this.props.updateTempCartItem}
             openModal={this.props.openModal}
           />
         </div>

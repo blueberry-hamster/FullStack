@@ -10,7 +10,7 @@ const CartModalBody = props => {
           props.cartItems.map((item, i) => 
             <CartModalProductCard 
               key={i}
-              cartItems={props.cartItems} 
+              cartItem={props.cartItems[item.id]} 
               cartItemId={item.id}
               cartId={props.cartId}
               product={props.products[item.product_id]}

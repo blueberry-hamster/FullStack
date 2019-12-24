@@ -62,7 +62,7 @@ export default class ProductCard extends Component {
 
   }
 
-  addItemsToCart() {
+  addItemToCart() {
     const cartItems = this.props.cart.cartItems;
     const product = this.props.product;
 
