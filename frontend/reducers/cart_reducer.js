@@ -1,13 +1,13 @@
 import { RECEIVE_CART  } from "../actions/cart_actions";
 import { RECEIVE_CART_ITEM, REMOVE_CART_ITEM } from "../actions/cart_item_actions";
 
-const cartReducer = (state = { cartItems: {} }, action) => {
+const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
-  
 
   switch (action.type) {
     case RECEIVE_CART:
+      newState.cartItems = action.cart.cartItems;
       newState.cartId = action.cart.cartId;
       return newState;
     

@@ -32,8 +32,8 @@ export default class Header extends Component {
       );
     }
     
-    if (this.props.currentUser) this.props.getCart(this.props.user.id);
-    if (this.props.cart.cartItems) this.updateNum();
+    if (this.props.user) this.props.getCart();
+    if (this.props.cart.cartId) this.updateNum();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -43,7 +43,7 @@ export default class Header extends Component {
   }
   
   updateNum() {
-    if (!this.props.cart) return 0;
+    if (!this.props.cart.cartItems) return 0;
     
     const numItems = Object.values(this.props.cart.cartItems).length;
     let totalCount = 0;

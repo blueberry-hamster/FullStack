@@ -59,6 +59,7 @@ export default class ProductIndex extends Component {
             key={this.props.category}
             products={products}
             cart={this.props.cart}
+            currentUser={this.props.currentUser}
             createCartItem={this.props.createCartItem}
             updateCartItem={this.props.updateCartItem}
             updateTempCartItem={this.props.updateTempCartItem}

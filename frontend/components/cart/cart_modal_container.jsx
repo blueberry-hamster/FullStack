@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import CartModal from './cart_modal';
-import { destroyCartItem, updateCartItem, removeTempCartItem, updateTempCartItem } from "../../actions/cart_item_actions";
+import { getCart } from "../../actions/cart_actions";
+import { destroyCartItem, updateCartItem, updateTempCartItem } from "../../actions/cart_item_actions";
 import { closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = state => ({
@@ -10,6 +11,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  getCart: () => dispatch(getCart()),
   updateCartItem: (params) => dispatch(updateCartItem(params)),
   destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId)),
   closeModal: () => dispatch(closeModal()),

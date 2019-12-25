@@ -11,6 +11,7 @@ export default function ProductCategoryCards(props) {
               key={product.id}
               product={product}
               cart={props.cart}
+              currentUser={props.currentUser}
               createCartItem={props.createCartItem}
               updateCartItem={props.updateCartItem}
               updateTempCartItem={props.updateTempCartItem}
