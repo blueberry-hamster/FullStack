@@ -40,6 +40,7 @@ export default class Header extends Component {
     if (prevProps.cart != this.props.cart) {
       this.updateNum();
     }
+    if (this.props.user && !this.props.cart.cartId) this.props.getCart();
   }
   
   updateNum() {
