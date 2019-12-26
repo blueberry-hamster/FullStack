@@ -12,6 +12,7 @@ import FooterContainer from './footer/footer_container';
 import SplashContainer from './splash/splash_container';
 import ProductIndexContainer from './product_index/product_index_container';
 import ProductShowContainer from './product_show/product_show_container';
+import CheckoutContainer from './checkout/checkout_container';
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
     <Switch>
       <AuthRoute path='/signin' component={LoginFormContainer} />
       <AuthRoute path='/signup' component={SignupFormContainer} />
+      <Route path='/checkout' component={CheckoutContainer} />
       <Route path='/products/:category?' component={ProductIndexContainer} />
       <Route path='/product/:name' component={ProductShowContainer} />
       <Route exact path='/' component={SplashContainer} />

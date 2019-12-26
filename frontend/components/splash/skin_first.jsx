@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ProductCard from '../product_index/product_card';
 
 export default function SkinFirst(props) {
@@ -23,7 +23,7 @@ export default function SkinFirst(props) {
         </div>
         <ul className='splash-product-cards'>
           {
-            products.map((product, i) => <ProductCard product={product} key={i} />)
+            products.map((product, i) => <ProductCard product={product} />)
           }
         </ul>
       </div>

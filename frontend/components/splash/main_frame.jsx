@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import GLogo from './g_logo';
 
 export default function MainFrame(props) {

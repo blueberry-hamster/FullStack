@@ -1,6 +1,7 @@
 import React from 'react';
+import { withRouter } from "react-router-dom";
 
-export default function CartModalCheckout(props) {
+function CartModalCheckout(props) {
 
   return (
     <div id='cart-checkout-container'>
@@ -10,7 +11,7 @@ export default function CartModalCheckout(props) {
       </div>
       <button 
         className='checkout-btn'
-        // onClick={props.checkout(props.cart)}
+        onClick={() => props.history.push('/checkout')}
       >
         CHECKOUT
       </button>
@@ -20,3 +21,5 @@ export default function CartModalCheckout(props) {
     </div>
   )
 }
+
+export default withRouter(CartModalCheckout);

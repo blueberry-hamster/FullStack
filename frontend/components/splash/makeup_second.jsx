@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ProductCard from '../product_index/product_card';
 
 export default function SkinFirst(props) {
