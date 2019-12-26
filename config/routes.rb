@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'orders/create'
+    get 'orders/show'
+    get 'orders/index'
+  end
   # namespace :api do
   #   get 'cart_items/create'
   #   get 'cart_items/update'

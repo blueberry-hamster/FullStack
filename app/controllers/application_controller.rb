@@ -36,5 +36,10 @@ class ApplicationController < ActionController::Base
   def cart_item_params
     params.require(:cart_item).permit(:id, :product_id, :cart_id, :quantity)
   end
+
+  def order_params
+    params.require(:order).permit(:id, :order_number, :tracking_number, :created_at, :total)
+  end
+  
 end
 
