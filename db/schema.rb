@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2019_12_26_035510) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "order_number", null: false
+    t.string "order_number", null: false
     t.string "tracking_number"
     t.float "total"
     t.integer "user_id", null: false
