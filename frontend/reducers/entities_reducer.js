@@ -5,6 +5,7 @@ import productReducer from './product_reducer';
 import categoriesReducer from './categories_reducer';
 import productCategoriesReducer from './product_categories_reducer';
 import cartReducer from './cart_reducer';
+import ordersReducer from './orders_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -12,7 +13,8 @@ const entitiesReducer = combineReducers({
   products: productsReducer,
   categories: categoriesReducer,
   productCategories: productCategoriesReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer,
 });
 
 export default entitiesReducer;
