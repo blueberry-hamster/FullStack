@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import LoginForm from './login_form';
 import { loginUser } from '../../actions/session_actions';
+import { getCart } from "../../actions/cart_actions";
 
 const mapStateToProps = state => ({
   errors: state.errors.session,
@@ -9,6 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   loginUser: user => dispatch(loginUser(user)),
+  getCart: () => dispatch(getCart()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

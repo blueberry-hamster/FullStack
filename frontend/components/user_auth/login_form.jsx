@@ -11,6 +11,7 @@ export default class SignupForm extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
   }
   
@@ -22,9 +23,10 @@ export default class SignupForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const oldCart = this.props.cart;
+    
     this.props.loginUser(this.state)
       .then(() => {
+        this.props.getCart();
         this.props.history.push('/');
       })
       .fail(() => {
@@ -56,7 +58,7 @@ export default class SignupForm extends Component {
   }
 
   handleDemoLogin(email, password) {
-
+    let that = this;
     if (email.length > 0) {
       this.setState({
         email: this.state.email += email.shift()
@@ -73,7 +75,10 @@ export default class SignupForm extends Component {
       }, 100));
     } else {
       this.props.loginUser(this.state)
-        .then(() => this.props.history.push('/'));
+        .then(() => {
+          that.props.getCart();
+          that.props.history.push('/');
+        });
 
     }
   }
