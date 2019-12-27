@@ -32,17 +32,17 @@ const CartModalBody = props => {
 
         <div className='item subtotal'>
           <p>Subtotal</p>
-          <p>{`$${ props.subtotal }`}</p>
+          <p>{`$${ props.cart.subtotal.toFixed(2) }`}</p>
         </div>
 
         <div className='item tax'>
           <p>Tax</p>
-          <p>{`$${(props.subtotal * props.taxRate).toFixed(2)}`}</p>
+          <p>{`$${ (props.cart.subtotal * props.cart.taxRate).toFixed(2) }`}</p>
         </div>
 
         <div className='item shipping'>
           <p>Shipping</p>
-          <p>{`$${ props.shippingCost }`}</p>
+          <p>{`$${ props.cart.shippingCost.toFixed(2) }`}</p>
         </div>
         
       </div>

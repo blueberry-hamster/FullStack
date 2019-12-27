@@ -32,6 +32,7 @@ export default class ProductCard extends Component {
 
     this.props.updateTempCartItem({
       [product.id]: {
+        product: this.props.product,
         quantity: newCount,
         product_id: product.id,
         cart_id: this.props.cart.cartId

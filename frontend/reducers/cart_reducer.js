@@ -35,6 +35,7 @@ const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
       newState.subtotal = subtotal;
       newState.totalPrice = totalPrice;
       newState.totalCount = totalCount;
+      newState.taxRate = taxRate;
 
       return newState;
     

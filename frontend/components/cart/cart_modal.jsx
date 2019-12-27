@@ -37,25 +37,7 @@ export default class CartModal extends Component {
 
   render() {
     if (!this.props.cart) return null;
-    
     const cartItems = Object.values(this.props.cart.cartItems);
-    let totalPrice = 0;
-    let totalCount = 0;
-    
-    const numItems = cartItems.length;
-
-    for (let i = 0; i < numItems; i++) {
-      const item = cartItems[i];
-      const itemPrice = this.props.products[item.product_id].price;
-
-      totalPrice += (item.quantity * itemPrice);
-      totalCount += (cartItems[i].quantity);
-    }
-
-    const taxRate = 0.08; //FIXME you can update taxrate based upon user address info
-    const shippingCost = (totalPrice === 0 || totalPrice > 30) ? 0 : 5.00; //FIXME can change shipping cost based on total in the future
-    const subtotal = totalPrice.toFixed(2);
-    totalPrice = (totalPrice + (totalPrice * taxRate) + shippingCost).toFixed(2);
     
     return (
       
@@ -67,13 +49,11 @@ export default class CartModal extends Component {
 
         <div className='cart-body-container slide-in-right'>
           <CartModalTopBar 
-            totalCount={totalCount}
+            totalCount={this.props.cart.totalCount}
             closeModal={this.props.closeModal}
           />
           <CartModalBody 
-            subtotal={subtotal}
-            taxRate={taxRate}
-            shippingCost={shippingCost}
+            cart={this.props.cart}
             cartItems={cartItems} 
             cartId={this.props.cart.cartId}
             products={this.props.products}
@@ -84,7 +64,7 @@ export default class CartModal extends Component {
             currentUser={this.props.currentUser}
           />
           <CartModalCheckout 
-            totalPrice={totalPrice} 
+            totalPrice={this.props.cart.totalPrice} 
             products={this.props.products}
           />  
           {/* checkoutCart={this.props.checkoutCart} */}

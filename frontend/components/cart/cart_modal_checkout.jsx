@@ -7,7 +7,7 @@ function CartModalCheckout(props) {
     <div id='cart-checkout-container'>
       <div className='checkout-label'>
         <p>Estimated Total</p>
-        <p>{ `$${ props.totalPrice }` }</p>
+        <p>{ `$${ props.totalPrice.toFixed(2) }` }</p>
       </div>
       <button 
         className='checkout-btn'
