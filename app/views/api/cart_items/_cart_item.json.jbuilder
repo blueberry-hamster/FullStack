@@ -1,7 +1,5 @@
 
 json.set! cart_item.product_id do
-  # json.product do
-  #   Product.find(cart_item.product_id)
-  # end
+  json.product Product.find_by(id: cart_item.product_id)
   json.(cart_item, :id, :product_id, :quantity)
 end

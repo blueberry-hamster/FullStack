@@ -5,19 +5,18 @@ import CheckoutRight from './checkout_right';
 export default class Checkout extends Component {
 
   render() {
-    const CheckoutContext = React.createContext({});
-
     return (
-      <CheckoutContext.Provider 
-        currentUser={this.props.currentUser}
-        cart={this.props.cart}
-        orders={this.props.orders}
-      >
         <div className='checkout-container'>
-          <CheckoutLeft/>
-          <CheckoutRight/>
+          <CheckoutLeft
+            currentUser={this.props.currentUser}
+            cart={this.props.cart}
+            orders={this.props.orders}
+            newOrder={this.props.newOrder}
+          />
+          <CheckoutRight
+            cart={this.props.cart}
+          />
         </div>
-      </CheckoutContext.Provider>
     )
   }
 }
