@@ -18,11 +18,23 @@ export default class CheckoutLeft extends Component {
     return (
       <div className='checkout-left-container'>
         <Header/>
-        <Email/>
-        <Shipping/>
-        <Delivery/>
-        <Payment/>
-        <PlaceOrder/>
+        <Email
+          currentUser={this.props.currentUser}
+        />
+        <Shipping
+          currentUser={this.props.currentUser}
+        />
+        <Delivery
+          cart={this.props.cart}
+        />
+        <Payment
+          currentUser={this.props.currentUser}
+        />
+        <PlaceOrder
+          currentUser={this.props.currentUser}
+          cart={this.props.cart}
+          newOrder={this.props.newOrder}
+        />
       </div>
     )
   }

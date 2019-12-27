@@ -10,7 +10,7 @@ export default class Checkout extends Component {
           <CheckoutLeft
             currentUser={this.props.currentUser}
             cart={this.props.cart}
-            orders={this.props.orders}
+            // orders={this.props.orders}
             newOrder={this.props.newOrder}
           />
           <CheckoutRight

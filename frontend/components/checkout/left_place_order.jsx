@@ -7,6 +7,11 @@ export default class PlaceOrder extends Component {
   
   handleOrder(e) {
     debugger
+
+    this.props.newOrder({
+      total: this.props.cart.totalPrice,
+      userId: this.props.currentUser.id
+    });
   }
   
   render() {
