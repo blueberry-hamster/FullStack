@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import NoUserSubnav from './no_user_subnav';
 import UserSubnav from './user_subnav';
 import Logo from './_logo';
 import UserIcon from './_user_icon';
 import CartIcon from './_cart_icon';
 
-export default class Header extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,6 +42,7 @@ export default class Header extends Component {
       this.updateNum();
     }
     if (this.props.user && !this.props.cart.cartId) this.props.getCart();
+
   }
   
   updateNum() {
@@ -89,3 +91,4 @@ export default class Header extends Component {
     )
   }
 }
+export default withRouter(Header);

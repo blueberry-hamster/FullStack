@@ -14,6 +14,13 @@ import ProductIndexContainer from './product_index/product_index_container';
 import ProductShowContainer from './product_show/product_show_container';
 import CheckoutContainer from './checkout/checkout_container';
 
+// reset scroll to 0y on history change
+import { createBrowserHistory } from 'history';
+const history = createBrowserHistory();
+history.listen((location, action) => {
+  window.scrollTo(0, 0);
+});
+
 const App = () => (
   <div>
     <Modal />
