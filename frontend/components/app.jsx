@@ -22,9 +22,9 @@ const App = () => (
     <NavbarContainer />
 
     <Switch>
+      <Route path='/checkout' component={CheckoutContainer} />
       <AuthRoute path='/signin' component={LoginFormContainer} />
       <AuthRoute path='/signup' component={SignupFormContainer} />
-      <Route path='/checkout' component={CheckoutContainer} />
       <Route path='/products/:category?' component={ProductIndexContainer} />
       <Route path='/product/:name' component={ProductShowContainer} />
       <Route exact path='/' component={SplashContainer} />

@@ -11,7 +11,10 @@ function CartModalCheckout(props) {
       </div>
       <button 
         className='checkout-btn'
-        onClick={() => props.history.push('/checkout')}
+        onClick={() => {
+          props.closeModal()
+          props.history.push('/checkout')
+        }}
       >
         CHECKOUT
       </button>
