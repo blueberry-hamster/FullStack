@@ -21,15 +21,16 @@ history.listen((location, action) => {
   window.scrollTo(0, 0);
 });
 
-const App = () => (
+const App = () => { 
+return (
   <div>
     <Modal />
     
+    <Route path='/checkout' component={CheckoutContainer} />
     <Header />
     <NavbarContainer />
 
     <Switch>
-      <Route path='/checkout' component={CheckoutContainer} />
       <AuthRoute path='/signin' component={LoginFormContainer} />
       <AuthRoute path='/signup' component={SignupFormContainer} />
       <Route path='/products/:category?' component={ProductIndexContainer} />
@@ -39,6 +40,6 @@ const App = () => (
 
     <FooterContainer />
   </div>
-);
+)};
 
 export default App;

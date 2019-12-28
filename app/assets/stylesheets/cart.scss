@@ -6,7 +6,7 @@ div#cart-modal-container {
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
-  z-index: 999;
+  z-index: 900;
 
   div.cart-modal-page-overlay {
     height: 100vh;
@@ -20,7 +20,7 @@ div#cart-modal-container {
   }
 
   div.cart-body-container {
-    z-index: 1000;
+    z-index: 999;
     
     position: fixed;
     top: 0px;

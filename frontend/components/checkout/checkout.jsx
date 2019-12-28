@@ -3,8 +3,18 @@ import CheckoutLeft from './checkout_left';
 import CheckoutRight from './checkout_right';
 
 export default class Checkout extends Component {
+  constructor(props) {
+    super(props);
+    
+  }
+  
+  componentDidMount() {
+    this.props.getCart();
+  }
+  
 
   render() {
+    if (!this.props.cart.cartId) return null;
     return (
         <div className='checkout-container'>
           <CheckoutLeft

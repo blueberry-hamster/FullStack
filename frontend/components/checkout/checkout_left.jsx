@@ -15,6 +15,7 @@ export default class CheckoutLeft extends Component {
   }
   
   render() {
+    if (!this.props.cart) return null;
     return (
       <div className='checkout-left-container'>
         <Header/>
