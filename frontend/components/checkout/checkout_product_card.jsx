@@ -8,8 +8,8 @@ export default function ProductCard(props) {
     quantity = props.quantity;
   
   return (
-    <div className='cart-modal-product-card'>
-      
+    <div className='product-card'>
+
       <div className='product-display'>
 
         <div className='product-description'>

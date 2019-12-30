@@ -1,14 +1,18 @@
 
 import React from 'react';
+import { withRouter } from "react-router-dom";
 import PeaceIcon from './peace_icon';
 
-export default function Header() {
+function Header(props) {
   return (
     <div className='left-header-container'>
       <h1>Checkout
         <PeaceIcon/>
       </h1>
-      <span>Back to Shopping</span>
+      <span
+        onClick={() => props.history.push('/products')}
+      >Back to Shopping</span>
     </div>
   )
 }
+export default withRouter(Header);

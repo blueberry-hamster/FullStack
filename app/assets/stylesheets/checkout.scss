@@ -101,5 +101,42 @@
 
     display: flex;
     flex-direction: column;
+
+    .right-header-container {
+      p {
+        font-weight: 600;
+      }
+    }
+
+    .product-card-container {
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 16px 0px 0px;
+
+    }
+
+    .checkout-order-estimate-container {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+          font-weight: 600;
+        }
+
+        &.total {
+          font-size: 1.2em;
+        }
+      }
+    }
+    
   }
 }
