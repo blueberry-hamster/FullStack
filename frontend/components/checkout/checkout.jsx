@@ -9,7 +9,8 @@ export default class Checkout extends Component {
   }
   
   componentDidMount() {
-    this.props.getCart();
+    if (!this.props.cart) this.props.getCart();
+    if (!this.props.products) this.props.getProducts();
   }
   
 
@@ -25,6 +26,7 @@ export default class Checkout extends Component {
           />
           <CheckoutRight
             cart={this.props.cart}
+            products={this.props.products}
           />
         </div>
     )

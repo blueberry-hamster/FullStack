@@ -4,7 +4,8 @@ import Items from './right_items';
 import OrderEstimate from './right_order_estimate';
 
 export default function CheckoutRight(props) {
-  if (!props.cart) return null;
+  if (!props.cart || !props.products) return null;
+  // debugger
   return (
     <div className='checkout-right-container'>
       <Header
@@ -12,6 +13,7 @@ export default function CheckoutRight(props) {
       />
       <Items
         cart={props.cart}
+        products={props.products}
       />
       <OrderEstimate
         cart={props.cart}

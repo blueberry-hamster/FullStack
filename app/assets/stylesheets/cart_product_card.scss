@@ -16,6 +16,7 @@ div.cart-modal-product-card, div.product-card {
   overflow: hidden;
 
   div.product-display {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -24,16 +25,21 @@ div.cart-modal-product-card, div.product-card {
     font-size: 12px;
     line-height: 14px;
     padding: 10px 12px;
+    margin: auto;
 
     div.product-description {
+      box-sizing: border-box;
+
       p {
         font-weight: 700;
         margin: 0px 0px 4px;
+        width: 80%;
       }
 
     }
 
     div.product-photo {
+      box-sizing: border-box;
       flex-grow: 1;
       width: 75%;
       height: auto;

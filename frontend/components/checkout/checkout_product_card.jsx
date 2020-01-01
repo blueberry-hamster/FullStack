@@ -1,6 +1,8 @@
 import React from 'react';
 
 export default function ProductCard(props) {
+  if (!props.product) return null;
+  
   const product = props.product,
     price = product.price,
     name = product.name,
