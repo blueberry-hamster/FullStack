@@ -13,6 +13,7 @@ import SplashContainer from './splash/splash_container';
 import ProductIndexContainer from './product_index/product_index_container';
 import ProductShowContainer from './product_show/product_show_container';
 import CheckoutContainer from './checkout/checkout_container';
+import OrdersContainer from './orders/orders_container';
 
 // reset scroll to 0y on history change
 import { createBrowserHistory } from 'history';
@@ -25,12 +26,12 @@ const App = () => {
 return (
   <div>
     <Modal />
-    
-    <Route path='/checkout' component={CheckoutContainer} />
     <Header />
     <NavbarContainer />
 
     <Switch>
+      <Route path='/checkout' component={CheckoutContainer} />
+      <Route path='/orders' component={OrdersContainer} />
       <AuthRoute path='/signin' component={LoginFormContainer} />
       <AuthRoute path='/signup' component={SignupFormContainer} />
       <Route path='/products/:category?' component={ProductIndexContainer} />
