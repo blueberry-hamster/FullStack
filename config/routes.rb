@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  namespace :api do
-    get 'orders/create'
-    get 'orders/show'
-    get 'orders/index'
-  end
+  # namespace :api do
+  #   get 'orders/create'
+  #   get 'orders/show'
+  #   get 'orders/index'
+  # end
   # namespace :api do
   #   get 'cart_items/create'
   #   get 'cart_items/update'
@@ -34,5 +34,6 @@ Rails.application.routes.draw do
     # resources :categories, only: [:index] ?? FIXME why doesn't this one work like the one above?
     resources :carts, only: [:show]
     resources :cart_items, only: [:create, :update, :destroy]
+    resources :orders, only: [:create, :show, :index]
   end
 end

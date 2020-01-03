@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   end
 
   def order_params
-    params.require(:order).permit(:id, :order_number, :tracking_number, :created_at, :total)
+    params.require(:order).permit(:user_id, :order_number, :tracking_number, :created_at, :total)
   end
   
 end

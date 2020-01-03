@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 export default class PlaceOrder extends Component {
   constructor(props) {
     super(props);
+
+    this.handleOrder = this.handleOrder.bind(this);
   }
   
   handleOrder(e) {
-    debugger
-
     this.props.newOrder({
       total: this.props.cart.totalPrice,
-      userId: this.props.currentUser.id
+      user_id: this.props.currentUser.id
     });
   }
   

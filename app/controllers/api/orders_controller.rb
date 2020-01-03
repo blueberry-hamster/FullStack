@@ -1,8 +1,9 @@
 class Api::OrdersController < ApplicationController
   def create
+    debugger
     @order = Order.new(order_params)
     if @order.save
-      render :show
+      render 'api/orders/show'
     else
       render json: @order.errors.full_messages, status: 422
     end
@@ -10,11 +11,11 @@ class Api::OrdersController < ApplicationController
 
   def show
     @order = Order.find_by(id: order_params.id)
-    render :show
+    render 'api/orders/show'
   end
 
   def index
      @orders = Order.find_by(user_id: order_params.user_id)
-     render :index
+     render 'api/orders/index'
   end
 end

@@ -1,7 +1,7 @@
 export const getOrders = user_id => (
   $.ajax({
     method: 'GET',
-    url: `/api/carts/index`,
+    url: `/api/orders`,
     data: { order: { user_id } }
   })
 );
@@ -9,7 +9,7 @@ export const getOrders = user_id => (
 export const getOrder = id => (
   $.ajax({
     method: 'GET',
-    url: `/api/carts/show`,
+    url: `/api/orders/${id}`,
     data: { order: { id } }
   })
 );
@@ -17,7 +17,7 @@ export const getOrder = id => (
 export const newOrder = order => (
   $.ajax({
     method: 'POST',
-    url: 'api/carts/create',
+    url: 'api/orders',
     data: { order }
   })
 );
