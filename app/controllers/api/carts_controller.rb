@@ -13,4 +13,13 @@ class Api::CartsController < ApplicationController
     # @cart = Cart.find_by(user_id: cart_params.user_id)
     render :show
   end
+
+  def update #reset cart only
+    @cart = current_user.cart
+    @cart.cart_items.each do |cart_item|
+      cart_item.destroy
+    end
+
+    render :show
+  end
 end

@@ -13,6 +13,7 @@ class PlaceOrder extends Component {
       total: this.props.cart.totalPrice,
       user_id: this.props.currentUser.id
     });
+    this.props.cleanCart(this.props.cart.id);
     this.props.history.push('/orders');
   }
   

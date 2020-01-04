@@ -10,7 +10,7 @@ export default function ProductCard(props) {
     quantity = props.quantity;
   
   return (
-    <div className='product-card'>
+    <div className='product-card checkout-product-card'>
 
       <div className='product-display'>
 

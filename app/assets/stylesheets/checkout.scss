@@ -108,13 +108,18 @@
       }
     }
 
+    div.checkout-product-card {
+      width: 150px;
+      margin-right: 15px;
+    }
+
     .product-card-container {
       width: 100%;
 
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin: 16px 0px 0px;
 
     }

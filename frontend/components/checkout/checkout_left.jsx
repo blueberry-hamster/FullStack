@@ -35,6 +35,7 @@ export default class CheckoutLeft extends Component {
           currentUser={this.props.currentUser}
           cart={this.props.cart}
           newOrder={this.props.newOrder}
+          cleanCart={this.props.cleanCart}
         />
       </div>
     )

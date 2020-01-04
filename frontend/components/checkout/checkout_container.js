@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Checkout from './checkout';
 import { newOrder } from "../../actions/order_actions";
-import { getCart } from "../../actions/cart_actions";
+import { getCart, cleanCart } from "../../actions/cart_actions";
 import { getProducts } from "../../actions/product_actions";
 // import {  } from "../../actions/session_actions";
 
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => ({
   newOrder: (order) => dispatch(newOrder(order)),
   getCart: () => dispatch(getCart()),
   getProducts: () => dispatch(getProducts()),
+  cleanCart: id => dispatch(cleanCart(id)),
 });
 
 

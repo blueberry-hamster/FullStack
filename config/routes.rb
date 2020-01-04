@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index]
     resources :products, only: [:show], param: :name
     # resources :categories, only: [:index] ?? FIXME why doesn't this one work like the one above?
-    resources :carts, only: [:show]
+    resources :carts, only: [:show, :update]
     resources :cart_items, only: [:create, :update, :destroy]
     resources :orders, only: [:create, :show, :index]
   end

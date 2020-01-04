@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Order = (props) => {
+  if(!props.order || !props.order.total) return null;
+  
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
