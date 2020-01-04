@@ -1,6 +1,7 @@
 import { RECEIVE_CART  } from "../actions/cart_actions";
 import { RECEIVE_CART_ITEM, REMOVE_CART_ITEM } from "../actions/cart_item_actions";
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_ORDER } from "../actions/order_actions";
 
 const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
   Object.freeze(state);
@@ -72,6 +73,9 @@ const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
       return newState;
 
     case LOGOUT_CURRENT_USER: // clear cart on logout
+      return emptyCart;
+
+    case RECEIVE_ORDER: // clear cart on order
       return emptyCart;
       
     default:

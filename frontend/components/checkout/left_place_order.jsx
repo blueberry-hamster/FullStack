@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 
-export default class PlaceOrder extends Component {
+class PlaceOrder extends Component {
   constructor(props) {
     super(props);
 
@@ -12,6 +13,7 @@ export default class PlaceOrder extends Component {
       total: this.props.cart.totalPrice,
       user_id: this.props.currentUser.id
     });
+    this.props.history.push('/orders');
   }
   
   render() {
@@ -30,3 +32,5 @@ export default class PlaceOrder extends Component {
     )
   }
 }
+
+export default withRouter(PlaceOrder);

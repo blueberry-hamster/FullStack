@@ -2,7 +2,6 @@ import React from 'react';
 import ProductCard from './checkout_product_card';
 
 export default function Items(props) {
-  // debugger
   return (
     <div className='product-card-container'>
       { 
@@ -12,7 +11,7 @@ export default function Items(props) {
             cartItem={item}
             cartItemId={item.id}
             cartId={props.cart.cartId}
-            product={props.products[item.id]}
+            product={props.products[item.product_id]}
             quantity={item.quantity}
           />
         )

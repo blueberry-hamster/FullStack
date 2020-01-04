@@ -1,0 +1,62 @@
+div.orders-container {
+  box-sizing: border-box;
+  min-width: 100vw;
+  min-height: 68vh;
+  padding: 0.5px;
+  background-color: $medium-pink;
+
+  @include flex-centered;
+
+  div.main-content-container {
+    box-sizing: border-box;
+    @include flex-centered;
+    flex-direction: column;
+    min-height: 400px;
+    padding: 50px;
+    margin: 100px 50px;
+    width: fit-content;
+
+    background-color: $white;
+    border: 1px solid $black;
+
+    h1 {
+      margin-bottom: 1em;
+      font-size: 1.75em;
+    }
+
+    h3 {
+      font-weight: 600;
+    }
+
+    span {
+      padding: 1em 0;
+    }
+
+    div.order-items-container {
+      
+    }
+
+    h3, div.order-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .order-number {
+          grid-column-start: 1;
+        }
+
+        .date {
+          grid-column-start: 2;
+        }
+
+        .amount {
+          grid-column-start: 3;
+        }
+
+        .tracking-number {
+          grid-column-start: 4;
+        }
+    }
+    
+  }
+}

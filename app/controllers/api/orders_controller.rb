@@ -1,6 +1,5 @@
 class Api::OrdersController < ApplicationController
   def create
-    debugger
     @order = Order.new(order_params)
     if @order.save
       render 'api/orders/show'
@@ -15,7 +14,7 @@ class Api::OrdersController < ApplicationController
   end
 
   def index
-     @orders = Order.find_by(user_id: order_params.user_id)
+     @orders = Order.where(user_id: order_params[:user_id]).to_a
      render 'api/orders/index'
   end
 end

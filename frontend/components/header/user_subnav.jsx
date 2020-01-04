@@ -6,7 +6,7 @@ export default class UserSubnav extends Component {
     return (
       <ul className='user_dropdown'>
         <li>
-          <Link to='/' >Order History</Link>
+          <Link to='/orders' >Order History</Link>
         </li>
         <li>
           <Link to='/' onClick={this.props.logoutUser}>Sign Out</Link>
