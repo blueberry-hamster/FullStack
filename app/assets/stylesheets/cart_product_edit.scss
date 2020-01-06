@@ -29,7 +29,9 @@ div.cart-modal-edit-container {
     div.left {
       box-sizing: border-box;
       display: flex;
-      align-items: center;
+      // align-items: center;
+      max-width: 80%;
+      
 
       p {
         font-size: 1.2em;

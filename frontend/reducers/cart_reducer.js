@@ -30,13 +30,21 @@ const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
         // const shippingCost = (subtotal === 0 || subtotal > 30) ? 0 : 5.00; //FIXME can change shipping cost based on total in the future
         subtotal = subtotal;
         let totalPrice = (subtotal + (subtotal * taxRate) + shippingCost);
+
+        newState.cartItems = action.cart.cartItems;
+        newState.cartId = action.cart.cartId;
   
         newState.shippingCost = shippingCost;
         newState.subtotal = subtotal;
         newState.totalPrice = totalPrice;
         newState.totalCount = totalCount;
         newState.taxRate = taxRate;
+
       } else {
+
+        newState.cartItems = {};
+        newState.cartId = action.cart.cartId;
+        
         newState.shippingCost = 0;
         newState.subtotal = 0;
         newState.totalPrice = 0;
@@ -44,19 +52,16 @@ const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
         newState.taxRate = 0.08;
       }
 
-      newState.cartItems = action.cart.cartItems || {};
-      newState.cartId = action.cart.cartId;
-
       return newState;
     
     case RECEIVE_CART_ITEM:
       let productId = Object.keys(action.cartItem)[0];
       let cartItem = Object.values(action.cartItem)[0];
       let prevQuantity = (newState.cartItems[productId] ? newState.cartItems[productId].quantity : 0);
-      totalCount = (newState.totalCount + (cartItem.quantity - prevQuantity));
-      subtotal = (newState.subtotal + ((cartItem.quantity - prevQuantity) * cartItem.product.price));
-      shippingCost = (subtotal === 0) ? 0 : 5.00;
-      totalPrice = (subtotal + (subtotal * 0.08) + shippingCost);
+      let totalCount = (newState.totalCount + (cartItem.quantity - prevQuantity));
+      let subtotal = (newState.subtotal + ((cartItem.quantity - prevQuantity) * cartItem.product.price));
+      let shippingCost = (subtotal === 0) ? 0 : 5.00;
+      let totalPrice = (subtotal + (subtotal * 0.08) + shippingCost);
       
       newState.cartItems[productId] = cartItem;
       newState.totalCount = totalCount;
