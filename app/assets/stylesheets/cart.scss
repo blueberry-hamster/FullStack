@@ -135,6 +135,12 @@ div#cart-modal-container {
       button {
         @include black-button;
         margin: 1em 0;
+
+        &:disabled {
+        border: 1px solid $light-grey;
+        color: $medium-light-grey;
+        background-color: $lightest-grey;
+        }
       }
 
       p.terms-of-service-disclaimer {

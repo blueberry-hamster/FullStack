@@ -8,7 +8,7 @@ const Order = (props) => {
   ];
   let d = new Date(props.order.date);
   const month = monthNames[d.getMonth()],
-        day = d.getDay(),
+        day = d.getDate(),
         year = d.getFullYear();
 
   const orderNumber = props.order.order_number,

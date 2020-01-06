@@ -27,7 +27,7 @@ export class Orders extends Component {
             </h3>
 
             {
-              Object.values(this.props.orders).map( (order, i) => {
+              Object.values(this.props.orders).reverse().map( (order, i) => {
                 return <Order order={order} key={i} />
               })
             }

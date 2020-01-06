@@ -20,7 +20,7 @@ export const cleanCart = (id) => dispatch => CartApiUtil.cleanCart(id)
 
 export const getDefaultCart = ip => dispatch(receiveCart({
   cartId: ip,
-  cartItems: {} 
+  cartItems: null, 
 }));
 
 // export const newCart = userId => dispatch => CartApiUtil.newCart(userId)

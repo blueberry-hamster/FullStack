@@ -66,9 +66,9 @@ export default class CartModal extends Component {
           <CartModalCheckout 
             totalPrice={this.props.cart.totalPrice} 
             products={this.props.products}
+            currentUser={this.props.currentUser}
             closeModal={this.props.closeModal}
           />  
-          {/* checkoutCart={this.props.checkoutCart} */}
         </div>
 
       </div>

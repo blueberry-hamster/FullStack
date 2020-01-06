@@ -17,7 +17,6 @@ const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),
   removeTempCartItem: cartItem => dispatch(updateTempCartItem(cartItem)),
   updateTempCartItem: cartItem => dispatch(updateTempCartItem(cartItem)),
-  // checkout: cart => dispatch(checkout(cart))
 });
 
 
