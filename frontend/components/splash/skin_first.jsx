@@ -23,7 +23,15 @@ export default function SkinFirst(props) {
         </div>
         <ul className='splash-product-cards'>
           {
-            products.map((product, i) => <ProductCard product={product} cart={props.cart} key={i} />)
+            products.map((product, i) => <ProductCard 
+              key={i}
+              product={product}
+              cart={props.cart}
+              currentUser={props.currentUser}
+              createCartItem={props.createCartItem}
+              updateCartItem={props.updateCartItem}
+              updateTempCartItem={props.updateTempCartItem}
+            />)
           }
         </ul>
       </div>

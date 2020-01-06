@@ -16,22 +16,34 @@ export default class Splash extends Component {
   }
   
   render() {
-    const products = this.props.products;
-    const cart = this.props.cart;
-
     return (
       <div id='splash-container'>
         <MainFrame history={this.props.history} />
         <Inspired history={this.props.history} 
-          cart={cart}
-          products={products} />
+          cart={this.props.cart}
+          products={this.props.products}
+          currentUser={this.props.currentUser}
+          createCartItem={this.props.createCartItem}
+          updateCartItem={this.props.updateCartItem}
+          updateTempCartItem={this.props.updateTempCartItem}
+        />
         <About />
         <SkinFirst history={this.props.history} 
-          cart={cart}
-          products={products} />
+          cart={this.props.cart}
+          products={this.props.products}
+          currentUser={this.props.currentUser}
+          createCartItem={this.props.createCartItem}
+          updateCartItem={this.props.updateCartItem}
+          updateTempCartItem={this.props.updateTempCartItem}
+        />
         <MakeupSecond history={this.props.history} 
-          cart={cart}
-          products={products} />
+          cart={this.props.cart}
+          products={this.props.products}
+          currentUser={this.props.currentUser}
+          createCartItem={this.props.createCartItem}
+          updateCartItem={this.props.updateCartItem}
+          updateTempCartItem={this.props.updateTempCartItem}
+        />
         <Base />
       </div>
     )
