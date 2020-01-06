@@ -31,6 +31,7 @@ export default function SkinFirst(props) {
               createCartItem={props.createCartItem}
               updateCartItem={props.updateCartItem}
               updateTempCartItem={props.updateTempCartItem}
+              openModal={props.openModal}
             />)
           }
         </ul>

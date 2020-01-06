@@ -26,6 +26,7 @@ export default class Splash extends Component {
           createCartItem={this.props.createCartItem}
           updateCartItem={this.props.updateCartItem}
           updateTempCartItem={this.props.updateTempCartItem}
+          openModal={this.props.openModal}
         />
         <About />
         <SkinFirst history={this.props.history} 
@@ -35,6 +36,7 @@ export default class Splash extends Component {
           createCartItem={this.props.createCartItem}
           updateCartItem={this.props.updateCartItem}
           updateTempCartItem={this.props.updateTempCartItem}
+          openModal={this.props.openModal}
         />
         <MakeupSecond history={this.props.history} 
           cart={this.props.cart}
@@ -43,6 +45,7 @@ export default class Splash extends Component {
           createCartItem={this.props.createCartItem}
           updateCartItem={this.props.updateCartItem}
           updateTempCartItem={this.props.updateTempCartItem}
+          openModal={this.props.openModal}
         />
         <Base />
       </div>

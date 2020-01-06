@@ -19,7 +19,7 @@ class Api::CartsController < ApplicationController
     @cart.cart_items.each do |cart_item|
       cart_item.destroy
     end
-
+    @cart.reload
     render :show
   end
 end
