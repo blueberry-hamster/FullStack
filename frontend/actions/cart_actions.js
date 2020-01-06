@@ -3,7 +3,7 @@ import * as CartApiUtil from "../util/cart_api_util";
 export const RECEIVE_CART = 'RECEIVE_CART';
 export const CLEAR_CART = 'CLEAR_CART';
 
-const receiveCart = cart => ({
+export const receiveCart = cart => ({
   type: RECEIVE_CART,
   cart
 });

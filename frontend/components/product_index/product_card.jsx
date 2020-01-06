@@ -54,7 +54,7 @@ export default class ProductCard extends Component {
   }
   
   render() {
-    if(!this.props.product) return null;
+    if(!this.props.product || !this.props.cart) return null;
     
     const product = this.props.product;
     const productUrlName = product.name.split(' ').join('-');

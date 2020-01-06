@@ -2,10 +2,9 @@ import { connect } from 'react-redux';
 import Splash from './splash';
 
 const mapStateToProps = state => {
-  let products = state.entities.products;
-
   return {
-    products,
+    products: state.entities.products,
+    cart: state.entities.cart,
     user: state.entities.users[state.session.id],
   };
 };

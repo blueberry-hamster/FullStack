@@ -12,7 +12,7 @@ const Inspired = props => {
       </p>
       <ul>
         {
-          products.map((product, i) => <ProductCard product={product} key={i} />)
+          products.map((product, i) => <ProductCard product={product} key={i} cart={props.cart} />)
         }
       </ul>
     </div>

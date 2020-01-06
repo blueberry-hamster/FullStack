@@ -17,13 +17,21 @@ export default class Splash extends Component {
   
   render() {
     const products = this.props.products;
+    const cart = this.props.cart;
+
     return (
       <div id='splash-container'>
         <MainFrame history={this.props.history} />
-        <Inspired history={this.props.history} products={products} />
+        <Inspired history={this.props.history} 
+          cart={cart}
+          products={products} />
         <About />
-        <SkinFirst history={this.props.history} products={products} />
-        <MakeupSecond history={this.props.history} products={products} />
+        <SkinFirst history={this.props.history} 
+          cart={cart}
+          products={products} />
+        <MakeupSecond history={this.props.history} 
+          cart={cart}
+          products={products} />
         <Base />
       </div>
     )

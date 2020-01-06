@@ -20,7 +20,7 @@ export default function SkinFirst(props) {
       <div className='splash-product-show-container'>
         <ul className='splash-product-cards'>
           {
-            products.map(product => <ProductCard product={product} />)
+            products.map(product => <ProductCard product={product} cart={props.cart} />)
           }
         </ul>
         <div className='splash-product-img'>
