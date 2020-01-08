@@ -2,5 +2,5 @@ node_modules/
 bundle.js
 bundle.js.map
 tmp/
-# keys.js
+keys.js
 log/
