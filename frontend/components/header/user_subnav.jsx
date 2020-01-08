@@ -9,12 +9,13 @@ export default class UserSubnav extends Component {
   
   handleLogout() {
     const that = this;
-    this.props.logoutUser();
-    this.props.getIp().then(
-      res => {
-        debugger
-        that.props.getDefaultCart(res.ip)
-      }
+    this.props.logoutUser()
+    .then(
+      res => this.props.getIp().then(
+        res => {
+          that.props.getDefaultCart(res.ip)
+        }
+      )
     );
   }
   
