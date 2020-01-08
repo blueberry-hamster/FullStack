@@ -11,12 +11,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getCart: () => dispatch(getCart()),
-  updateCartItem: (params) => dispatch(updateCartItem(params)),
-  destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId)),
+  getCart: () => (getCart()),
+  updateCartItem: (params) => (updateCartItem(params)),
+  destroyCartItem: (cartItemId) => (destroyCartItem(cartItemId)),
   closeModal: () => dispatch(closeModal()),
   removeTempCartItem: cartItem => (removeTempCartItem(cartItem)),
-  updateTempCartItem: cartItem => dispatch(updateTempCartItem(cartItem)),
+  updateTempCartItem: cartItem => (updateTempCartItem(cartItem)),
 });
 
 
