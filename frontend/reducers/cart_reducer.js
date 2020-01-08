@@ -71,7 +71,6 @@ const cartReducer = (state = { cartItems: {}, cartId: null}, action) => {
       return newState;
     
     case REMOVE_CART_ITEM:
-      debugger
       let item = Object.values(action.cartItem)[0];
       totalCount = newState.totalCount - item.quantity;
       subtotal = newState.subtotal - (item.quantity * item.product.price);

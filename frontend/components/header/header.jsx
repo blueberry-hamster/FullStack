@@ -64,7 +64,11 @@ class Header extends Component {
   
   render() {
     const subnav = this.props.user ? 
-      <UserSubnav logoutUser={this.props.logoutUser} /> :
+      <UserSubnav 
+        logoutUser={this.props.logoutUser} 
+        getIp={this.props.getIp}
+        getDefaultCart={this.props.getDefaultCart}
+      /> :
       <NoUserSubnav user={this.props.user} />;
       
       
