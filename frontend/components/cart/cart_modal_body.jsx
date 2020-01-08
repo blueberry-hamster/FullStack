@@ -2,15 +2,14 @@ import React from 'react';
 import CartModalProductCard from './cart_modal_product_card';
 
 const CartModalBody = props => {
-  
   return (
     <div id='cart-modal-body-container'>
       <div className='product-card-container'>
         {
-          props.cartItems.map((item, i) => 
+          Object.values(props.cartItems).map((item, i) => 
             <CartModalProductCard 
               key={i}
-              cartItem={props.cartItems[item.id]} 
+              cartItem={props.cartItems[item.product_id]} 
               cartItemId={item.id}
               cartId={props.cartId}
               product={props.products[item.product_id]}

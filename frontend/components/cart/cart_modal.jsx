@@ -37,7 +37,6 @@ export default class CartModal extends Component {
 
   render() {
     if (!this.props.cart) return null;
-    const cartItems = Object.values(this.props.cart.cartItems);
     
     return (
       
@@ -54,7 +53,7 @@ export default class CartModal extends Component {
           />
           <CartModalBody 
             cart={this.props.cart}
-            cartItems={cartItems} 
+            cartItems={this.props.cart.cartItems} 
             cartId={this.props.cart.cartId}
             products={this.props.products}
             updateCartItem={this.props.updateCartItem}

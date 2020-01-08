@@ -46,12 +46,17 @@ export default class CartModalEdit extends Component {
   updateTemp() {
     if (this.state.quantity > 0) {
       this.props.updateTempCartItem({
-        quantity: this.state.quantity,
-        product_id: this.props.product.id,
-        cart_id: this.props.cartId
+        [this.props.product.id]: {
+          product: this.props.product,
+          quantity: this.state.quantity,
+          product_id: this.props.product.id,
+          cart_id: this.props.cartId
+        }
       });
     } else {
-      this.props.removeTempCartItem(this.props.cartItem);
+      this.props.removeTempCartItem({
+        [this.props.cartItem.product_id]: this.props.cartItem
+      });
     }
   }
 

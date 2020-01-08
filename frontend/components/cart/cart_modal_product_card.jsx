@@ -23,11 +23,15 @@ class CartModalProductCard extends Component {
     if (this.props.currentUser) {
       this.props.destroyCartItem(this.props.cartItemId);
     } else {
-      this.props.removeTempCartItem(this.props.cartItem);
+      this.props.removeTempCartItem({
+        [this.props.cartItem.product_id]: this.props.cartItem
+      });
     }
   }
   
   render() {
+    if (!this.props.cartItem) return null;
+    
     const product = this.props.product,
       price = product.price,
       name = product.name,
