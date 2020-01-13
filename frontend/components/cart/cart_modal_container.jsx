@@ -12,8 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getCart: () => (getCart()),
-  updateCartItem: (params) => (updateCartItem(params)),
-  destroyCartItem: (cartItemId) => (destroyCartItem(cartItemId)),
+  updateCartItem: (params) => dispatch(updateCartItem(params)),
+  destroyCartItem: (cartItemId) => dispatch(destroyCartItem(cartItemId)),
   closeModal: () => dispatch(closeModal()),
   removeTempCartItem: cartItem => (removeTempCartItem(cartItem)),
   updateTempCartItem: cartItem => (updateTempCartItem(cartItem)),

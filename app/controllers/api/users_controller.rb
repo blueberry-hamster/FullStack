@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
       login!(@user)
       cart = Cart.create({ user_id: @user.id })
       cart.save
+      cart.reload
       render 'api/users/show'
     else
       render json: @user.errors.full_messages, status: 422
