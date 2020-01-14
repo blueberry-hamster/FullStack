@@ -21,7 +21,7 @@ class Header extends Component {
     this.props.getCategories();
     
     // set session to ip if not logged in
-    let that = this;
+    // let that = this;
     if (!this.props.session.id) {
       let ip = `${Math.floor(Math.random() * 255) + 1
       }.${ Math.floor(Math.random() * 255) }.${Math.floor(Math.random() * 255)}`;
