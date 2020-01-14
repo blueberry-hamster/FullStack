@@ -23,14 +23,16 @@ class Header extends Component {
     // set session to ip if not logged in
     let that = this;
     if (!this.props.session.id) {
-      this.props.getIp().then(
-        res => {
-          if (that.props.session.id.split('.').length > 1) {
-            // this.props.newCart(res.ip);
-            that.props.getDefaultCart(that.props.session.id);
-          }
-        }
-      );
+      let ip = `${Math.floor(Math.random() * 255) + 1
+      }.${ Math.floor(Math.random() * 255) }.${Math.floor(Math.random() * 255)}`;
+      this.props.getDefaultCart(ip);
+      // .then(
+      //   res => {
+      //     if (that.props.session.id.split('.').length > 1) {
+      //       that.props.getDefaultCart(that.props.session.id);
+      //     }
+      //   }
+      // );
     }
     
     if (this.props.user) this.props.getCart();
