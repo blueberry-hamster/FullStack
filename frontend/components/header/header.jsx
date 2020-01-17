@@ -35,7 +35,8 @@ class Header extends Component {
       // );
     }
     
-    if (this.props.user) this.props.getCart();
+    if (this.props.user) this.props.getCart().then(res => 
+      console.log("I GOT THE CART"));
     if (this.props.cart.cartId) this.updateNum();
   }
 
