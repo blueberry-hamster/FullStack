@@ -8,7 +8,6 @@ const Orders = (props) => {
   const [hasOrders, setOrders] = useState(false);
   const lastLocation = useLastLocation();
   const message = document.querySelector('.message');
-  // const newOrder = document.querySelector('.order-container');
 
   const handleNewOrder = () => {
     message.innerHTML = 'Thank you for your order!';
