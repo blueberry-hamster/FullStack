@@ -11,14 +11,7 @@ const Orders = (props) => {
   // const newOrder = document.querySelector('.order-container');
 
   const handleNewOrder = () => {
-    // debugger
     message.innerHTML = 'Thank you for your order!';
-    // newOrder.style.backgroundColor = '#F5E3E7';
-
-    // window.setTimeout(() => {
-    //   newOrder.style.backgroundColor = 'white';
-    //   newOrder.style.color = 'black';
-    // }, 3000);
   };
 
   useEffect(() => {
