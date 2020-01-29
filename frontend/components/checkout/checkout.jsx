@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CheckoutLeft from './checkout_left';
 import CheckoutRight from './checkout_right';
+import { withRouter } from 'react-router-dom';
 
-export default class Checkout extends Component {
+class Checkout extends Component {
   constructor(props) {
     super(props);
     
@@ -11,6 +12,12 @@ export default class Checkout extends Component {
   componentDidMount() {
     if (!this.props.cart) this.props.getCart();
     if (!this.props.products) this.props.getProducts();
+  }
+
+  componentDidUpdate() {
+    if (this.props.cart && this.props.cart.subtotal === 0) {
+      this.props.history.push('/');
+    }
   }
   
 
@@ -32,3 +39,5 @@ export default class Checkout extends Component {
     )
   }
 }
+
+export default withRouter(Checkout);

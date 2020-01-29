@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
+import { LastLocationProvider } from 'react-router-last-location';
 
 import Modal from './modal/modal';
 import Header from './header/header_container';
@@ -24,23 +25,25 @@ history.listen((location, action) => {
 
 const App = () => { 
 return (
-  <div>
-    <Modal />
-    <Header />
-    <NavbarContainer />
+  <LastLocationProvider>
+    <div>
+      <Modal />
+      <Header />
+      <NavbarContainer />
 
-    <Switch>
-      <Route path='/checkout' component={CheckoutContainer} />
-      <Route path='/orders' component={OrdersContainer} />
-      <AuthRoute path='/signin' component={LoginFormContainer} />
-      <AuthRoute path='/signup' component={SignupFormContainer} />
-      <Route path='/products/:category?' component={ProductIndexContainer} />
-      <Route path='/product/:name' component={ProductShowContainer} />
-      <Route exact path='/' component={SplashContainer} />
-    </Switch>
+      <Switch>
+        <Route path='/checkout' component={CheckoutContainer} />
+        <Route path='/orders' component={OrdersContainer} />
+        <AuthRoute path='/signin' component={LoginFormContainer} />
+        <AuthRoute path='/signup' component={SignupFormContainer} />
+        <Route path='/products/:category?' component={ProductIndexContainer} />
+        <Route path='/product/:name' component={ProductShowContainer} />
+        <Route exact path='/' component={SplashContainer} />
+      </Switch>
 
-    <FooterContainer />
-  </div>
+      <FooterContainer />
+    </div>
+  </LastLocationProvider>
 )};
 
 export default App;

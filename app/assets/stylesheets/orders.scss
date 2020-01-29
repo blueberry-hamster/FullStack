@@ -24,6 +24,12 @@ div.orders-container {
       font-size: 1.75em;
     }
 
+    p.message {
+      margin-bottom: 2em;
+      color: $red;
+      font-weight: 400;
+    }
+
     h3 {
       font-weight: 600;
     }
