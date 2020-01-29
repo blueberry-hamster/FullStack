@@ -8,12 +8,12 @@ const Orders = (props) => {
   const [hasOrders, setOrders] = useState(false);
   const lastLocation = useLastLocation();
   const message = document.querySelector('.message');
-  const newOrder = document.querySelector('.order-container');
+  // const newOrder = document.querySelector('.order-container');
 
   const handleNewOrder = () => {
-    debugger
+    // debugger
     message.innerHTML = 'Thank you for your order!';
-    newOrder.style.backgroundColor = '#F5E3E7';
+    // newOrder.style.backgroundColor = '#F5E3E7';
 
     // window.setTimeout(() => {
     //   newOrder.style.backgroundColor = 'white';
