@@ -4,3 +4,4 @@ bundle.js.map
 tmp/
 # keys.js
 log/
+/public/assets
