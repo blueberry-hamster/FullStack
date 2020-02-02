@@ -1,3 +1,5 @@
+### [Live Demo](https://glossier-demo.herokuapp.com/#/ "Live Demo of Glossier clone")
+
 ## Summary:
 ![](demo/glossier_main.gif)
 This is a high-quality dupe of Glossier.com: a modern, and sleek e-commerce site. It currently has user auth, products, cart and checkout functionality. The app is written with a React / Redux frontend, and Ruby on Rails, Postgresql backend. Check it out! 
