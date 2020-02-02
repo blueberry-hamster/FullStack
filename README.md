@@ -1,4 +1,5 @@
-### [Live Demo](https://glossier-demo.herokuapp.com/#/ "Live Demo of Glossier clone")
+ # Glossier Clone
+ ### [Live Demo](https://glossier-demo.herokuapp.com/#/ "Live Demo of Glossier clone")
 
 ## Summary:
 ![](demo/glossier_main.gif)
